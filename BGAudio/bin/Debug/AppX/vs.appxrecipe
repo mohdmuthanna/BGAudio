@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-UQNDEAN</Machine>
-    <WindowsUser>kiseksen</WindowsUser>
+    <Machine>DESKTOP-VG99HUH</Machine>
+    <WindowsUser>mohd</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>d0e595e4-4b5e-4ad4-880c-f8689483bd5a</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\bld\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>3F8BA30DF2C4D13E3703DA35502AFCF610769ADF3194A390CB755FBA4D5013FE</RegisteredManifestChecksum>
+    <IntermediateOutputPath>C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>093823758E7324C4842826E2ED5C2C55BE2987F5E34A0DB616DBBE6E1A79E78A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d0e595e4-4b5e-4ad4-880c-f8689483bd5a_1.0.0.0_neutral__gk67abdd0vp4a</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d0e595e4-4b5e-4ad4-880c-f8689483bd5a_gk67abdd0vp4a!App</RegisteredUserModeAppID>
     <RegisteredPackageID>d0e595e4-4b5e-4ad4-880c-f8689483bd5a</RegisteredPackageID>
@@ -19,110 +19,110 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-02-25T02:20:02.109</Modified>
+      <Modified>2016-06-01T08:11:34.659</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\default.html">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2016-02-24T19:17:22.000</Modified>
+      <Modified>2016-05-31T14:19:03.332</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\images\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2016-05-31T07:12:07.955</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\images\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\SplashScreen.scale-200.png">
       <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2016-05-31T07:12:07.960</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\images\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square150x150Logo.scale-200.png">
       <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2016-05-31T07:12:07.964</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\images\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square44x44Logo.scale-200.png">
       <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2016-05-31T07:12:07.968</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2016-05-31T07:12:07.970</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\images\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\StoreLogo.png">
       <PackagePath>images\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2016-05-31T07:12:07.974</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\images\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Wide310x150Logo.scale-200.png">
       <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T08:38:34.000</Modified>
+      <Modified>2016-05-31T07:12:07.977</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\js\audio.js">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\audio.js">
       <PackagePath>js\audio.js</PackagePath>
-      <Modified>2016-02-24T19:13:50.000</Modified>
+      <Modified>2016-05-31T14:29:40.382</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\js\default.js">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2016-02-24T19:09:14.000</Modified>
+      <Modified>2016-05-31T07:12:07.984</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\js\global.js">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\global.js">
       <PackagePath>js\global.js</PackagePath>
-      <Modified>2016-02-24T19:34:28.000</Modified>
+      <Modified>2016-05-31T07:12:07.988</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\js\messages.js">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\messages.js">
       <PackagePath>js\messages.js</PackagePath>
-      <Modified>2016-02-24T19:17:40.000</Modified>
+      <Modified>2016-05-31T07:12:07.991</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\WinJS\js\en-US\ui.strings.js">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\WinJS\js\en-US\ui.strings.js">
       <PackagePath>WinJS\js\en-US\ui.strings.js</PackagePath>
-      <Modified>2015-08-27T08:38:32.000</Modified>
+      <Modified>2016-05-31T07:12:05.117</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\WinJS\js\base.js">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\WinJS\js\base.js">
       <PackagePath>WinJS\js\base.js</PackagePath>
-      <Modified>2016-02-24T18:16:34.000</Modified>
+      <Modified>2016-05-31T07:12:05.077</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\WinJS\js\ui.js">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\WinJS\js\ui.js">
       <PackagePath>WinJS\js\ui.js</PackagePath>
-      <Modified>2015-08-27T08:38:32.000</Modified>
+      <Modified>2016-05-31T07:12:05.993</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\css\default.css">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2015-08-27T08:38:32.000</Modified>
+      <Modified>2016-05-31T07:12:07.948</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\WinJS\css\ui-dark.css">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\WinJS\css\ui-dark.css">
       <PackagePath>WinJS\css\ui-dark.css</PackagePath>
-      <Modified>2015-08-27T08:38:32.000</Modified>
+      <Modified>2016-05-31T07:12:04.567</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\WinJS\css\ui-light.css">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\WinJS\css\ui-light.css">
       <PackagePath>WinJS\css\ui-light.css</PackagePath>
-      <Modified>2015-08-27T08:38:32.000</Modified>
+      <Modified>2016-05-31T07:12:04.606</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\Media\Assets\Fragile.mp3">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\Media\Assets\Fragile.mp3">
       <PackagePath>Media\Assets\Fragile.mp3</PackagePath>
-      <Modified>2012-07-02T23:12:08.000</Modified>
+      <Modified>2016-05-31T07:12:04.374</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\Media\Assets\k.m4a">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\Media\Assets\k.m4a">
       <PackagePath>Media\Assets\k.m4a</PackagePath>
-      <Modified>2013-12-12T23:41:46.000</Modified>
+      <Modified>2016-05-31T07:12:04.517</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\Media\Assets\Perfect.m4a">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\Media\Assets\Perfect.m4a">
       <PackagePath>Media\Assets\Perfect.m4a</PackagePath>
-      <Modified>2013-12-12T23:43:06.000</Modified>
+      <Modified>2016-05-31T07:12:04.426</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\WinJS\fonts\Symbols.ttf">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\WinJS\fonts\Symbols.ttf">
       <PackagePath>WinJS\fonts\Symbols.ttf</PackagePath>
-      <Modified>2015-08-27T08:38:32.000</Modified>
+      <Modified>2016-05-31T07:12:04.635</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kiseksen\Documents\BGAudio\BGAudio\BGAudio\bin\Debug\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-02-25T02:20:02.059</Modified>
+      <Modified>2016-06-01T08:11:33.974</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

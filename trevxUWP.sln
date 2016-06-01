@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "BGAudio", "BGAudio\BGAudio.jsproj", "{D0E595E4-4B5E-4AD4-880C-F8689483BD5A}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "trevxUWP", "BGAudio\trevxUWP.jsproj", "{D0E595E4-4B5E-4AD4-880C-F8689483BD5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

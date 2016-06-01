@@ -37,6 +37,7 @@
                     this.mediaPlayer.play();
                 } else {
                     var source = "ms-appx:///Media/Assets/" + MyPlaylist.songs[id];
+                    //var source = ["http://www.aldwaihi.com/ram/24frzdq37.mp3", "http://abdulrazzak.com/sounds/ya_sbr_ayob.mp3"];
                     this.currentSongId = id;
                     this.mediaPlayer.autoPlay = false;
                     this.mediaPlayer.setUriSource(new Windows.Foundation.Uri(source));
@@ -69,7 +70,9 @@
             songs: [
                 "Fragile.mp3",
                 "k.m4a",
-                "Perfect.m4a"
+                "Perfect.m4a",
+                "http://songily.com/new/file//90668619.mp3",
+                "http://songily.com/new/file//115904791.mp3",
             ]
         }
     );
