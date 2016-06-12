@@ -8,6 +8,8 @@ var MediaPlayerState = Windows.Media.Playback.MediaPlayerState;
 var mediaPlayer = Windows.Media.Playback.BackgroundMediaPlayer.current;
 var smtc = Windows.Media.SystemMediaTransportControls.getForCurrentView();
 
+
+
 function initializeBackgroundAudio() {
     setupSMTC();
     Windows.Media.Playback.BackgroundMediaPlayer.addEventListener("messagereceivedfrombackground", messagereceivedHandler);
@@ -19,6 +21,9 @@ function addApplicationEventHandlers() {
     document.getElementById("PlayButton").addEventListener("click", startOrResume, false);
     document.getElementById("PauseButton").addEventListener("click", pausePlayback, false);
     document.getElementById("NextButton").addEventListener("click", playNextSong, false);
+
+    document.getElementById("trevxSearchButton").addEventListener("click", searchForQuery)
+
     Windows.Media.Playback.BackgroundMediaPlayer.onmessagereceivedfrombackground = function (e) {
         messagereceivedHandler(e);
     }
@@ -74,6 +79,54 @@ function pausePlayback() {
     }
 }
 
+var favoritesList = [];
+function getAudioTitle(title) {
+    if (title.length > 40) {
+        title = title.substr(0, 39) + "..";
+    }
+    return title;
+}
+function getAudioImage(imgUrl) {
+    if (imgUrl.length == 0) {
+        imgUrl = "images/cover-img.jpg";
+    }
+    return imgUrl;
+}
+
+function callTrevxAPI() {
+    var searchQueryValueEncoded = document.getElementById("trevxSearchBox").value;
+    if (searchQueryValueEncoded.length > 0) {
+        var url = 'http://trevx.com/v1/' + searchQueryValueEncoded + '/0/40/?format=json';
+        $.getJSON(url, function (data) {
+            var searchResultList = data.slice(0, data.length - 7);
+            //callback(searchResultList);
+            if (searchResultList.length > 0) {
+                document.getElementById("results").innerHTML = createFavoriteLines(searchResultList);
+            } else {
+                document.getElementById("results").innerHTML = "No results found";
+            }
+        });
+
+    }
+  
+};
+
+function searchForQuery() {
+    var searchQueryValueEncoded = encodeURIComponent(document.getElementById("trevxSearchBox").value);
+    callTrevxAPI();
+    console.log("after callTrevxAPI(callback)");
+
+}
+
+function createFavoriteLines(list) {
+    var links = '';
+    for (var i = 0; i < list.length; i++) {
+        links += "<p>" + list[i].title + "</p>";
+    }
+    return links;
+
+}
+
 //
 // To start playback send message to the background
 //
@@ -90,6 +143,8 @@ function startPlaylist() {
 
     document.getElementById("PauseButton").disabled = false;
     document.getElementById("NextButton").disabled = false;
+    
+
 }
 
 function playNextSong() {
@@ -116,7 +171,7 @@ function progressBar() {
             var ctx = canvas.getContext("2d");
             //clear canvas before painting
             ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
-            ctx.fillStyle = "rgb(255,0,0)";
+            ctx.fillStyle = "#DD4433";
             var fWidth = (elapsedTime / mediaPlayer.naturalDuration) * (canvas.clientWidth);
             if (fWidth > 0) {
                 ctx.fillRect(0, 0, fWidth, canvas.clientHeight);

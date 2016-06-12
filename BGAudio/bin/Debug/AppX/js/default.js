@@ -2,7 +2,6 @@
 // http://go.microsoft.com/fwlink/?LinkID=329104
 (function () {
     "use strict";
-
     var app = WinJS.Application;
     var activation = Windows.ApplicationModel.Activation;
 
@@ -13,6 +12,8 @@
                 // your application here.
                 addApplicationEventHandlers();
                 backgroundAudioStateChanged();
+                console.log("if");
+
 
             } else {
                 // TODO: This application has been reactivated from suspension.
@@ -20,6 +21,8 @@
                 // Update progressbar on UI
                 backgroundAudioStateChanged();
                 addApplicationEventHandlers();
+                console.log("else");
+
             }
             args.setPromise(WinJS.UI.processAll());
         }

@@ -10,18 +10,40 @@
     <script src="WinJS/js/ui.js"></script>
 
     <!-- BGAudio references -->
+   <!-- <link href="/css/default.css" rel="stylesheet" /> -->
     <link href="/css/default.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+
     <script src="/js/default.js"></script>
     <script src="/js/messages.js"></script>
     <script src="/js/global.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
 </head>
 <body>
+    <div class="row">
+        <div class="col-lg-6">
+                <div class="form-group">
+                    <input id="trevxSearchBox" type="text" placeholder="Search">
+                </div>
+                <button id="trevxSearchButton" type="submit" class="btn btn-default">Search</button>
+        </div><!-- /.col-lg-6 -->
+    </div>
+    <button id="xhrb" class="btn btn-primary" type="button">xhr</button>
+    <button id="1" name="1" class="btn btn-info">Play</button>
+    <button type="button" class="btn btn-warning">Warning</button>
     <div:overflow:auto>
         <div id="statusMessage"></div>
         <div>Trevx Music Player</div>
-        <p><button type="button" id="PlayButton">Play</button></p>
-        <p><button type="button" id="PauseButton">Pause</button></p>
+        <button id="PlayButton" name="1" class="btn btn-success">Play</button>
+        <p><button type="button" id="PauseButton" class="btn btn-primary">Pause</button></p>
         <p><button type="button" id="NextButton">Next</button></p>
+        
+        
 
         <style id="inlinecss" type="text/css">
             /* put a border around the canvas element */
@@ -37,6 +59,11 @@
                 canvas not supported
             </canvas>
         </p>
+        <div id="results">
+
+
+        </div>
+
     </div:overflow:auto>
 </body>
 
