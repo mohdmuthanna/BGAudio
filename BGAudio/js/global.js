@@ -21,8 +21,19 @@ function addApplicationEventHandlers() {
     document.getElementById("PlayButton").addEventListener("click", startOrResume, false);
     document.getElementById("PauseButton").addEventListener("click", pausePlayback, false);
     document.getElementById("NextButton").addEventListener("click", playNextSong, false);
+    document.getElementById("PreviousButton").addEventListener("click", playPrevSong, false);
 
-    document.getElementById("trevxSearchButton").addEventListener("click", searchForQuery)
+    document.getElementById("trevxSearchButton").addEventListener("click", searchForQuery);
+    //$("p").click(function () {
+      //  console.log(this.id);
+        //console.log(this.innerHTML);
+    //});
+
+    $('#results').on('click', '.audio-line', function () {
+        console.log(this.id);
+        console.log(this.innerHTML);
+    });
+
 
     Windows.Media.Playback.BackgroundMediaPlayer.onmessagereceivedfrombackground = function (e) {
         messagereceivedHandler(e);
@@ -121,7 +132,8 @@ function searchForQuery() {
 function createFavoriteLines(list) {
     var links = '';
     for (var i = 0; i < list.length; i++) {
-        links += "<p>" + list[i].title + "</p>";
+        //"<a class='action' id='" + searchResultList[i].id + "'href='#'>"
+        links += "<p id='"+ list[i].id +"' class='audio-line'>" + list[i].title + "</p>";
     }
     return links;
 
@@ -154,6 +166,7 @@ function playNextSong() {
 }
 
 function playPrevSong() {
+    console.log("p p s g.gs")
     var message = new Windows.Foundation.Collections.ValueSet();
     message.insert("PrevSong", "");
     Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground(message);
@@ -232,6 +245,12 @@ function skipSong()
     smtc.playbackStatus = MediaPlaybackStatus.changing;
     playNextSong();
 }
+
+function skipSong() {
+    smtc.playbackStatus = MediaPlaybackStatus.changing;
+    playNextSong();
+}
+
 
 function smtc_buttonPressed(ev) {
     switch (ev.target.args.button) {

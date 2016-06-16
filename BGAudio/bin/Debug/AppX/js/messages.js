@@ -5,6 +5,7 @@
     AppSuspended: "appsuspend",
     AppResumed: "appresumed",
     StartPlayback: "startplayback",
-    SkipSong: "skipsong"
+    SkipSong: "skipsong",
+    PrevSong: "prevsong"
 };
 self.Messages = Messages;

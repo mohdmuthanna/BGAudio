@@ -19,6 +19,7 @@ js\messages.js
 Media\Assets\Fragile.mp3
 Media\Assets\k.m4a
 Media\Assets\Perfect.m4a
+storage\songs.json
 WinJS\css\ui-dark.css
 WinJS\css\ui-light.css
 WinJS\fonts\Symbols.ttf
