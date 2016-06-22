@@ -34,14 +34,18 @@ function addApplicationEventHandlers() {
         console.log(this.innerHTML);
     });
 
+    try {
+        Windows.Media.Playback.BackgroundMediaPlayer.onmessagereceivedfrombackground = function (e) {
+            messagereceivedHandler(e);
+        }
+        if (mediaPlayer.currentState != Windows.Media.Playback.MediaPlayerState.playing) {
+            document.getElementById("PauseButton").disabled = true;
+            document.getElementById("NextButton").disabled = true;
+        }
+    } catch (err) {
+        console.log(err);
+    }
 
-    Windows.Media.Playback.BackgroundMediaPlayer.onmessagereceivedfrombackground = function (e) {
-        messagereceivedHandler(e);
-    }
-    if (mediaPlayer.currentState != Windows.Media.Playback.MediaPlayerState.playing) {
-        document.getElementById("PauseButton").disabled = true;
-        document.getElementById("NextButton").disabled = true;
-    }
 }
 
 function removeMediaPlayerEventHandlers() {
@@ -166,7 +170,6 @@ function playNextSong() {
 }
 
 function playPrevSong() {
-    console.log("p p s g.gs")
     var message = new Windows.Foundation.Collections.ValueSet();
     message.insert("PrevSong", "");
     Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground(message);
@@ -246,27 +249,38 @@ function skipSong()
     playNextSong();
 }
 
-function skipSong() {
+function prevSong() {
     smtc.playbackStatus = MediaPlaybackStatus.changing;
-    playNextSong();
+    playPrevSong();
 }
 
 
 function smtc_buttonPressed(ev) {
-    switch (ev.target.args.button) {
-        case SystemMediaTransportControlsButton.play:
-            mediaPlayer.play();
-            break;
-        case SystemMediaTransportControlsButton.pause:
-            mediaPlayer.pause();
-            break;
-        case SystemMediaTransportControlsButton.next:
-            this.skipSong();
-            break;
+    try {
+        console.log(ev.button);
+        switch (ev.button) {
+            case 0:
+                mediaPlayer.play();
+                break;
+            case 1:
+                mediaPlayer.pause();
+                break;
+            //case SystemMediaTransportControlsButton.next: 
+            case 6:
+                this.skipSong();
+                break;
+            case 7:
+                this.prevSong();
+                break;
+        }
+    } catch (err) {
+        console.log(ev.button);
+        console.log(err);
     }
+
 };
 
-function systemmediatransportcontrol_propertyChanged(ev) { };
+function systemmediatransportcontrol_propertyChanged(ev) {};
 
 function setupSMTC()
 {
@@ -276,4 +290,5 @@ function setupSMTC()
     smtc.isPauseEnabled = true;
     smtc.isPlayEnabled = true;
     smtc.isNextEnabled = true;
+    smtc.isPreviousEnabled = true;
 }

@@ -1,5 +1,6 @@
 css\bootstrap.css
 css\default.css
+data\data.json
 default.html
 images\LockScreenLogo.scale-200.png
 images\SplashScreen.scale-200.png
@@ -19,7 +20,6 @@ js\messages.js
 Media\Assets\Fragile.mp3
 Media\Assets\k.m4a
 Media\Assets\Perfect.m4a
-storage\songs.json
 WinJS\css\ui-dark.css
 WinJS\css\ui-light.css
 WinJS\fonts\Symbols.ttf

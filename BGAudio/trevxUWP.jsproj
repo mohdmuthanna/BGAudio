@@ -80,7 +80,7 @@
     <Content Include="Media\Assets\Fragile.mp3" />
     <Content Include="Media\Assets\k.m4a" />
     <Content Include="Media\Assets\Perfect.m4a" />
-    <Content Include="storage\songs.json" />
+    <Content Include="data\data.json" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />

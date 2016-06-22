@@ -12,7 +12,6 @@
                 // your application here.
                 addApplicationEventHandlers();
                 backgroundAudioStateChanged();
-                console.log("if");
 
 
             } else {
@@ -21,7 +20,6 @@
                 // Update progressbar on UI
                 backgroundAudioStateChanged();
                 addApplicationEventHandlers();
-                console.log("else");
 
             }
             args.setPromise(WinJS.UI.processAll());
