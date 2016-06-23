@@ -23,7 +23,7 @@ function addApplicationEventHandlers() {
     document.getElementById("NextButton").addEventListener("click", playNextSong, false);
     document.getElementById("PreviousButton").addEventListener("click", playPrevSong, false);
 
-    document.getElementById("trevxSearchButton").addEventListener("click", searchForQuery);
+    document.getElementById("trevxSearchButton").addEventListener("click", searchForQuery, false);
     //$("p").click(function () {
       //  console.log(this.id);
         //console.log(this.innerHTML);
@@ -108,14 +108,14 @@ function getAudioImage(imgUrl) {
     return imgUrl;
 }
 
-function callTrevxAPI() {
-    var searchQueryValueEncoded = document.getElementById("trevxSearchBox").value;
+function searchForQuery() {
+    var searchQueryValueEncoded = encodeURI(document.getElementById("trevxSearchBox").value);
     if (searchQueryValueEncoded.length > 0) {
         var url = 'http://trevx.com/v1/' + searchQueryValueEncoded + '/0/40/?format=json';
         $.getJSON(url, function (data) {
             var searchResultList = data.slice(0, data.length - 7);
-            //callback(searchResultList);
             if (searchResultList.length > 0) {
+                sendResultPlaylist(searchResultList);
                 document.getElementById("results").innerHTML = createFavoriteLines(searchResultList);
             } else {
                 document.getElementById("results").innerHTML = "No results found";
@@ -126,12 +126,12 @@ function callTrevxAPI() {
   
 };
 
-function searchForQuery() {
-    var searchQueryValueEncoded = encodeURIComponent(document.getElementById("trevxSearchBox").value);
-    callTrevxAPI();
-    console.log("after callTrevxAPI(callback)");
+function sendResultPlaylist(searchResultList) {
+        var message = new Windows.Foundation.Collections.ValueSet();
+        message.insert(Messages.ResultPlaylist, JSON.stringify(searchResultList));
+        Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground(message);
+};
 
-}
 
 function createFavoriteLines(list) {
     var links = '';
