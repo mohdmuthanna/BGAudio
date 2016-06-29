@@ -3,11 +3,14 @@ var serverStarted = false;
 var isMusicPlaying = false;
 var initialized = false;
 
+var resultList = [];
+var favoritesList = [];
+
+
 var MediaPlaybackStatus = Windows.Media.MediaPlaybackStatus;
 var MediaPlayerState = Windows.Media.Playback.MediaPlayerState;
 var mediaPlayer = Windows.Media.Playback.BackgroundMediaPlayer.current;
 var smtc = Windows.Media.SystemMediaTransportControls.getForCurrentView();
-
 
 
 function initializeBackgroundAudio() {
@@ -24,14 +27,26 @@ function addApplicationEventHandlers() {
     document.getElementById("PreviousButton").addEventListener("click", playPrevSong, false);
 
     document.getElementById("trevxSearchButton").addEventListener("click", searchForQuery, false);
-    //$("p").click(function () {
-      //  console.log(this.id);
-        //console.log(this.innerHTML);
-    //});
+
+    $('#results').on('click', '.add-remove-fav', function () {
+        //send onAppId & id wich is song id in trevx database
+        AddRemoveFav(this.getAttribute('on-app-id'),this.id);
+        console.log(this.id);
+    });
 
     $('#results').on('click', '.audio-line', function () {
+        //send send to background
+        PlayThisAudio("resultlist", this.getAttribute('on-app-id'));
+        //startOrResume();
+        //startPlaylist();
+        initializeBackgroundAudio()
         console.log(this.id);
-        console.log(this.innerHTML);
+    });
+
+    $('#fav').on('click', '.audio-line', function () {
+        //send send to background
+        PlayThisAudio("favoritesList", this.getAttribute('on-app-id'));
+        console.log(this.id);
     });
 
     try {
@@ -94,7 +109,7 @@ function pausePlayback() {
     }
 }
 
-var favoritesList = [];
+
 function getAudioTitle(title) {
     if (title.length > 40) {
         title = title.substr(0, 39) + "..";
@@ -113,35 +128,198 @@ function searchForQuery() {
     if (searchQueryValueEncoded.length > 0) {
         var url = 'http://trevx.com/v1/' + searchQueryValueEncoded + '/0/40/?format=json';
         $.getJSON(url, function (data) {
-            var searchResultList = data.slice(0, data.length - 7);
-            if (searchResultList.length > 0) {
-                sendResultPlaylist(searchResultList);
-                document.getElementById("results").innerHTML = createFavoriteLines(searchResultList);
+            resultList = data.slice(0, data.length - 7);
+            WriteTextFileResult(resultList);
+            sendResultList(JSON.stringify(resultList));
+            removeRedundentResult();
+            if (resultList.length > 0) {
+                document.getElementById("results").innerHTML = createAudioLines(resultList);
             } else {
                 document.getElementById("results").innerHTML = "No results found";
             }
         });
-
     }
-  
 };
 
-function sendResultPlaylist(searchResultList) {
+function sendResultList(list) {
         var message = new Windows.Foundation.Collections.ValueSet();
-        message.insert(Messages.ResultPlaylist, JSON.stringify(searchResultList));
+        message.insert(Messages.ResultPlaylist, list);
         Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground(message);
+        console.log("sendResultList function");
+};
+
+function sendFavoritesList(list) {
+    var message = new Windows.Foundation.Collections.ValueSet();
+    message.insert(Messages.FavoritesList, list);
+    Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground(message);
+    //console.log("sendfavoritesList function");
+};
+
+function PlayThisAudio(activeList, onAppId) {
+    console.log("activ " + activeList);
+    var message = new Windows.Foundation.Collections.ValueSet();
+    var detail = { activeList: activeList, onAppId: onAppId };
+    message.insert(Messages.PlayThisAudio, JSON.stringify(detail));
+    Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground(message);
+    console.log("sendResultList function");
 };
 
 
-function createFavoriteLines(list) {
-    var links = '';
-    for (var i = 0; i < list.length; i++) {
-        //"<a class='action' id='" + searchResultList[i].id + "'href='#'>"
-        links += "<p id='"+ list[i].id +"' class='audio-line'>" + list[i].title + "</p>";
-    }
-    return links;
+function AddRemoveFav(onAppId, id) {
+    var isFavored = checkIfFavored(id);
+    //console.log("id = " +id +  "  isFavored = " + isFavored);
+    
+    if (isFavored == -1) {
+        addToFavorites(onAppId);
+    } else {
+        removeFromFavorites(id);
+    };
+
+    WriteTextFileFav(favoritesList);
+    sendFavoritesList(JSON.stringify(favoritesList));
+    document.getElementById("fav").innerHTML = createAudioLines(favoritesList);
+    //ReadTextFileFav();
 
 }
+
+function checkIfFavored(target) {
+        for (var i = 0; i < favoritesList.length; i++) {
+            if (favoritesList[i].id == target) {
+                return [i];
+            }
+        }
+        return -1;
+
+}
+
+function addToFavorites(target){
+  // max length should not be more than 250, because google SafeSearch API cant handel more than 500 links
+  // and every audio has tow links, image & audio url
+    if (favoritesList.length < 249) {
+        console.log("ddddd  " + resultList.length);
+    for (var i = 0; i < resultList.length; i++) {
+      if (resultList[i].id == target) {
+        var active = i;
+      }
+    }
+    var element = resultList[active];
+    favoritesList.push(resultList[target]);
+  } else {
+    alert("Sorry, your favorites list is full, remove some items and the try add new item");
+  }
+
+} // add to favorite
+
+function removeFromFavorites(target){
+  for (var i = 0; i < favoritesList.length; i++) {
+    if (favoritesList[i].id == target) {
+      favoritesList.splice( i, 1 );
+    }
+  }
+}
+
+
+
+function createAudioLines(list) {
+    var links = '';
+    for (var i = 0; i < list.length; i++) {
+        //"<a class='action' id='" + resultList[i].id + "'href='#'>"
+        links += "<span id=" + list[i].id + " class='add-remove-fav' on-app-id=" + i + ">add to fav</span>" + "<p id=" + list[i].id + " on-app-id=" + i + " class='audio-line'>" + list[i].title + "</p>";
+    }
+    return links;
+}
+
+
+//Read and Wite file
+var applicationData = Windows.Storage.ApplicationData.current;
+var localFolder = applicationData.localFolder;
+
+// This  to read fav-list file
+function WriteTextFileResult(JSONlist) {
+    localFolder.createFileAsync("searchResult.txt", Windows.Storage.CreationCollisionOption.replaceExisting)
+   .then(function (sampleFile) {
+       return Windows.Storage.FileIO.writeTextAsync(sampleFile, JSON.stringify(JSONlist));
+
+   }).done(function () {
+       console.log("Saved completely ");
+       // console.log("beforddddd  " + JSON.stringify(sx).length);
+   }, function () {
+       console.log("Not saved ");
+   });
+}
+
+// This  to read fav-list file
+function ReadTextFileResult() {
+    localFolder.getFileAsync("searchResult.txt")
+   .then(function (sampleFile) {
+
+       return Windows.Storage.FileIO.readTextAsync(sampleFile);;
+   }).done(function (timestamp) {
+       //list to html
+       if (JSON.parse(timestamp).length > 0) {
+           resultList = JSON.parse(timestamp);
+           document.getElementById("results").innerHTML = createAudioLines(resultList);
+           sendResultList(timestamp);
+           console.log("read done, msg should sent ");
+       } else {
+           document.getElementById("results").innerHTML = "search for a music";
+       }
+       
+   }, function () {
+       document.getElementById("results").innerHTML = "an erorr accured";
+       console.log("not exisit");
+   });
+}
+
+
+function WriteTextFileFav(JSONlist) {
+    localFolder.createFileAsync("fav.txt", Windows.Storage.CreationCollisionOption.replaceExisting)
+   .then(function (sampleFile) {
+       return Windows.Storage.FileIO.writeTextAsync(sampleFile, JSON.stringify(JSONlist));
+
+   }).done(function () {
+       console.log("Saved completely ");
+       // console.log("beforddddd  " + JSON.stringify(sx).length);
+   }, function () {
+       console.log("Not saved ");
+   });
+}
+
+// This  to read fav-list file
+function ReadTextFileFav() {
+    localFolder.getFileAsync("fav.txt")
+   .then(function (sampleFile) {
+
+       return Windows.Storage.FileIO.readTextAsync(sampleFile);;
+   }).done(function (timestamp) {
+       //list to html
+       try {
+           if (JSON.parse(timestamp).length > 0) {
+               favoritesList = JSON.parse(timestamp);
+               document.getElementById("fav").innerHTML = createAudioLines(favoritesList);
+               sendResultList(timestamp);
+               console.log("read done, msg should sent ");
+           } else {
+               document.getElementById("fav").innerHTML = "no fav added yet";
+           }
+       } catch (err) {
+           console.log(err);
+       }
+
+
+   }, function () {
+       document.getElementById("fav").innerHTML = "an erorr accured";
+       console.log("not exisit");
+   });
+}
+
+function removeRedundentResult() {
+    resultList = resultList.reduceRight(function (r, a) {
+        r.some(function (b) { return a.link === b.link; }) || r.push(a);
+        return r;
+    }, []);
+    resultList = resultList.reverse();
+};
 
 //
 // To start playback send message to the background
@@ -277,7 +455,6 @@ function smtc_buttonPressed(ev) {
         console.log(ev.button);
         console.log(err);
     }
-
 };
 
 function systemmediatransportcontrol_propertyChanged(ev) {};
@@ -291,4 +468,8 @@ function setupSMTC()
     smtc.isPlayEnabled = true;
     smtc.isNextEnabled = true;
     smtc.isPreviousEnabled = true;
+}
+window.onload = function(){
+    ReadTextFileFav();
+    ReadTextFileResult();
 }

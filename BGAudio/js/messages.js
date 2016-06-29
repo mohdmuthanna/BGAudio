@@ -7,7 +7,9 @@
     StartPlayback: "startplayback",
     SkipSong: "skipsong",
     PrevSong: "prevsong",
-    ResultPlaylist: "resultplaylist"
+    ResultPlaylist: "resultplaylist",
+    PlayThisAudio: "playthisaudio",
+    FavoritesList: "favoriteslist",
 };
 
 //self is equavilant to window in javascript, used to create global variable
