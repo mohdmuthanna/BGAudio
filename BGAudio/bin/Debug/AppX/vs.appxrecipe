@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-19T07:43:07.541</Modified>
+      <Modified>2016-07-04T07:36:50.652</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,7 +44,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2016-06-28T08:54:19.442</Modified>
+      <Modified>2016-06-30T12:10:56.981</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
@@ -82,7 +82,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\audio.js">
       <PackagePath>js\audio.js</PackagePath>
-      <Modified>2016-06-29T12:02:55.088</Modified>
+      <Modified>2016-07-04T09:44:11.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\bootstrap.min.js">
       <PackagePath>js\bootstrap.min.js</PackagePath>
@@ -94,7 +94,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\global.js">
       <PackagePath>js\global.js</PackagePath>
-      <Modified>2016-06-29T11:59:18.184</Modified>
+      <Modified>2016-07-04T09:28:44.139</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\jquery-2.2.4.min.js">
       <PackagePath>js\jquery-2.2.4.min.js</PackagePath>
@@ -110,7 +110,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\messages.js">
       <PackagePath>js\messages.js</PackagePath>
-      <Modified>2016-06-28T18:25:50.703</Modified>
+      <Modified>2016-07-04T09:20:29.708</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\WinJS\js\en-US\ui.strings.js">
       <PackagePath>WinJS\js\en-US\ui.strings.js</PackagePath>
@@ -146,7 +146,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-06-19T07:43:07.240</Modified>
+      <Modified>2016-07-04T07:36:50.051</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

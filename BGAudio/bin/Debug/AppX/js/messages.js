@@ -7,10 +7,10 @@
     StartPlayback: "startplayback",
     SkipSong: "skipsong",
     PrevSong: "prevsong",
-    ResultPlaylist: "resultplaylist",
+    ResultList: "resultlist",
     PlayThisAudio: "playthisaudio",
     FavoritesList: "favoriteslist",
+    CanvasTracker: "canvastracker",
 };
-
 //self is equavilant to window in javascript, used to create global variable
 self.Messages = Messages;

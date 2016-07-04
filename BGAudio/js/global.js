@@ -5,6 +5,7 @@ var initialized = false;
 
 var resultList = [];
 var favoritesList = [];
+var firstRun = true;
 
 
 var MediaPlaybackStatus = Windows.Media.MediaPlaybackStatus;
@@ -28,15 +29,28 @@ function addApplicationEventHandlers() {
 
     document.getElementById("trevxSearchButton").addEventListener("click", searchForQuery, false);
 
+    $("#canvas").click(function (jqEvent) {
+        var coords = {
+            x: jqEvent.pageX - $("#canvas").offset().left,
+        };
+        var logicalCoords = {
+            x: coords.x / (canvas.width) *100,
+        }
+        console.log("logicalCoords   " + logicalCoords.x);
+        canvasTracker(logicalCoords.x);
+    });
+
+
     $('#results').on('click', '.add-remove-fav', function () {
         //send onAppId & id wich is song id in trevx database
         AddRemoveFav(this.getAttribute('on-app-id'),this.id);
         console.log(this.id);
     });
 
+
     $('#results').on('click', '.audio-line', function () {
         //send send to background
-        PlayThisAudio("resultlist", this.getAttribute('on-app-id'));
+        PlayThisAudio("resultList", this.getAttribute('on-app-id'));
         //startOrResume();
         //startPlaylist();
         initializeBackgroundAudio()
@@ -49,6 +63,12 @@ function addApplicationEventHandlers() {
         console.log(this.id);
     });
 
+    $('#fav').on('click', '.add-remove-fav', function () {
+        //send onAppId & id wich is song id in trevx database
+        AddRemoveFav(this.getAttribute('on-app-id'), this.id);
+        console.log(this.id);
+    });
+
     try {
         Windows.Media.Playback.BackgroundMediaPlayer.onmessagereceivedfrombackground = function (e) {
             messagereceivedHandler(e);
@@ -58,6 +78,7 @@ function addApplicationEventHandlers() {
             document.getElementById("NextButton").disabled = true;
         }
     } catch (err) {
+        
         console.log(err);
     }
 
@@ -129,9 +150,10 @@ function searchForQuery() {
         var url = 'http://trevx.com/v1/' + searchQueryValueEncoded + '/0/40/?format=json';
         $.getJSON(url, function (data) {
             resultList = data.slice(0, data.length - 7);
+            removeRedundentResult();
             WriteTextFileResult(resultList);
             sendResultList(JSON.stringify(resultList));
-            removeRedundentResult();
+            
             if (resultList.length > 0) {
                 document.getElementById("results").innerHTML = createAudioLines(resultList);
             } else {
@@ -141,11 +163,15 @@ function searchForQuery() {
     }
 };
 
+// this function ricive stringfy JSON object to send it in message
 function sendResultList(list) {
+       // console.log("555555555555555555");
         var message = new Windows.Foundation.Collections.ValueSet();
-        message.insert(Messages.ResultPlaylist, list);
+        message.insert(Messages.ResultList, list);
         Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground(message);
-        console.log("sendResultList function");
+      //  console.log("66666666666666666666666");
+
+
 };
 
 function sendFavoritesList(list) {
@@ -156,12 +182,17 @@ function sendFavoritesList(list) {
 };
 
 function PlayThisAudio(activeList, onAppId) {
-    console.log("activ " + activeList);
+    //console.log("active in global " + activeList);
     var message = new Windows.Foundation.Collections.ValueSet();
     var detail = { activeList: activeList, onAppId: onAppId };
     message.insert(Messages.PlayThisAudio, JSON.stringify(detail));
     Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground(message);
-    console.log("sendResultList function");
+};
+
+function canvasTracker(percentage) {
+    var message = new Windows.Foundation.Collections.ValueSet();
+    message.insert(Messages.CanvasTracker, percentage);
+    Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground(message);
 };
 
 
@@ -178,8 +209,6 @@ function AddRemoveFav(onAppId, id) {
     WriteTextFileFav(favoritesList);
     sendFavoritesList(JSON.stringify(favoritesList));
     document.getElementById("fav").innerHTML = createAudioLines(favoritesList);
-    //ReadTextFileFav();
-
 }
 
 function checkIfFavored(target) {
@@ -258,9 +287,11 @@ function ReadTextFileResult() {
        //list to html
        if (JSON.parse(timestamp).length > 0) {
            resultList = JSON.parse(timestamp);
+           sendResultList(JSON.stringify(resultList));
            document.getElementById("results").innerHTML = createAudioLines(resultList);
-           sendResultList(timestamp);
-           console.log("read done, msg should sent ");
+           //console.log("read done, msg should sent " + JSON.stringify(resultList));
+          // sendResultList(JSON.stringify(resultList));
+           
        } else {
            document.getElementById("results").innerHTML = "search for a music";
        }
@@ -296,9 +327,9 @@ function ReadTextFileFav() {
        try {
            if (JSON.parse(timestamp).length > 0) {
                favoritesList = JSON.parse(timestamp);
+               //sendFavoritesList(JSON.stringify(favoritesList));
                document.getElementById("fav").innerHTML = createAudioLines(favoritesList);
-               sendResultList(timestamp);
-               console.log("read done, msg should sent ");
+               //console.log("read done, msg should sent ");
            } else {
                document.getElementById("fav").innerHTML = "no fav added yet";
            }
@@ -373,7 +404,6 @@ function progressBar() {
         }
     }
     catch (error) {
-
         log(error.message);
         log(error.description);
     }
@@ -469,7 +499,14 @@ function setupSMTC()
     smtc.isNextEnabled = true;
     smtc.isPreviousEnabled = true;
 }
-window.onload = function(){
+
+window.onload = function () {
+
+    ReadTextFileFav();
+    ReadTextFileResult();
+}
+
+function read() {
     ReadTextFileFav();
     ReadTextFileResult();
 }

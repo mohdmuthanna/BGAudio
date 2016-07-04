@@ -15,23 +15,6 @@
     var resultList = [];
     var favoritesList = [];
     var activeList = '';
-
-    //Read and Wite file
-    var applicationData = Windows.Storage.ApplicationData.current;
-    var localFolder = applicationData.localFolder;
-    function ReadTextFile() {
-        localFolder.getFileAsync("searchResult.txt")
-       .then(function (sampleFile) {
-           return Windows.Storage.FileIO.readTextAsync(sampleFile);
-       }).done(function (timestamp) {
-           // Data is contained in timestamp 
-           //MyPlaylist.songs = JSON.parse(timestamp);
-           console.log(timestamp);
-       }, function () {
-           MyPlaylist.songs = {};
-           console.log("not exisit");
-       });
-    }
      
     var SongChangedEvent = WinJS.Class.mix(WinJS.Class.define(function () { }), WinJS.Utilities.eventMixin);
     var MyPlaylist = WinJS.Class.define(
@@ -68,9 +51,10 @@
                             console.log("ok");
                         } catch (err) {
                             console.log(err);
+
                             //this.currentSongId = id+1;
                             //this.startSongAt(id+1);
-                            //this.skipToNext();
+                            this.skipToNext();
 
                         }
 
@@ -82,7 +66,7 @@
                 }
             },
 
-            mediaPlayer_mediaEnded: function(ev) {
+            mediaPlayer_mediaEnded: function (ev) {
                 this.skipToNext();
             },
             mediaPlayer_mediaErorr: function (ev) {
@@ -184,8 +168,10 @@
             },
 
             backgroundMediaPlayer_messageReceivedFromForeground: function (ev) {
-                console.log("msg recived ");
                 var iter = ev.data.first();
+                //console.log("777777777777777" + iter.current.key);
+
+
                 while (iter.hasCurrent) {
                     switch(iter.current.key.toLowerCase()) {
                         case Messages.AppSuspended:
@@ -210,28 +196,37 @@
                             this.skipSong();
                             break;
                         case Messages.PlayThisAudio:
-                            var onAppId = JSON.parse(iter.current.value).onAppId
-                            console.log("play this audio  " + onAppId);
                             
-                            console.log("activ " + JSON.parse(iter.current.value).activeList);
-                            if (JSON.parse(iter.current.value).activeList == "resultsList") {
-                                MyPlaylist.songs = resultList;
-                                console.log("fffffffffffffff"+resultList);
-                            } else {
-                                MyPlaylist.songs = favoritesList;
-                            }
+                            var onAppId = JSON.parse(iter.current.value).onAppId
+                            var activeList = JSON.parse(iter.current.value).activeList;
+                            console.log("ppplllaaay   " + activeList);
+                            //console.log("play this audio  " + onAppId);
+                            
+                            console.log("activeList in audio.js  =  " + activeList);
 
+                            if (activeList == "favoritesList") {
+                                MyPlaylist.songs = favoritesList;
+                            } else {
+                                MyPlaylist.songs = resultList;
+                                //console.log(Messages.ResultList.value)
+
+                            }
                             this.playThisAudio(onAppId);
                             break;
-                        case Messages.ResultPlaylist:
-                            console.log("audio.js recive message result");
-                            console.log(JSON.parse(iter.current.value));
+                        case Messages.CanvasTracker:
+                            var percantge = iter.current.value;
+                            console.log("canvooooooooooosy " + percantge);
+                            this.seekAudio(percantge);
+                            break;
+                        case Messages.ResultList:
+                            //console.log("audio.js recive message result");
+                            //console.log(JSON.parse(iter.current.value));
                             resultList = JSON.parse(iter.current.value);
                             //MyPlaylist.songs = JSON.parse(iter.current.value);
                             break;
                         case Messages.FavoritesList:
-                            console.log("audio.js recive message result");
-                            console.log(JSON.parse(iter.current.value));
+                            //console.log("audio.js recive message result");
+                           // console.log(JSON.parse(iter.current.value));
                             //MyPlaylist.songs = JSON.parse(iter.current.value);
                             favoritesList = JSON.parse(iter.current.value);
                             break;
@@ -251,6 +246,14 @@
                 this.getPlaylist().startSongAt(onAppId);
             },
 
+            seekAudio: function(percantge){
+                if (percantge > 50) {
+                    this.skipSong();
+                } else {
+
+                }
+            },
+
             taskCompleted: function (ev) {
                 console.log("MyBackgroundAudioTaskJS Completed...");
                 BackgroundMediaPlayer.shutdown();
@@ -260,7 +263,7 @@
             },
 
             onCanceled: function (ev) {
-                console.log("MyBackgroundAudioTaskJS cancel requested...");
+               // console.log("MyBackgroundAudioTaskJS cancel requested...");
                 BackgroundMediaPlayer.shutdown();
                 if (this.deferral) {
                     this.deferral.complete();
@@ -272,6 +275,62 @@
     var task = new MyBackgroundAudioTask();
     task.run();
 
-    //ReadTextFile();
+    //Read and Wite file
+    var applicationData = Windows.Storage.ApplicationData.current;
+    var localFolder = applicationData.localFolder;
+
+    // This  to read fav-list file
+    function ReadTextFileFav() {
+        localFolder.getFileAsync("fav.txt")
+       .then(function (sampleFile) {
+
+           return Windows.Storage.FileIO.readTextAsync(sampleFile);;
+       }).done(function (timestamp) {
+           //list to html
+           try {
+               if (JSON.parse(timestamp).length > 0) {
+                   favoritesList = JSON.parse(timestamp);
+               } else {
+                   favoritesList = [];
+               }
+           } catch (err) {
+               console.log(err);
+               favoritesList = [];
+           }
+       }, function () {
+           favoritesList = [];
+           //console.log("not exisit");
+       });
+    }
+
+
+    function ReadTextFileResult() {
+        localFolder.getFileAsync("searchResult.txt")
+       .then(function (sampleFile) {
+
+           return Windows.Storage.FileIO.readTextAsync(sampleFile);;
+       }).done(function (timestamp) {
+           //list to html
+           if (JSON.parse(timestamp).length > 0) {
+               resultList = JSON.parse(timestamp);
+
+           } else {
+               resultList = [];
+           }
+
+       }, function () {
+           resultList = [];
+           //console.log("not exisit");
+       });
+    }
+
+
+    function read() {
+        ReadTextFileFav();
+        ReadTextFileResult();
+    }
+
+
+    read();
 
 })();
