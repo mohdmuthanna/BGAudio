@@ -36,7 +36,6 @@ function addApplicationEventHandlers() {
         var logicalCoords = {
             x: coords.x / (canvas.width) *100,
         }
-        console.log("logicalCoords   " + logicalCoords.x);
         canvasTracker(logicalCoords.x);
     });
 

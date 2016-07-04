@@ -215,7 +215,7 @@
                             break;
                         case Messages.CanvasTracker:
                             var percantge = iter.current.value;
-                            if (percantge > 99) {
+                            if (percantge > 100) {
                                 this.skipSong();
                             } else {
                                 this.seekAudio(percantge);
@@ -251,7 +251,8 @@
             },
 
             seekAudio: function(percantge){
-                
+                var timeToSeek = BackgroundMediaPlayer.current.naturalDuration * percantge / 100;
+                BackgroundMediaPlayer.current.position = timeToSeek;
             },
 
             taskCompleted: function (ev) {
