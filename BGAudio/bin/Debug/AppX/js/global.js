@@ -1,8 +1,4 @@
-﻿/// <reference path="jquery-2.2.4.min.js" />
-/// <reference path="jquery-ui.js" />
-
-
-var positionUpdateInterval = 0;
+﻿var positionUpdateInterval = 0;
 var serverStarted = false;
 var isMusicPlaying = false;
 var initialized = false;
@@ -97,7 +93,6 @@ function addApplicationEventHandlers() {
             // on select suggestion item do
             select: function (event, ui) {
                 searchForQuery(ui.item.value);
-                document.getElementById("trevxSearchBox").value = '';
             },
             minLength: 2,
             //remove results status message
