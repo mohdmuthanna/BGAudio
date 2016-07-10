@@ -12,3 +12,39 @@ footer {
     overflow: scroll;
     height: 200px;
 }
+
+
+.results-list li .title:hover, .favorites-list li .title:hover{
+	cursor:pointer;
+}
+
+.ui-autocomplete{
+	padding: 0;
+	border: 1px solid #bebebe;
+	border-width: 0 1px 1px;
+	z-index: 999999;
+	position: absolute;
+	top: 34px !important;
+	left: 90px !important;
+	background-color: #fff;
+	list-style-type: none;
+}
+.ui-autocomplete li{
+	display: block;
+	padding: 5px 10px;
+	border-left:3px solid #fff;
+}
+.ui-autocomplete li:hover{
+	background-color:#ededed;
+	border-left:3px solid #d43;
+}
+.ui-state-focus
+{
+    background:#dedede;
+    outline:none;
+}
+/*when mouse hover the suggestion result list a message will printed */
+/*dont display this message*/
+.ui-helper-hidden-accessible:last-child{
+	display: none;
+}

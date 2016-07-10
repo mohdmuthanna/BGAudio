@@ -1,4 +1,8 @@
-﻿var positionUpdateInterval = 0;
+﻿/// <reference path="jquery-2.2.4.min.js" />
+/// <reference path="jquery-ui.js" />
+
+
+var positionUpdateInterval = 0;
 var serverStarted = false;
 var isMusicPlaying = false;
 var initialized = false;
@@ -81,6 +85,28 @@ function addApplicationEventHandlers() {
         console.log(err);
     }
 
+    $(function () {
+        $("#trevxSearchBox").autocomplete({
+            source: function (request, response) {
+                var suggestionUrl = "http://trevx.com/v1/suggestion/" + encodeURIComponent(request.term) + "/?format=json";
+                $.getJSON(suggestionUrl, function (data) {
+                    var searchTerms = data.slice(0, data.length - 4);
+                    response(searchTerms);
+                });
+            },
+            // on select suggestion item do
+            select: function (event, ui) {
+                searchForQuery(ui.item.value);
+            },
+            minLength: 2,
+            //remove results status message
+            messages: {
+                noResults: '',
+                results: function () { }
+            },
+        })
+    });
+
 }
 
 function removeMediaPlayerEventHandlers() {
@@ -124,8 +150,12 @@ function startOrResume() {
 }
 
 function pausePlayback() {
-    if (mediaPlayer.canPause) {
-        mediaPlayer.pause();
+    try {
+        if (mediaPlayer.canPause) {
+            mediaPlayer.pause();
+        }
+    } catch (err) {
+        console.log("can paused errrrrrrrrrrrror  ");
     }
 }
 
@@ -143,8 +173,12 @@ function getAudioImage(imgUrl) {
     return imgUrl;
 }
 
-function searchForQuery() {
-    var searchQueryValueEncoded = encodeURI(document.getElementById("trevxSearchBox").value);
+function searchForQuery(searchQueryValueEncoded) {
+
+    if (typeof searchQueryValueEncoded !== "string") {
+        var searchQueryValueEncoded = encodeURI(document.getElementById("trevxSearchBox").value);
+    }
+
     if (searchQueryValueEncoded.length > 0) {
         var url = 'http://trevx.com/v1/' + searchQueryValueEncoded + '/0/40/?format=json';
         $.getJSON(url, function (data) {
@@ -160,6 +194,8 @@ function searchForQuery() {
             }
         });
     }
+
+    document.getElementById("trevxSearchBox").value = '';
 };
 
 // this function ricive stringfy JSON object to send it in message
@@ -350,6 +386,56 @@ function removeRedundentResult() {
     }, []);
     resultList = resultList.reverse();
 };
+
+//autocomplete
+//$(function () {
+//    $("#trevxSearchButton").autocomplete({
+//        source: function (request, response) {
+//            var suggestionUrl = "http://trevx.com/v1/suggestion/" + encodeURIComponent(request.term) + "/?format=json";
+//            $.getJSON(suggestionUrl, function (data) {
+//                var searchTerms = data.slice(0, data.length - 4);
+//                response(searchTerms);
+//                console.log("aaauuuuuutttttttttoooooo");
+//            });
+//        },
+//        // on select suggestion item do
+//        select: function (event, ui) {
+//            searchForAQuery(ui.item.value);
+//        },
+//        minLength: 2,
+//        //remove results status message
+//        messages: {
+//            noResults: '',
+//            results: function () { }
+//        },
+//    })
+//});
+
+//$("input.suggest-user").autocomplete({
+//    source: function (request, response) {
+//        $.ajax({
+//            dataType: "json",
+//            type: 'Get',
+//            url: 'yourURL',
+//            success: function (data) {
+//                $('input.suggest-user').removeClass('ui-autocomplete-loading');
+//                // hide loading image
+
+//                response($.map(data, function (item) {
+//                    // your operation on data
+//                }));
+//            },
+//            error: function (data) {
+//                $('input.suggest-user').removeClass('ui-autocomplete-loading');
+//            }
+//        });
+//    },
+//    minLength: 3,
+//    open: function () { },
+//    close: function () { },
+//    focus: function (event, ui) { },
+//    select: function (event, ui) { }
+//});
 
 //
 // To start playback send message to the background
