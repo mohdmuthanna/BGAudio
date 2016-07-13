@@ -51,6 +51,7 @@ function addApplicationEventHandlers() {
         PlayThisAudio("resultList", this.getAttribute('on-app-id'));
         //startOrResume();
         //startPlaylist();
+        document.getElementById("curr-song-name").innerText = this.getAttribute('title');
         console.log("event listener: this.getAttribute('on-app-id')= " + this.getAttribute('on-app-id'));
     });
 
@@ -121,6 +122,10 @@ function messagereceivedHandler(e) {
                     isMusicPlaying = true;
                     smtc.playbackStatus = MediaPlaybackStatus.playing;
                     break;
+                case Messages.CurrentSongName:
+
+                    document.getElementById("curr-song-name").innerText = e.data.first().current.value;
+                    break;
                 case Messages.CurrentSong:
                     updateCurrentSong(e.detail[i].data[key]);
                     break;
@@ -133,6 +138,7 @@ function updateCurrentSong(songName) {
     smtc.displayUpdater.type = MediaPlaybackType.music;
     smtc.displayUpdater.musicProperties.title = songName;
     smtc.displayUpdater.update();
+    
 }
 
 function startOrResume() {
@@ -212,12 +218,7 @@ function sendFavoritesList(list) {
 
 function PlayThisAudio(activeList, onAppId) {
     //console.log("active in global " + activeList);
-    startPlaylist();
-    if (!initialized) {
-        //initializeBackgroundAudio();
-        //console.log("//initializeBackgroundAudio();      5555555555555");
-    };
-    
+    startPlaylist();  
     var message = new Windows.Foundation.Collections.ValueSet();
     var detail = { activeList: activeList, onAppId: onAppId };
     message.insert(Messages.PlayThisAudio, JSON.stringify(detail));
@@ -288,7 +289,8 @@ function createAudioLines(list) {
     var links = '';
     for (var i = 0; i < list.length; i++) {
         //"<a class='action' id='" + resultList[i].id + "'href='#'>"
-        links += "<span id=" + list[i].id + " class='add-remove-fav' on-app-id=" + i + ">add to fav</span>" + "<p id=" + list[i].id + " on-app-id=" + i + " class='audio-line'>" + list[i].title + "</p>";
+        links += "<span id=" + list[i].id + " class='add-remove-fav' on-app-id=" + i + ">add to fav</span>" + "<p id=" + list[i].id + " title ='"+ list[i].title +"' on-app-id=" + i + " class='audio-line'>" + list[i].title + "</p>";
+        title = list[i].title
     }
     return links;
 }
@@ -503,6 +505,7 @@ function backgroundAudioStateChanged() {
         var currentState = mediaPlayer.currentState;
         if (currentState == Windows.Media.Playback.MediaPlayerState.playing) {
             smtc.playbackStatus = MediaPlaybackStatus.playing;
+            //document.getElementById("curr-song-name").innerText = "fffff";
             document.getElementById("PauseButton").disabled = false;
             document.getElementById("PlayButton").disabled = true;
             if (positionUpdateInterval == 0) {

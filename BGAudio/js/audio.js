@@ -35,19 +35,25 @@
                 var songChangedEventDetails = new Object();
                 songChangedEventDetails.songName = this.getCurrentSongName();
                 this.songChanged.dispatchEvent("songchanged", songChangedEventDetails);
+
             },
 
             startSongAt: function (id) {
                 //if (this.currentSongId == id && this.mediaPlayer.currentState != MediaPlayerState.closed) {
                 //this should handle if the requested id in wich playlist
+                
                 if (false) {
                     this.mediaPlayer.play();
                 } else {                    
                     if (MyPlaylist.songs.length > 0) {
                         // this try added because some worked link not work in this  App
-                        //console.log("this.currentSongId = id   " + this.currentSongId);
+                        //console.log("this.currentSongId = id ddddddddddddddddd  " + this.currentSongId);
                         this.currentSongId = parseInt(id);
                         try {
+                            var message = new Windows.Foundation.Collections.ValueSet();
+                            message.insert(Messages.CurrentSongName, MyPlaylist.songs[id].title);
+                            BackgroundMediaPlayer.sendMessageToForeground(message);
+
                             var current = MyPlaylist.songs[id].link;
                             this.mediaPlayer.autoPlay = false;
                             this.mediaPlayer.setUriSource(new Windows.Foundation.Uri(current));
@@ -57,14 +63,8 @@
                             //this.currentSongId = id+1;
                             //this.startSongAt(id+1);
                             this.skipToNext();
-
                         }
-
-
-                        
-
-                    }
-                                        
+                    }                                  
                 }
             },
 
@@ -76,15 +76,17 @@
             },
 
             playAllSongs: function () {
-               // this.startSongAt(0);
+                //loop when the list finish
+                //this.startSongAt(0);
             },
 
             skipToNext: function () {
                 //console.log("currentSongId in audio.js  " + this.currentSongId);
                 if (this.currentSongId < MyPlaylist.songs.length -1) {
                     this.startSongAt(this.currentSongId + 1);
+
                 } else {
-                    this.startSongAt(0);
+                    //this.startSongAt(0);
                 };
             },
 
