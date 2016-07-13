@@ -37,21 +37,23 @@
                 this.songChanged.dispatchEvent("songchanged", songChangedEventDetails);
             },
 
-            startSongAt: function(id) {
-                if (this.currentSongId == id && this.mediaPlayer.currentState != MediaPlayerState.closed) {
+            startSongAt: function (id) {
+                //if (this.currentSongId == id && this.mediaPlayer.currentState != MediaPlayerState.closed) {
+                //this should handle if the requested id in wich playlist
+                if (false) {
                     this.mediaPlayer.play();
                 } else {                    
                     if (MyPlaylist.songs.length > 0) {
                         // this try added because some worked link not work in this  App
-                        this.currentSongId = id;
+                        //console.log("this.currentSongId = id   " + this.currentSongId);
+                        this.currentSongId = parseInt(id);
                         try {
                             var current = MyPlaylist.songs[id].link;
                             this.mediaPlayer.autoPlay = false;
                             this.mediaPlayer.setUriSource(new Windows.Foundation.Uri(current));
-                            console.log("ok");
+                            //console.log("ok");
                         } catch (err) {
                             console.log(err);
-
                             //this.currentSongId = id+1;
                             //this.startSongAt(id+1);
                             this.skipToNext();
@@ -74,10 +76,11 @@
             },
 
             playAllSongs: function () {
-                this.startSongAt(0);
+               // this.startSongAt(0);
             },
 
-            skipToNext: function() {
+            skipToNext: function () {
+                //console.log("currentSongId in audio.js  " + this.currentSongId);
                 if (this.currentSongId < MyPlaylist.songs.length -1) {
                     this.startSongAt(this.currentSongId + 1);
                 } else {
@@ -89,14 +92,14 @@
                 if (this.currentSongId != 0) {
                     this.startSongAt(this.currentSongId - 1);
                 } else {
-                    this.startSongAt(0);
+                    //this.startSongAt(0);
                 };
             },
             
             getCurrentSongName: function () {
                 if (this.currentSongId < MyPlaylist.songs.length) {
                     var fullUrl = MyPlaylist.songs[this.currentSongId].title;
-                    console.log(fullUrl);
+                    console.log("fullUrl  " + fullUrl);
                     return fullUrl;
                 } else {
                     throw "Song Id Is higher than total number of songs";
@@ -171,8 +174,7 @@
                 var iter = ev.data.first();
                 //console.log("777777777777777" + iter.current.key);
 
-
-                while (iter.hasCurrent) {
+                //while (iter.hasCurrent) {
                     switch(iter.current.key.toLowerCase()) {
                         case Messages.AppSuspended:
                             this.foregroundAppState = ForegroundAppStatus.suspended;
@@ -199,18 +201,22 @@
                             
                             var onAppId = JSON.parse(iter.current.value).onAppId
                             var activeList = JSON.parse(iter.current.value).activeList;
-                            console.log("ppplllaaay   " + activeList);
+                            //console.log("ppplllaaay   " + activeList);
                             //console.log("play this audio  " + onAppId);
                             
-                            console.log("activeList in audio.js  =  " + activeList);
+                            //console.log("activeList in audio.js  =  " + activeList);
 
                             if (activeList == "favoritesList") {
                                 MyPlaylist.songs = favoritesList;
+                                //console.log("iffffffffffff");
+
                             } else {
                                 MyPlaylist.songs = resultList;
+                                //console.log("elseeeeeeeeeeee");
                                 //console.log(Messages.ResultList.value)
 
                             }
+                            //console.log("888888888888888   "+MyPlaylist.songs[onAppId].title);
                             this.playThisAudio(onAppId);
                             break;
                         case Messages.CanvasTracker:
@@ -222,12 +228,14 @@
                             }
                             
                             break;
+                        //not working
                         case Messages.ResultList:
                             //console.log("audio.js recive message result");
                             //console.log(JSON.parse(iter.current.value));
                             resultList = JSON.parse(iter.current.value);
                             //MyPlaylist.songs = JSON.parse(iter.current.value);
                             break;
+                        //not working
                         case Messages.FavoritesList:
                             //console.log("audio.js recive message result");
                            // console.log(JSON.parse(iter.current.value));
@@ -235,8 +243,8 @@
                             favoritesList = JSON.parse(iter.current.value);
                             break;
                     }
-                    iter.moveNext();
-                }
+                    //iter.moveNext();
+               // } // while
             },
             prevSong: function () {
                 this.getPlaylist().backToPrevious();
@@ -246,13 +254,18 @@
                 this.getPlaylist().skipToNext();
             },
 
-            playThisAudio: function(onAppId){
+            playThisAudio: function (onAppId) {
                 this.getPlaylist().startSongAt(onAppId);
             },
 
-            seekAudio: function(percantge){
-                var timeToSeek = BackgroundMediaPlayer.current.naturalDuration * percantge / 100;
-                BackgroundMediaPlayer.current.position = timeToSeek;
+            seekAudio: function (percantge) {
+                try{
+                    var timeToSeek = BackgroundMediaPlayer.current.naturalDuration * percantge / 100;
+                    BackgroundMediaPlayer.current.position = timeToSeek;
+                } catch (err) {
+                    console.log("cant seeked, err: " + err)
+                }
+
             },
 
             taskCompleted: function (ev) {

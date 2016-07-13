@@ -1,12 +1,11 @@
 ﻿var positionUpdateInterval = 0;
 var serverStarted = false;
 var isMusicPlaying = false;
-var initialized = false;
+var initialized = false; //is start play list initialized
 
 var resultList = [];
 var favoritesList = [];
 var firstRun = true;
-
 
 var MediaPlaybackStatus = Windows.Media.MediaPlaybackStatus;
 var MediaPlayerState = Windows.Media.Playback.MediaPlayerState;
@@ -43,7 +42,7 @@ function addApplicationEventHandlers() {
     $('#results').on('click', '.add-remove-fav', function () {
         //send onAppId & id wich is song id in trevx database
         AddRemoveFav(this.getAttribute('on-app-id'),this.id);
-        console.log(this.id);
+        //console.log(this.id);
     });
 
 
@@ -52,8 +51,7 @@ function addApplicationEventHandlers() {
         PlayThisAudio("resultList", this.getAttribute('on-app-id'));
         //startOrResume();
         //startPlaylist();
-        initializeBackgroundAudio()
-        console.log(this.id);
+        console.log("event listener: this.getAttribute('on-app-id')= " + this.getAttribute('on-app-id'));
     });
 
     $('#fav').on('click', '.audio-line', function () {
@@ -74,7 +72,7 @@ function addApplicationEventHandlers() {
         }
         if (mediaPlayer.currentState != Windows.Media.Playback.MediaPlayerState.playing) {
             document.getElementById("PauseButton").disabled = true;
-            document.getElementById("NextButton").disabled = true;
+            //document.getElementById("NextButton").disabled = true;
         }
     } catch (err) {
         
@@ -214,6 +212,12 @@ function sendFavoritesList(list) {
 
 function PlayThisAudio(activeList, onAppId) {
     //console.log("active in global " + activeList);
+    startPlaylist();
+    if (!initialized) {
+        //initializeBackgroundAudio();
+        //console.log("//initializeBackgroundAudio();      5555555555555");
+    };
+    
     var message = new Windows.Foundation.Collections.ValueSet();
     var detail = { activeList: activeList, onAppId: onAppId };
     message.insert(Messages.PlayThisAudio, JSON.stringify(detail));
@@ -448,7 +452,7 @@ function startPlaylist() {
     }
 
     document.getElementById("PauseButton").disabled = false;
-    document.getElementById("NextButton").disabled = false;
+    //document.getElementById("NextButton").disabled = false;
     
 
 }
@@ -545,20 +549,20 @@ function prevSong() {
 
 
 function smtc_buttonPressed(ev) {
+    var mediaButton = Windows.Media.SystemMediaTransportControlsButton;
     try {
-        console.log(ev.button);
+        console.log("mediaButton preseddddddddddddddddd");
         switch (ev.button) {
-            case 0:
+            case mediaButton.play:
                 mediaPlayer.play();
                 break;
-            case 1:
+            case mediaButton.pause:
                 mediaPlayer.pause();
                 break;
-            //case SystemMediaTransportControlsButton.next: 
-            case 6:
+            case mediaButton.next:
                 this.skipSong();
                 break;
-            case 7:
+            case mediaButton.previous:
                 this.prevSong();
                 break;
         }
