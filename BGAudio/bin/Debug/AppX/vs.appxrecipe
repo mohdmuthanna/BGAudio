@@ -10,7 +10,7 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>d0e595e4-4b5e-4ad4-880c-f8689483bd5a</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>093823758E7324C4842826E2ED5C2C55BE2987F5E34A0DB616DBBE6E1A79E78A</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>091C799A972CF3CC3B2B401AE870DFE7507E088BDB54519D7D76AEB5F04A7F5D</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d0e595e4-4b5e-4ad4-880c-f8689483bd5a_1.0.0.0_neutral__gk67abdd0vp4a</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d0e595e4-4b5e-4ad4-880c-f8689483bd5a_gk67abdd0vp4a!App</RegisteredUserModeAppID>
     <RegisteredPackageID>d0e595e4-4b5e-4ad4-880c-f8689483bd5a</RegisteredPackageID>
@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-07-10T11:53:32.249</Modified>
+      <Modified>2016-07-27T05:34:40.760</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -82,7 +82,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\audio.js">
       <PackagePath>js\audio.js</PackagePath>
-      <Modified>2016-07-13T12:21:21.483</Modified>
+      <Modified>2016-07-27T10:51:48.208</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\bootstrap.min.js">
       <PackagePath>js\bootstrap.min.js</PackagePath>
@@ -94,7 +94,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\global.js">
       <PackagePath>js\global.js</PackagePath>
-      <Modified>2016-07-13T11:36:07.639</Modified>
+      <Modified>2016-07-18T07:49:09.978</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\jquery-2.2.4.min.js">
       <PackagePath>js\jquery-2.2.4.min.js</PackagePath>
@@ -146,7 +146,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-07-10T12:19:36.634</Modified>
+      <Modified>2016-07-27T05:34:40.275</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

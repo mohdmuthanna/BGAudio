@@ -334,7 +334,7 @@ function ReadTextFileResult() {
        }
        
    }, function () {
-       document.getElementById("results").innerHTML = "an erorr accured";
+       document.getElementById("results").innerHTML = "Welcome to Trevx, make new search";
        console.log("not exisit");
    });
 }
@@ -376,7 +376,7 @@ function ReadTextFileFav() {
 
 
    }, function () {
-       document.getElementById("fav").innerHTML = "an erorr accured";
+       document.getElementById("fav").innerHTML = "Welcome to Trevx, Add to fav";
        console.log("not exisit");
    });
 }

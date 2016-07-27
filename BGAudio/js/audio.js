@@ -15,7 +15,15 @@
     var resultList = [];
     var favoritesList = [];
     var activeList = '';
-     
+    
+    function wait(ms) {
+        var start = new Date().getTime();
+        var end = start;
+        while (end < start + ms) {
+            end = new Date().getTime();
+        }
+    }
+
     var SongChangedEvent = WinJS.Class.mix(WinJS.Class.define(function () { }), WinJS.Utilities.eventMixin);
     var MyPlaylist = WinJS.Class.define(
         function () {
@@ -60,9 +68,8 @@
                             //console.log("ok");
                         } catch (err) {
                             console.log(err);
-                            //this.currentSongId = id+1;
-                            //this.startSongAt(id+1);
-                            this.skipToNext();
+                            wait(2000);
+                           this.skipToNext();
                         }
                     }                                  
                 }
@@ -72,6 +79,7 @@
                 this.skipToNext();
             },
             mediaPlayer_mediaErorr: function (ev) {
+                wait(2000);
                 this.skipToNext();
             },
 
