@@ -62,6 +62,20 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="assets\css\setting.css" />
+    <Content Include="assets\css\simple-1.css" />
+    <Content Include="assets\css\slick-theme.css" />
+    <Content Include="assets\css\slick.css" />
+    <Content Include="assets\imgs\avatar.jpg" />
+    <Content Include="assets\imgs\cover-img.jpg" />
+    <Content Include="assets\imgs\icons - Copy.png" />
+    <Content Include="assets\imgs\icons.png" />
+    <Content Include="assets\imgs\logo.png" />
+    <Content Include="assets\imgs\slide1.jpg" />
+    <Content Include="assets\imgs\slide2.jpg" />
+    <Content Include="assets\js\jquery-3.1.0.min.js" />
+    <Content Include="assets\js\script.js" />
+    <Content Include="assets\js\slick.min.js" />
     <Content Include="css\bootstrap.css" />
     <Content Include="default.html" />
     <Content Include="images\LockScreenLogo.scale-200.png" />

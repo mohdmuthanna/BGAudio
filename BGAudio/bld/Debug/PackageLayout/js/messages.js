@@ -11,6 +11,8 @@
     PlayThisAudio: "playthisaudio",
     FavoritesList: "favoriteslist",
     CanvasTracker: "canvastracker",
+    CurrentSongName: "currentsongname",
 };
+
 //self is equavilant to window in javascript, used to create global variable
 self.Messages = Messages;

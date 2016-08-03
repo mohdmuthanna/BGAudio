@@ -1,3 +1,4 @@
+C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\ReverseMap\resources.pri
 C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\AppxManifest.xml
 C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\trevxUWP.build.appxrecipe
 C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Debug\ResourceHandlingTask.state
@@ -13,4 +14,3 @@ C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Debug\qu
 C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Debug\qualifiers.txt.intermediate
 C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Debug\ProjectArchitectures.txt
-C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\ReverseMap\resources.pri

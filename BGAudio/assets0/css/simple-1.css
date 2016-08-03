@@ -1,0 +1,2027 @@
+/* Simple Framework 1 | by Mohammad Younis [http://www.linkedin.com/in/mohammadyounis] */
+
+/* --------------------Main Settings-------------------- */
+html {
+	font-size: 16px; /* add font-size in html element to support the rem unit */
+}
+html, body {
+	height: 100%;
+}
+body {
+	background-color: #fff;
+	color: #333;
+	padding: 0;
+	margin: 0;
+	font: normal normal 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif; /* Default font properties */
+	font-size: 0.875rem; /* Default font size [rem] */
+}
+a {
+	color: #0066bb;
+	text-decoration: none;
+	outline: none;
+	line-height: inherit;
+}
+a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+img, a img {
+	border: none;
+}
+img {
+	max-width: 100%; /* Responsive Images */
+	height: auto; /* Responsive Images */
+	display: inline-block;
+	vertical-align: middle;
+}
+textarea {
+	height: auto;
+	min-height: 50px;
+}
+th, td {
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p, hr, ul, ol, dl, dt, dd, form, blockquote, pre, address, fieldset, figure {
+	margin: 10px 0;
+	margin: 0.625rem 0;
+}
+hr {
+	height: 0;
+	display: block;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #ddd;
+	border-width: 1px 0 0;
+}
+table {
+	width: 100%;
+	margin-bottom: 15px;
+	margin-bottom: 0.9375rem;
+	border: 1px solid #ddd;
+	background-color: #fff;
+}
+table th, table td {
+	display: table-cell;
+	padding: 8px;
+	border: 1px solid #ddd;
+	text-align: left;
+	line-height: 1rem;
+}
+table th {
+	background-color: #f1f1f1;
+}
+/* --------------------/Main Settings-------------------- */
+
+/* --------------------Typography - Font Issues-------------------- */
+h1 {
+	font-size: 32px; /* for old browser like IE7,8 */
+	font-size: 2rem; /* 2rem=32px */
+}
+h2 {
+	font-size: 28px; /* for old browser like IE7,8 */
+	font-size: 1.75rem; /* 1.75rem=28px */
+}
+h3 {
+	font-size: 22px; /* for old browser like IE7,8 */
+	font-size: 1.375rem; /* 1.375rem=22px */
+}
+h4 {
+	font-size: 20px; /* for old browser like IE7,8 */
+	font-size: 1.25rem; /* 1.25rem=20px */
+}
+h5 {
+	font-size: 18px; /* for old browser like IE7,8 */
+	font-size: 1.125rem; /* 1.125rem=18px */
+}
+h6 {
+	font-size: 16px; /* for old browser like IE7,8 */
+	font-size: 1rem; /* 1rem=16px */
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4; /* Unitless line height */
+}
+.font-small {
+	font-size: 13px;
+	font-size: 0.8125rem;
+}
+.font-large {
+	font-size: 16px;
+	font-size: 1rem;
+}
+/* --------------------/Typography - Font Issues-------------------- */
+
+/* --------------------Buttons-------------------- */
+button, input[type=button], .btn {
+	display: inline-block;
+	height: auto;
+	padding: 5px 10px; /* default size */
+	padding: 0.3125rem 0.625rem; /* default size [rem] */
+	border: 0 none;
+	outline: none;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1.4;
+	background-color: #0488cc; /* default background-color for primary button */
+	color: #fff;
+	white-space: normal; /* text will wrap when necessary especially in this case input[type=button] */
+	-moz-appearance: none; /* look like a standard user interface */
+	-webkit-appearance: none; /* look like a standard user interface */
+	-ms-appearance: none; /* look like a standard user interface */
+	-o-appearance: none; /* look like a standard user interface */
+	appearance: none; /* look like a standard user interface */
+}
+button:hover, input[type=button]:hover, .btn:hover {
+	background-color: #0078bc;
+	text-decoration: none;
+}
+.btn-lg {
+	padding: 10px 20px !important; /* large size */
+	padding: 0.625rem 1.25rem !important; /* large size */
+	font-size: 14px !important;
+	font-size: 0.875rem !important;
+}
+.btn-med {
+	padding: 7px 15px !important; /* medium size */
+	padding: 0.4375rem 0.9375rem !important; /* medium size */
+	font-size: 13px !important;
+	font-size: 0.8125rem !important;
+}
+.btn-sm {
+	padding: 5px 10px !important; /* small size */
+	padding: 0.3125rem 0.625rem !important; /* small size */
+	font-size: 11px !important;
+	font-size: 0.6875rem !important;
+}
+.btn-expand {
+	display: block;
+}
+.btn-secondary {
+	background-color: #f1f1f1 !important;
+	color: #666 !important;
+}
+.btn-secondary:hover {
+	background-color: #cdcdcd !important;
+}
+.btn-alert {
+	background-color: #ff0000 !important;
+}
+.btn-alert:hover {
+	background-color: #ef0000 !important;
+}
+.btn.disabled, .btn[disabled] {
+	background-color: #0488cc;
+	color: rgba(221, 221, 221, 0.7);
+	cursor: not-allowed;
+	opacity: 0.7;
+}
+.btn.disabled:hover, .btn[disabled]:hover {
+	background-color: #0488cc;
+}
+/* --------------------/Buttons-------------------- */
+
+/* --------------------Form - Input Field-------------------- */
+input[type=text], .form-field {
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+	border: 1px solid #bbb;
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.4;
+	color: #999;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input[type=text]:focus, .form-field:focus {
+	border: 1px solid #0078bc;
+}
+.form-field.disabled, .form-field[disabled], input[type=text]:disabled {
+	background-color: #ddd;
+	color: rgba(51, 51, 51, 0.7);
+	cursor: default;
+	opacity: 0.7;
+}
+/* --------------------/Form - Input Field-------------------- */
+
+/* --------------------Form - Select List-------------------- */
+select, .form-select {
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+	border: 1px solid #bbb;
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.4;
+	color: #999;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+select:hover, .form-select:hover {
+	cursor: pointer;
+}
+select option, .form-select option {
+	padding: 3px;
+}
+/* --------------------/Form - Select List-------------------- */
+
+/* --------------------Form - Text Area-------------------- */
+textarea, .form-text-area {
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #bbb;
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.4;
+	color: #999;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+textarea:focus, .form-text-area:focus {
+	border: 1px solid #0078bc;
+}
+/* --------------------/Form - Text Area-------------------- */
+
+/* --------------------Form - Checkbox - Switch Button-------------------- */
+.switch-checkbox {
+	display: inline-block;
+}
+.switch-checkbox .label {
+	display: inline-block;
+	margin-right: 10px;
+}
+.checkbox-on-off {
+	height: 20px;
+	float: right;
+	position: relative;
+}
+.checkbox-on-off input[type='checkbox'] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.switch-btn {
+	width: 42px;
+	height: 18px;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	border: 0 none;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	appearance: none;
+	z-index: 0;
+}
+.switch-btn:before {
+	content: 'on';
+	width: 40px;
+	height: 18px;
+	position: absolute;
+	top: 1px;
+	left: 0;
+	padding-left: 3px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background-color: #b9b9b9;
+	color: #fff;
+	font-size: 12px;
+	z-index: 1;
+}
+.switch-btn:after {
+	content: ' ';
+	height: 18px;
+	width: 18px;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	border-radius: 100%;
+	background-color: #fff;
+	-moz-box-shadow: 0 0 1px #fff;
+	-webkit-box-shadow: 0 0 1px #fff;
+	box-shadow: 0 0 2px #fff;
+	-webkit-transition-duration: 300ms;
+	transition-duration: 300ms;
+	z-index: 2;
+}
+.switchOn, .switchOn:before {
+	background-color: #df4e3d;
+}
+.switchOn:after {
+	left: 25px;
+}
+/* --------------------/Form - Checkbox - Switch Button-------------------- */
+
+/* --------------------Form - Validation-------------------- */
+label.error {
+	display: block;
+	clear: both;
+	margin-bottom: 15px;
+	padding: 5px;
+	background-color: #ff0000;
+	color: #fff;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-style: italic;
+}
+/* --------------------/Form - Validation-------------------- */
+
+/* --------------------Alert Messages-------------------- */
+.alert-message {
+	position: relative;
+	margin-bottom: 20px;
+	padding: 10px 30px 10px 10px;
+	border-radius: 5px;
+}
+.alert-message.success {
+	border: 1px solid #ddeecc;
+	background-color: #dff0dd;
+	color: #00c555;
+}
+.alert-message.info {
+	border: 1px solid #bccfff;
+	background-color: #ddeeff;
+	color: #0066bb;
+}
+.alert-message.warning {
+	border: 1px solid #feebcc;
+	background-color: #fff8ee;
+	color: #aa6633;
+}
+.alert-message.alert {
+	border: 1px solid #eeccdd;
+	background-color: #ffdddd;
+	color: #ff0000;
+}
+.alert-message .close {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 5px;
+	padding: 5px;
+	font-size: 20px;
+	color: #777;
+}
+.alert-message .close:hover {
+	text-decoration: none;
+}
+/* --------------------/Alert Messages-------------------- */
+
+/* --------------------Tooltips-------------------- */
+.tooltip {
+	width: 200px; /* you can remove the width */
+	position: relative;
+	padding: 5px 10px;
+	border: 1px solid #bbb;
+	background-color: #fff;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	-moz-box-shadow: 0 0 5px #ddd;
+	-webkit-box-shadow: 0 0 5px #ddd;
+	box-shadow: 0 0 5px #ddd;
+}
+/* Tooltip - with top arrow */ 
+.tooltip.arrow-top:after, .tooltip.arrow-top:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+.tooltip.arrow-top:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 7px;
+	margin-left: -7px;
+}
+.tooltip.arrow-top:before {
+	border-color: rgba(187, 187, 187, 0);
+	border-bottom-color: #bbb;
+	border-width: 8px;
+	margin-left: -8px;
+}
+/* /Tooltip - with top arrow */ 
+
+/* Tooltip - with right arrow */ 
+.tooltip.arrow-right:after, .tooltip.arrow-right:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+.tooltip.arrow-right:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #fff;
+	border-width: 7px;
+	margin-top: -7px;
+}
+.tooltip.arrow-right:before {
+	border-color: rgba(187, 187, 187, 0);
+	border-left-color: #bbb;
+	border-width: 8px;
+	margin-top: -8px;
+}
+/* /Tooltip - with right arrow */ 
+
+/* Tooltip - with bottom arrow */ 
+.tooltip.arrow-bottom:after, .tooltip.arrow-bottom:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+.tooltip.arrow-bottom:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #fff;
+	border-width: 7px;
+	margin-left: -7px;
+}
+.tooltip.arrow-bottom:before {
+	border-color: rgba(187, 187, 187, 0);
+	border-top-color: #bbb;
+	border-width: 8px;
+	margin-left: -8px;
+}
+/* /Tooltip - with bottom arrow */ 
+
+/* Tooltip - with left arrow */ 
+.tooltip.arrow-left:after, .tooltip.arrow-left:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+.tooltip.arrow-left:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #fff;
+	border-width: 7px;
+	margin-top: -7px;
+}
+.tooltip.arrow-left:before {
+	border-color: rgba(187, 187, 187, 0);
+	border-right-color: #bbb;
+	border-width: 8px;
+	margin-top: -8px;
+}
+/* /Tooltip - with left arrow */ 
+/* --------------------/Tooltips-------------------- */
+
+/* --------------------Arrows-------------------- */
+/* Top Arrow */ 
+.arrow.arrow-top {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid #bbb;
+}
+/* /Top Arrow */ 
+
+/* Right Arrow */ 
+.arrow.arrow-right {
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid #bbb;
+}
+/* /Right Arrow */ 
+
+/* Bottom Arrow */ 
+.arrow.arrow-bottom {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #bbb;
+}
+/* /Bottom Arrow */ 
+
+/* Left Arrow */ 
+.arrow.arrow-left {
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid #bbb;
+}
+/* /Left Arrow */ 
+/* --------------------/Arrows-------------------- */
+
+/* --------------------Navigation - Breadcrumbs-------------------- */
+.breadcrumbs {
+	display: block;
+	overflow: hidden;
+	margin: 0 0 15px 0;
+	margin: 0 0 0.9375rem 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+.breadcrumbs > * {
+	display: inline;
+	margin-right: 5px;
+	margin-right: 0.3125rem;
+}
+.breadcrumbs .sign {
+	line-height: 1.2;
+	direction: ltr;
+}
+.breadcrumbs .current > * {
+	color: #333;
+}
+/* --------------------/Navigation - Breadcrumbs-------------------- */
+
+/* --------------------Navigation - Pagination-------------------- */
+.pagination {
+	display: inline-block;
+	clear: both;
+	margin: 0 0 15px 0;
+	margin: 0 0 0.9375rem 0;
+	padding: 0;
+	list-style-type: none;
+}
+.pagination > * {
+	float: left;
+}
+.pagination li a {
+	display: inline-block;
+	margin-right: -1px;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+}
+.pagination li a.arrow {
+	direction: ltr;
+}
+.pagination li a:hover {
+	text-decoration: none;
+	background-color: #f1f1f1;
+	color: #333;
+}
+.pagination li:last-child > a {
+	margin-right: 0;
+}
+.pagination li.current > * {
+	background-color: #f1f1f1;
+	color: #333;
+	cursor: text;
+}
+.pagination.radius li:first-child > a {
+	-moz-border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
+}
+.pagination.radius li:last-child > a {
+	-moz-border-radius: 0 5px 5px 0;
+	-webkit-border-radius: 0 5px 5px 0;
+	border-radius: 0 5px 5px 0;
+}
+/* --------------------/Navigation - Pagination-------------------- */
+
+/* --------------------Navigation - Menu Bar-------------------- */
+.nav-bar ul, .nav-progress ul {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.nav-bar ul li {
+	position: relative;
+}
+.nav-bar ul li a {
+	height: 20px;
+	display: block;
+	padding: 5px 20px;
+	background-color: #f1f1f1;
+	color: #333;
+}
+.nav-bar ul li a:hover {
+	text-decoration: none;
+}
+.nav-horizontal ul li {
+	float: left;
+	border-right: 1px solid #bbb;
+}
+.nav-vertical ul li {
+	width: 170px;
+	border-bottom: 1px solid #bbb;
+}
+.nav-bar ul li:last-child {
+	border-right: 0 none;
+	border-bottom: 0 none;
+}
+.nav-bar ul li.active a, .nav-bar ul li a:hover {
+	background-color: #ddd;
+	color: #777;
+}
+.nav-bar ul li .sub-nav {
+	display: none;
+	position: absolute;
+	border-left: 1px solid #fff;
+	z-index: 999;
+}
+.nav-horizontal ul li .sub-nav {
+	top: 30px;
+	left: 0;
+}
+.nav-horizontal ul li .sub-nav li {
+	width: 180px;
+}
+.nav-horizontal ul li .sub-nav li .sub-nav {
+	top: 0;
+	left: 180px;
+}
+.nav-vertical ul li .sub-nav {
+	top: 0;
+	left: 170px;
+}
+.sub-nav li {
+	border: 1px solid #bbb;
+	border-width: 0 0 1px 0 !important;
+}
+.nav-progress {
+	width: 100%;
+	display: table;
+	overflow: hidden;
+	padding: 10px 0;
+}
+.nav-progress ul {
+	display: table-row;
+}
+.nav-progress ul li {
+	display: table-cell;
+	position: relative;
+	padding-top: 5px;
+	border: 1px solid #ddd;
+	border-width: 1px 0 0;
+	text-align: center;
+}
+.nav-progress ul li:hover, .nav-progress ul li.active {
+	border-color: #bbb;
+}
+.nav-progress ul li.active .bullet, .nav-progress ul li:hover .bullet {
+	width: 15px;
+	height: 15px;
+	top: -9px;
+	margin-left: -8px;
+	background-color: #bbb;
+	transition: background-color 0.5s;
+}
+.nav-progress ul li a {
+	height: 20px;
+	display: block;
+	padding: 0 10px;
+}
+.nav-progress ul li a:hover {
+	text-decoration: none;
+}
+.nav-progress ul li .bullet {
+	width: 10px;
+	height: 10px;
+	display: block;
+	position: absolute;
+	top: -7px;
+	left: 50%;
+	margin-left: -6px;
+	border-radius: 100%;
+	border: 1px solid #ddd;
+	background-color: #fff;
+}
+/* --------------------/Navigation - Menu Bar-------------------- */
+
+/* --------------------Navigation - Off Canvas Menu-------------------- */
+.off-menu {
+	width: 250px;
+	width: 15.625rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -250px;
+	left: -15.625rem;
+	overflow-y: auto;
+	background-color: #333;
+	z-index: 1001;
+}
+.off-menu-icon {
+	color: #333;
+	cursor: pointer;
+}
+.off-menu-icon:hover {
+	text-decoration: none;
+}
+.close-off-menu {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	cursor: pointer;
+	z-index: 1002;
+}
+.off-menu ul {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.off-menu ul li a, .off-menu ul li span {
+	display: block;
+	padding: 10px;
+	border-bottom: 1px solid #222;
+	color: #fff;
+}
+.off-menu ul li a:hover, .off-menu ul li span:hover {
+	background-color: #555;
+	color: #aaa;
+	text-decoration: none;
+}
+.off-menu ul li ul li a {
+	color: #bbb;
+}
+.off-menu ul.item-sep li {
+	border-bottom: 1px solid #444;
+}
+.off-menu ul.item-sep li a, .off-menu ul li ul:last-child {
+	border-bottom: 1px solid #222; /* Add border-bottom to <li> in parent menu and to sub <ul> */
+}
+.off-menu ul.item-no-sep li, .off-menu ul.item-no-sep li a, .off-menu ul li span {
+	border-bottom: 0 none; /* Remove border-bottom from <li> in sub menu */
+}
+/* --------------------/Navigation - Off Canvas Menu-------------------- */
+
+/* --------------------Tabs-------------------- */
+.tab-links ul:after, .tab-content ul:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+.tab-links ul {
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.tab-links ul li {
+	float: left;
+	margin: 0 10px;
+	border: 1px solid #bbb;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+.tab-links ul li a {
+	display: block;
+	padding: 5px 20px;
+	background-color: #f1f1f1;
+	color: #333;
+	-moz-border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+.tab-links ul li.active {
+	border-bottom: 1px solid #fff;
+}
+.tab-links ul li.active a {
+	cursor: text;
+}
+.tab-links ul li a:hover, .tab-links ul li.active a {
+	background-color: #fff;
+	text-decoration: none;
+}
+.tab-content {
+	margin-top: -1px;
+	padding: 10px;
+	border: 1px solid #bbb;
+	background-color: #fff;
+}
+.tab {
+	display: none;
+}
+.tab.active {
+	display: block;
+}
+/* --------------------/Tabs-------------------- */
+
+/* --------------------PopUp-------------------- */
+.popup-overlay {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #333;
+	opacity: 0.5;
+	z-index: 1000;
+}
+.popup-container {
+	width: 600px;
+	display: none;
+	position: fixed;
+	top: 50px;
+	top: 3.125rem;
+	left: 50%;
+	margin-left: -305px; /* width/2 + border-left-width */
+	border: 5px solid #bbb;
+	background-color: #fff;
+	z-index: 1001;
+}
+.popup-container .close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 1px 4px;
+	background-color: #bbb;
+	font-size: 12px;
+	font-size: 0.75rem;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+}
+.popup-container .close:hover {
+	text-decoration: none;
+}
+.popup-container .content {
+	margin: 15px 0 0;
+	padding: 0 10px 10px;
+	overflow-y: auto;
+}
+.popup-container .heightFixed {
+	height: 350px;
+}
+.popup-container .heightAuto {
+	height: auto;
+}
+/* --------------------/PopUp-------------------- */
+
+/* --------------------Back To Top-------------------- */
+.back-to-top {
+	display: none;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	text-decoration: none;
+	background-color: #ddd;
+	padding: 5px;
+	color: #777;
+}
+.back-to-top .arrow {
+	width: 0;
+	height: 0;
+	display: inline-block;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #777;
+}
+.back-to-top:hover {
+	text-decoration: none;
+	color: #333;
+}
+.back-to-top:hover .arrow {
+	border-bottom: 5px solid #333;
+}
+/* --------------------/Back To Top-------------------- */
+
+/* --------------------Reusable Classes-------------------- */
+.clearfix:before, .clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.over-hidden {
+	overflow: hidden;
+}
+.over-visible {
+	overflow: visible;
+}
+.width100 {
+	width: 100%;
+}
+.height100 {
+	height: 100%;
+}
+.left {
+	float: left !important;
+}
+.right {
+	float: right !important;
+}
+.float-none {
+	float: none;
+}
+.mar-0 {
+	margin: 0 !important;
+}
+.mart-0 {
+	margin-top: 0 !important;
+}
+.marr-0 {
+	margin-right: 0 !important;
+}
+.marb-0 {
+	margin-bottom: 0 !important;
+}
+.marl-0 {
+	margin-left: 0 !important;
+}
+.pad-0 {
+	padding: 0 !important;
+}
+.padt-0 {
+	padding-top: 0 !important;
+}
+.padr-0 {
+	padding-right: 0 !important;
+}
+.padb-0 {
+	padding-bottom: 0 !important;
+}
+.padl-0 {
+	padding-left: 0 !important;
+}
+.hide {
+	display: none;
+}
+.block {
+	display: block;
+}
+.inline-block {
+	display: inline-block;
+}
+.clear {
+	clear: both;
+}
+.clear-none {
+	clear: none;
+}
+.clear-inherit {
+	clear: inherit;
+}
+.clear-left {
+	clear: left;
+}
+.clear-right {
+	clear: right;
+}
+.dir-l {
+	direction: ltr;
+}
+.dir-r {
+	direction: rtl;
+}
+/* Alignment */
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+	float: none !important;
+}
+.text-left {
+	text-align: left !important;
+}
+.text-right {
+	text-align: right !important;
+}
+.text-center {
+	text-align: center !important;
+}
+.text-justify {
+	text-align: justify !important;
+}
+.valign-top {
+	vertical-align: top !important;
+}
+.valign-middle {
+	vertical-align: middle !important;
+}
+.valign-bottom {
+	vertical-align: bottom !important;
+}
+/* /Alignment */
+
+/* List */
+.inline-list {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.inline-list li {
+	float: left;
+	margin-right: 15px;
+	margin-right: 0.9375rem;
+}
+.inline-list li > * {
+	display: block;
+}
+.block-list {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.block-list li {
+	float: none;
+	padding: 5px;
+}
+.block-list li > * {
+	display: block;
+}
+.no-bullet {
+	list-style-type: none !important;
+}
+.list-disc {
+	list-style-type: disc !important;
+}
+.list-circle {
+	list-style-type: circle !important;
+}
+.list-decimal {
+	list-style-type: decimal !important;
+}
+.list-space {
+	margin-left: 15px !important;
+	margin-left: 0.9375rem !important;
+	padding-left: 20px !important;
+	padding-left: 1.25rem !important;
+}
+/* /List */
+
+/* Text Issues */
+.word-wrap {
+	word-wrap: break-word;
+}
+.color-default {
+	color: #333;
+}
+.color-gray {
+	color: #999;
+}
+.color-dark-gray {
+	color: #777;
+}
+.color-black {
+	color: #000;
+}
+.color-white {
+	color: #fff;
+}
+.color-red {
+	color: #ff0000;
+}
+.color-green {
+	color: #00c555;
+}
+.link-hoverColor:hover {
+	color: #333;
+}
+.link-hoverLine:hover {
+	text-decoration: underline;
+}
+/* /Text Issues */
+
+/* Border and Background */
+.bord-gray {
+	border: 1px solid #ddd;
+}
+.bord-dark-gray {
+	border: 1px solid #bbb;
+}
+.sep {
+	border-bottom: 1px solid #ddd;
+}
+.bg-gray {
+	background-color: #f1f1f1;
+}
+.bg-light-gray {
+	background-color: #fafafa;
+}
+.bg-dark-gray {
+	background-color: #ddd;
+}
+.bg-red {
+	background-color: #ff0000;
+}
+.bg-green {
+	background-color: #00c555;
+}
+.has-error {
+	border: 1px solid #ff0000 !important;
+	color: #ff0000 !important;
+}
+.has-error:focus {
+	border: 1px solid #df0000 !important;
+}
+.has-success {
+	border: 1px solid #00c555 !important;
+	color: #00c555 !important;
+}
+.has-success:focus {
+	border: 1px solid #00a333 !important;
+}
+/* /Border and Background */
+
+/* Border Radius */
+.radius5 {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.radius10 {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+/* /Border Radius */
+/* --------------------/Reusable Classes-------------------- */
+
+/* --------------------Grid-------------------- */
+.off-menu-wrapper {
+	width: 100%;
+	overflow: hidden;
+	position: relative; /* For Off Canvas Menu */
+}
+.inner-wrapper {
+	/*max-width:;*/  /* Add max-width in case fixed layout */
+	position: relative; /* For Off Canvas Menu */
+	margin: auto;
+}
+/* Basic Grid */
+.row {
+	width: 100%;
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem;
+}
+.wrapper:before, .wrapper:after, .row:before, .row:after { /* = overflow:hidden; [and] = .clearfixing */
+	content: " ";
+	display: table;
+}
+.wrapper:after, .row:after { /* = overflow:hidden; [and] = .clearfixing */
+	clear: both;
+}
+.row .row:last-child {
+	margin-bottom: 0; /* we removed margin-bottom from the last element, because there's a margin-bottom in the parent element (.row). */
+}
+.column, .columns {
+	width: 100%;
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* /Basic Grid */
+
+/* Grid Margin */
+.grid-margin {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* This class (.row) takes margin by default, and if you need to add margin to others use
+this class (.grid-margin) */
+}
+/* /Grid Margin */
+
+/* Column Classes - These classes are common between (Desktop, Tablet and Mobile) */
+.one {
+	width: 8.33333%;
+}
+.two {
+	width: 16.66667%;
+}
+.three {
+	width: 25%;
+}
+.four {
+	width: 33.33333%;
+}
+.five {
+	width: 41.66667%;
+}
+.six {
+	width: 50%;
+}
+.seven {
+	width: 58.33333%;
+}
+.eight {
+	width: 66.66667%;
+}
+.nine {
+	width: 75%;
+}
+.ten {
+	width: 83.33333%;
+}
+.eleven {
+	width: 91.66667%;
+}
+.twelve {
+	width: 100%;
+}
+/* /Column Classes - These classes are common between (Desktop, Tablet and Mobile) */
+
+/* Grid-Space Feature */
+.push-0 {
+	margin-left: 0% !important;
+}
+.push-1 {
+	margin-left: 8.33333% !important;
+}
+.push-2 {
+	margin-left: 16.66667% !important;
+}
+.push-3 {
+	margin-left: 25% !important;
+}
+.push-4 {
+	margin-left: 33.33333% !important;
+}
+.push-5 {
+	margin-left: 41.66667% !important;
+}
+.push-6 {
+	margin-left: 50% !important;
+}
+.push-7 {
+	margin-left: 58.33333% !important;
+}
+.push-8 {
+	margin-left: 66.66667% !important;
+}
+.push-9 {
+	margin-left: 75% !important;
+}
+.push-10 {
+	margin-left: 83.33333% !important;
+}
+.push-11 {
+	margin-left: 91.66667% !important;
+}
+.pull-0 {
+	margin-right: 0% !important;
+}
+.pull-1 {
+	margin-right: 8.33333% !important;
+}
+.pull-2 {
+	margin-right: 16.66667% !important;
+}
+.pull-3 {
+	margin-right: 25% !important;
+}
+.pull-4 {
+	margin-right: 33.33333% !important;
+}
+.pull-5 {
+	margin-right: 41.66667% !important;
+}
+.pull-6 {
+	margin-right: 50% !important;
+}
+.pull-7 {
+	margin-right: 58.33333% !important;
+}
+.pull-8 {
+	margin-right: 66.66667% !important;
+}
+.pull-9 {
+	margin-right: 75% !important;
+}
+.pull-10 {
+	margin-right: 83.33333% !important;
+}
+.pull-11 {
+	margin-right: 91.66667% !important;
+}
+/* /Grid-Space Feature */
+/* --------------------/Grid-------------------- */
+
+/* --------------------Media Queries-------------------- */
+/* XLarge Screens - [Desktop] */
+@media screen and (min-width:1200px) {
+}
+/* /XLarge Screens - [Desktop] */
+
+/* Large Screens - [Desktop] */
+@media screen and (min-width:960px) {
+/* --------------------Grid-------------------- */
+/* Column Classes */
+.large-1 {
+	width: 8.33333%;
+}
+.large-2 {
+	width: 16.66667%;
+}
+.large-3 {
+	width: 25%;
+}
+.large-4 {
+	width: 33.33333%;
+}
+.large-5 {
+	width: 41.66667%;
+}
+.large-6 {
+	width: 50%;
+}
+.large-7 {
+	width: 58.33333%;
+}
+.large-8 {
+	width: 66.66667%;
+}
+.large-9 {
+	width: 75%;
+}
+.large-10 {
+	width: 83.33333%;
+}
+.large-11 {
+	width: 91.66667%;
+}
+.large-12 {
+	width: 100%;
+}
+/* /Column Classes */
+
+/* Grid Margin */
+.grid-margin-lg {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on large screen only */
+}
+.grid-margin-lg-med {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on large and medium screens only */
+}
+.grid-margin-lg-sm {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on large and small screens only */
+}
+.grid-margin-lg-mini {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on large and mini screens only */
+}
+/* /Grid Margin */
+
+/* Grid-Space Feature */
+.lg-push-0 {
+	margin-left: 0% !important;
+}
+.lg-push-1 {
+	margin-left: 8.33333% !important;
+}
+.lg-push-2 {
+	margin-left: 16.66667% !important;
+}
+.lg-push-3 {
+	margin-left: 25% !important;
+}
+.lg-push-4 {
+	margin-left: 33.33333% !important;
+}
+.lg-push-5 {
+	margin-left: 41.66667% !important;
+}
+.lg-push-6 {
+	margin-left: 50% !important;
+}
+.lg-push-7 {
+	margin-left: 58.33333% !important;
+}
+.lg-push-8 {
+	margin-left: 66.66667% !important;
+}
+.lg-push-9 {
+	margin-left: 75% !important;
+}
+.lg-push-10 {
+	margin-left: 83.33333% !important;
+}
+.lg-push-11 {
+	margin-left: 91.66667% !important;
+}
+.lg-pull-0 {
+	margin-right: 0% !important;
+}
+.lg-pull-1 {
+	margin-right: 8.33333% !important;
+}
+.lg-pull-2 {
+	margin-right: 16.66667% !important;
+}
+.lg-pull-3 {
+	margin-right: 25% !important;
+}
+.lg-pull-4 {
+	margin-right: 33.33333% !important;
+}
+.lg-pull-5 {
+	margin-right: 41.66667% !important;
+}
+.lg-pull-6 {
+	margin-right: 50% !important;
+}
+.lg-pull-7 {
+	margin-right: 58.33333% !important;
+}
+.lg-pull-8 {
+	margin-right: 66.66667% !important;
+}
+.lg-pull-9 {
+	margin-right: 75% !important;
+}
+.lg-pull-10 {
+	margin-right: 83.33333% !important;
+}
+.lg-pull-11 {
+	margin-right: 91.66667% !important;
+}
+/* /Grid-Space Feature */
+/* --------------------/Grid-------------------- */
+
+/* --------------------Visibility Classes [for Desktop]-------------------- */
+.hidden-desktop {
+	display: none !important;
+}
+.visible-desktop {
+	display: block !important;
+}
+/* --------------------/Visibility Classes [for Desktop]-------------------- */
+}
+/* /Large Screens - [Desktop] */
+
+/* Medium and Small Screens - [Common between tablet and mobile] */
+@media screen and (max-width:959px) {
+/* --------------------Tabs-------------------- */
+.tab-links {
+	width: 100% !important;
+	overflow: auto !important;
+}
+/* --------------------/Tabs-------------------- */
+
+/* --------------------Navigation - Menu Bar-------------------- */
+.nav-bar-toggle {
+	height: 20px;
+	padding: 5px 20px;
+	background-color: #f1f1f1;
+	color: #333;
+	cursor: pointer;
+}
+.nav-bar {
+	display: none;
+	overflow: hidden;
+}
+.nav-bar ul, .nav-bar ul li, .nav-bar ul li .sub-nav li {
+	width: 100%;
+}
+.nav-bar ul li {
+	float: none;
+	border: 0 none;
+}
+.nav-bar ul li .sub-nav {
+	position: static;
+	border-left: 5px solid #ddd;
+}
+/* --------------------/Navigation - Menu Bar-------------------- */
+
+/* --------------------Tabs-------------------- */
+.tab-links ul {
+	width: 400px;
+}
+/* --------------------/Tabs-------------------- */
+}
+/* /Medium and Small Screens - [Common between tablet and mobile] */
+
+/* Medium Screens - [Landscape tablet to desktop] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+}
+/* /Medium Screens - [Landscape tablet to desktop] */
+
+/* Medium Screens - [Portrait tablet to desktop] */
+@media screen and (min-width:768px) and (max-width:959px) {
+/* --------------------Grid-------------------- */
+/* Column Classes */
+.medium-1 {
+	width: 8.33333%;
+}
+.medium-2 {
+	width: 16.66667%;
+}
+.medium-3 {
+	width: 25%;
+}
+.medium-4 {
+	width: 33.33333%;
+}
+.medium-5 {
+	width: 41.66667%;
+}
+.medium-6 {
+	width: 50%;
+}
+.medium-7 {
+	width: 58.33333%;
+}
+.medium-8 {
+	width: 66.66667%;
+}
+.medium-9 {
+	width: 75%;
+}
+.medium-10 {
+	width: 83.33333%;
+}
+.medium-11 {
+	width: 91.66667%;
+}
+.medium-12 {
+	width: 100%;
+}
+/* /Column Classes */
+/* Grid Margin */
+.grid-margin-med {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on medium screen only */
+}
+.grid-margin-lg-med {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on large and medium screens only */
+}
+.grid-margin-med-sm {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on medium and small screens only */
+}
+.grid-margin-med-mini {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on medium and mini screens only */
+}
+/* /Grid Margin */
+
+/* Grid-Space Feature */
+.med-push-0 {
+	margin-left: 0% !important;
+}
+.med-push-1 {
+	margin-left: 8.33333% !important;
+}
+.med-push-2 {
+	margin-left: 16.66667% !important;
+}
+.med-push-3 {
+	margin-left: 25% !important;
+}
+.med-push-4 {
+	margin-left: 33.33333% !important;
+}
+.med-push-5 {
+	margin-left: 41.66667% !important;
+}
+.med-push-6 {
+	margin-left: 50% !important;
+}
+.med-push-7 {
+	margin-left: 58.33333% !important;
+}
+.med-push-8 {
+	margin-left: 66.66667% !important;
+}
+.med-push-9 {
+	margin-left: 75% !important;
+}
+.med-push-10 {
+	margin-left: 83.33333% !important;
+}
+.med-push-11 {
+	margin-left: 91.66667% !important;
+}
+.med-pull-0 {
+	margin-right: 0% !important;
+}
+.med-pull-1 {
+	margin-right: 8.33333% !important;
+}
+.med-pull-2 {
+	margin-right: 16.66667% !important;
+}
+.med-pull-3 {
+	margin-right: 25% !important;
+}
+.med-pull-4 {
+	margin-right: 33.33333% !important;
+}
+.med-pull-5 {
+	margin-right: 41.66667% !important;
+}
+.med-pull-6 {
+	margin-right: 50% !important;
+}
+.med-pull-7 {
+	margin-right: 58.33333% !important;
+}
+.med-pull-8 {
+	margin-right: 66.66667% !important;
+}
+.med-pull-9 {
+	margin-right: 75% !important;
+}
+.med-pull-10 {
+	margin-right: 83.33333% !important;
+}
+.med-pull-11 {
+	margin-right: 91.66667% !important;
+}
+/* /Grid-Space Feature */
+/* --------------------/Grid-------------------- */
+
+/* --------------------Visibility Classes [for Tablet]-------------------- */
+.hidden-tablet {
+	display: none !important;
+}
+.visible-tablet {
+	display: block !important;
+}
+/* --------------------/Visibility Classes [for Tablet]-------------------- */
+}
+/* /Medium Screens - [Portrait tablet to desktop] */
+
+/* Small Screens - [Portrait/Landscape phone to portrait tablet] */
+@media screen and (max-width:767px) {
+/* --------------------Typography - Font Issues-------------------- */
+h1 {
+	font-size: 22px; /* For old browser like IE7,8 */
+	font-size: 1.375rem; /* 2rem=32px */
+}
+h2 {
+	font-size: 18px; /* For old browser like IE7,8 */
+	font-size: 1.125rem; /* 1.75rem=28px */
+}
+h3 {
+	font-size: 16px; /* For old browser like IE7,8 */
+	font-size: 1rem; /* 1.375rem=22px */
+}
+h4 {
+	font-size: 14px; /* For old browser like IE7,8 */
+	font-size: 0.875rem; /* 1.25rem=20px */
+}
+h5 {
+	font-size: 13px; /* For old browser like IE7,8 */
+	font-size: 0.8125rem; /* 1.125rem=18px */
+}
+h6 {
+	font-size: 13px; /* For old browser like IE7,8 */
+	font-size: 0.8125rem; /* 1rem=16px */
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4; /* Unitless line height */
+}
+/* --------------------/Typography - Font Issues-------------------- */
+
+/* --------------------Grid-------------------- */
+/* Column Classes */
+.small-1 {
+	width: 8.33333%;
+}
+.small-2 {
+	width: 16.66667%;
+}
+.small-3 {
+	width: 25%;
+}
+.small-4 {
+	width: 33.33333%;
+}
+.small-5 {
+	width: 41.66667%;
+}
+.small-6 {
+	width: 50%;
+}
+.small-7 {
+	width: 58.33333%;
+}
+.small-8 {
+	width: 66.66667%;
+}
+.small-9 {
+	width: 75%;
+}
+.small-10 {
+	width: 83.33333%;
+}
+.small-11 {
+	width: 91.66667%;
+}
+.small-12 {
+	width: 100%;
+}
+/* /Column Classes */
+/* Grid Margin */
+.grid-margin-sm {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on small screen only */
+}
+.grid-margin-lg-sm {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on large and small screens only */
+}
+.grid-margin-med-sm {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on medium and small screens only */
+}
+/* /Grid Margin */
+
+/* Grid-Space Feature */
+.sm-push-0 {
+	margin-left: 0% !important;
+}
+.sm-push-1 {
+	margin-left: 8.33333% !important;
+}
+.sm-push-2 {
+	margin-left: 16.66667% !important;
+}
+.sm-push-3 {
+	margin-left: 25% !important;
+}
+.sm-push-4 {
+	margin-left: 33.33333% !important;
+}
+.sm-push-5 {
+	margin-left: 41.66667% !important;
+}
+.sm-push-6 {
+	margin-left: 50% !important;
+}
+.sm-push-7 {
+	margin-left: 58.33333% !important;
+}
+.sm-push-8 {
+	margin-left: 66.66667% !important;
+}
+.sm-push-9 {
+	margin-left: 75% !important;
+}
+.sm-push-10 {
+	margin-left: 83.33333% !important;
+}
+.sm-push-11 {
+	margin-left: 91.66667% !important;
+}
+.sm-pull-0 {
+	margin-right: 0% !important;
+}
+.sm-pull-1 {
+	margin-right: 8.33333% !important;
+}
+.sm-pull-2 {
+	margin-right: 16.66667% !important;
+}
+.sm-pull-3 {
+	margin-right: 25% !important;
+}
+.sm-pull-4 {
+	margin-right: 33.33333% !important;
+}
+.sm-pull-5 {
+	margin-right: 41.66667% !important;
+}
+.sm-pull-6 {
+	margin-right: 50% !important;
+}
+.sm-pull-7 {
+	margin-right: 58.33333% !important;
+}
+.sm-pull-8 {
+	margin-right: 66.66667% !important;
+}
+.sm-pull-9 {
+	margin-right: 75% !important;
+}
+.sm-pull-10 {
+	margin-right: 83.33333% !important;
+}
+.sm-pull-11 {
+	margin-right: 91.66667% !important;
+}
+/* /Grid-Space Feature */
+/* --------------------/Grid-------------------- */
+
+/* --------------------Visibility Classes [for Mobile]-------------------- */
+.hidden-mobile {
+	display: none !important;
+}
+.visible-mobile {
+	display: block !important;
+}
+/* --------------------/Visibility Classes [for Mobile]-------------------- */
+
+/* --------------------Navigation - Menu Bar-------------------- */
+.nav-progress ul {
+	width: 100%;
+}
+.nav-progress ul li {
+	float: none;
+	display: block;
+	margin-bottom: 15px;
+	text-align: center;
+}
+/* --------------------/Navigation - Menu Bar-------------------- */
+
+/* --------------------PopUp-------------------- */
+.popup-container {
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin-top: 0;
+	margin-left: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.popup-container .close {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+.popup-container .content {
+	margin: 20px 0 0;
+}
+.popup-container .heightFixed {
+	height: 400px;
+}
+/* --------------------/PopUp-------------------- */
+}
+/* /Small Screens - [Portrait/Landscape phone to portrait tablet] */
+
+/* Small Screens - [Landscape phones and above] */
+@media screen and (min-width:480px) and (max-width:767px) {
+.popup-container .heightFixed {
+	height: 200px;
+}
+}
+/* /Small Screens - [Landscape phones and above] */
+
+/* Mini Screens - [Portrait phones and down] */
+@media screen and (max-width:479px) {
+/* --------------------Grid-------------------- */
+/* Column Classes */
+.mini-1 {
+	width: 8.33333%;
+}
+.mini-2 {
+	width: 16.66667%;
+}
+.mini-3 {
+	width: 25%;
+}
+.mini-4 {
+	width: 33.33333%;
+}
+.mini-5 {
+	width: 41.66667%;
+}
+.mini-6 {
+	width: 50%;
+}
+.mini-7 {
+	width: 58.33333%;
+}
+.mini-8 {
+	width: 66.66667%;
+}
+.mini-9 {
+	width: 75%;
+}
+.mini-10 {
+	width: 83.33333%;
+}
+.mini-11 {
+	width: 91.66667%;
+}
+.mini-12 {
+	width: 100%;
+}
+/* /Column Classes */
+
+/* Grid Margin */
+.grid-margin-mini {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on mini screen only */
+}
+.grid-margin-lg-mini {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on large and mini screens only */
+}
+.grid-margin-med-mini {
+	margin: 0 auto 15px;
+	margin: 0 auto 0.9375rem; /* Add margin-bottom to the columns on medium and mini screens only */
+}
+/* /Grid Margin */
+
+/* Grid-Space Feature */
+.mini-push-0 {
+	margin-left: 0% !important;
+}
+.mini-push-1 {
+	margin-left: 8.33333% !important;
+}
+.mini-push-2 {
+	margin-left: 16.66667% !important;
+}
+.mini-push-3 {
+	margin-left: 25% !important;
+}
+.mini-push-4 {
+	margin-left: 33.33333% !important;
+}
+.mini-push-5 {
+	margin-left: 41.66667% !important;
+}
+.mini-push-6 {
+	margin-left: 50% !important;
+}
+.mini-push-7 {
+	margin-left: 58.33333% !important;
+}
+.mini-push-8 {
+	margin-left: 66.66667% !important;
+}
+.mini-push-9 {
+	margin-left: 75% !important;
+}
+.mini-push-10 {
+	margin-left: 83.33333% !important;
+}
+.mini-push-11 {
+	margin-left: 91.66667% !important;
+}
+.mini-pull-0 {
+	margin-right: 0% !important;
+}
+.mini-pull-1 {
+	margin-right: 8.33333% !important;
+}
+.mini-pull-2 {
+	margin-right: 16.66667% !important;
+}
+.mini-pull-3 {
+	margin-right: 25% !important;
+}
+.mini-pull-4 {
+	margin-right: 33.33333% !important;
+}
+.mini-pull-5 {
+	margin-right: 41.66667% !important;
+}
+.mini-pull-6 {
+	margin-right: 50% !important;
+}
+.mini-pull-7 {
+	margin-right: 58.33333% !important;
+}
+.mini-pull-8 {
+	margin-right: 66.66667% !important;
+}
+.mini-pull-9 {
+	margin-right: 75% !important;
+}
+.mini-pull-10 {
+	margin-right: 83.33333% !important;
+}
+.mini-pull-11 {
+	margin-right: 91.66667% !important;
+}
+/* /Grid-Space Feature */
+/* --------------------/Grid-------------------- */
+} 
+/* /Mini Screens - [Portrait phones and down] */
+/* --------------------/Media Queries-------------------- */

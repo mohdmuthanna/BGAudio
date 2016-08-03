@@ -1,86 +1,148 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>trevx</title>
-
-    <!-- WinJS references -->
-    <link href="WinJS/css/ui-dark.css" rel="stylesheet" />
-    <script src="WinJS/js/base.js"></script>
-    <script src="WinJS/js/ui.js"></script>
-
-    <!-- BGAudio references -->
-    <!-- Latest compiled and minified CSS -->
-    <link href="/css/bootstrap.css" rel="stylesheet" />
-   <!-- <link href="/css/default.css" rel="stylesheet" /> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Trevx | search the web for audio and music</title>
+    <meta name="description" content="Trevx is an audio search engine where You can search and download all types of audio files, you can download music, audio books, sound effects and soundtracks">
+    <meta name="keywords" content="youtube,popular,Torrent,ft,musica,by,free mp3,song,Play,band">
+    <link rel="stylesheet" href="assets/css/simple-1.css">
+    <link rel="stylesheet" href="assets/css/setting.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
     <link href="/css/default.css" rel="stylesheet" />
 
 
-    <script src="/js/default.js"></script>
-    <script src="/js/messages.js"></script>
-    <script src="/js/global.js"></script>
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-
-
+    <!-- WinJS references -->
+    <script src="WinJS/js/base.js"></script>
+    <script src="WinJS/js/ui.js"></script>
 </head>
-<body id="body">
-    <div class="container">
-        <h4>Trevx Music Player</h4>
-        <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-            <li><a data-toggle="tab" href="#favTab">FavTab</a></li>
-
-        </ul>
-        <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
-                <h3>HOME</h3>
+<body>
+    <!--Wrapper-->
+    <div class="wrapper">
+        <section class="top-block">
+            <header class="header clearfix">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="form-group">
-                            <input id="trevxSearchBox" type="text" placeholder="Search">
-                            <button id="trevxSearchButton" type="submit" class="btn btn-default">Search</button>
+                    <div class="columns large-11 medium-11 small-11 logo"> <span></span> </div>
+                    <div class="columns large-1 medium-1 small-1 search-icon"> <span></span> </div>
+                </div>
+                <div class="row audio-field">
+                    <form name="text" id="search" method="post" role="search" class="columns large-11 medium-11 small-11">
+                        <span class="search-icon" id="trevxSearchButton"></span>
+                        <input type="search" name="query" id="search-box" class="search-field-area" placeholder="Type any audio content">
+                    </form>
+                    <div class="columns large-1 medium-1 small-1 search-close"><span>X</span> </div>
+                </div>
+                <!--Search Suggestions-->
+                <div class="search-suggestions">
+                    <ul>
+                        <li><a href="#">Text for test, Text for test</a></li>
+                        <li><a href="#">Text for test, Text for test</a></li>
+                        <li><a href="#">Text for test, Text for test</a></li>
+                        <li><a href="#">Text for test, Text for test</a></li>
+                        <li><a href="#">Text for test, Text for test</a></li>
+                    </ul>
+                </div>
+                <!--/Search Suggestions-->
+            </header>
+            <nav class="nav row"> <a href="#" class="columns large-4 medium-4 small-4 trending on"><span class="icon on"></span></a> <a href="#" class="columns large-4 medium-4 small-4 discover"><span class="icon"></span></a> <a href="#" class="columns large-4 medium-4 small-4 favorite"><span class="icon"></span></a> </nav>
+        </section>
+        <section class="container">
+            <!--Trending-->
+            <div class="tab active trending">
+                <h2 class="title columns">Most Popular Songs</h2>
+                <ul id="trending-list">
+                </ul>
+
+                <h2 class="title columns">Top Rated Artists</h2>
+                <ul>
+                    <li class="columns large-2 medium-3 small-6">
+                        <div class="block">
+                            <a href="#" class="action"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </a>
+                            <a href="#" class="name">
+                                <h3>Track Name 1 <span>Music</span></h3>
+                            </a>
                         </div>
-                    </div><!-- /.col-lg-6 -->
-                </div>
-
-                <div:overflow:auto>
-                    <div id="statusMessage"></div>
-                    <div>Trevx Music Player</div>
-                    
-                    <button type="button" id="PreviousButton">Previous</button>
-                    <button id="PlayButton" name="1" class="btn btn-success">Play</button>
-                    <button type="button" id="PauseButton" class="btn btn-primary">Pause</button>
-                    <button type="button" id="NextButton">Next</button>
-
-
-
-                    <style id="inlinecss" type="text/css">
-                        /* put a border around the canvas element */
-                        #canvas {
-                            margin-top: 10px;
-                            border-style: solid;
-                            border-width: 1px;
-                            padding: 3px;
-                        }
-                    </style>
-
-                    <div id="results" class="secroll-div">
-
-
-                    </div>
-
-                </div:overflow:auto>
+                    </li>
+                    <li class="columns large-2 medium-3 small-6">
+                        <div class="block">
+                            <a href="#" class="action"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </a>
+                            <a href="#" class="name">
+                                <h3>Track Name 2 <span>Music</span></h3>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="columns large-2 medium-3 small-6">
+                        <div class="block">
+                            <a href="#" class="action"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </a>
+                            <a href="#" class="name">
+                                <h3>Track Name 3 <span>Music</span></h3>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="columns large-2 medium-3 small-6">
+                        <div class="block">
+                            <a href="#" class="action"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </a>
+                            <a href="#" class="name">
+                                <h3>Track Name Track Name Track Name 4 <span>Music</span></h3>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div id="favTab" class="tab-pane fade">
-                <h3>Fav list</h3>
-                <p>save your fav songs</p>
-                <div id="fav" class="secroll-div">
-                </div>
+            <!--/Trending-->
+            <!--Discover--> <!-- &&&& -> <!--Search Result--> 
+            <div class="tab discover" id="results"> 
+
+
             </div>
-    </div>
-    <footer class="footer">
+            <!--Discover-->
+            <!--Favorite-->
+            <div class="tab favorite">
+                <ul class="results" id="fav">
+                </ul>
+            </div>
+            <!--/Favorite-->
+            <!--Search Result-->
+            <div class="search-result">
+                <ul class="results">
+                    <li>
+                        <div class="avatar"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </div>
+                        <h2 class="name">Trak name trak name trak name trak name</h2>
+                        <div class="actions"> <a href="#" class="download"></a> <a href="#" class="favorite"></a> </div>
+                    </li>
+                    <li>
+                        <div class="avatar"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </div>
+                        <h2 class="name">Trak name trak name trak name trak name</h2>
+                        <div class="actions"> <a href="#" class="download"></a> <a href="#" class="favorite"></a> </div>
+                    </li>
+                    <li>
+                        <div class="avatar"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </div>
+                        <h2 class="name">Trak name trak name trak name trak name</h2>
+                        <div class="actions"> <a href="#" class="download"></a> <a href="#" class="favorite"></a> </div>
+                    </li>
+                </ul>
+            </div>
+            <!--/Search Result-->
+        </section>
+
+        <button type="button" id="PreviousButton">Previous</button>
+        <button id="PlayButton" name="1" class="btn btn-success">Play</button>
+        <button type="button" id="PauseButton" class="btn btn-primary">Pause</button>
+        <button type="button" id="NextButton">Next</button>
+        <p id="curr-song-name">enjoy</p>
+
+
+
+        <style id="inlinecss" type="text/css">
+            /* put a border around the canvas element */
+            #canvas {
+                margin-top: 10px;
+                border-style: solid;
+                border-width: 1px;
+                padding: 3px;
+            }
+        </style>
+
         <div class="container">
             <p>
                 <canvas id="canvas" width="300" height="20">
@@ -88,8 +150,74 @@
                 </canvas>
             </p>
         </div>
-    </footer>
-   
-</body>
+    </div>
+    <!--/Wrapper-->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script>
+         $(document).ready(function(){
+         $('.slider').slick({
+           dots: true,
+           arrows: false,
+           infinite: true,
+           speed: 300,
+           slidesToShow: 1,
+            responsive: [
+             {
+               breakpoint: 2000,
+               settings: {
+                 slidesToShow: 3,
+                 slidesToScroll: 3,
+                 infinite: true,
+                 dots: true
+               }
+             },
+         	{
+               breakpoint: 1024,
+               settings: {
+                 slidesToShow: 3,
+                 slidesToScroll: 3,
+                 infinite: true,
+                 dots: true
+               }
+             },
+             {
+               breakpoint: 600,
+               settings: {
+                 slidesToShow: 2,
+                 slidesToScroll: 2
+               }
+             },
+             {
+               breakpoint: 480,
+               settings: {
+                 slidesToShow: 1,
+                 slidesToScroll: 1
+               }
+             }
+           ]
+         });
+         });
+    </script>
 
+
+   
+    <script src="assets/js/script.js"></script>
+    <script src="/js/default.js"></script>
+    <script src="/js/messages.js"></script>
+    <script src="/js/global.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+</body>
 </html>
+
+
+
+
+
+
+<!--
+    
+
+-->

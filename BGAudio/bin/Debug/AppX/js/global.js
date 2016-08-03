@@ -1,4 +1,6 @@
-﻿var positionUpdateInterval = 0;
+﻿/// <reference path="jquery-2.2.4.min.js" />
+
+var positionUpdateInterval = 0;
 var serverStarted = false;
 var isMusicPlaying = false;
 var initialized = false; //is start play list initialized
@@ -39,29 +41,38 @@ function addApplicationEventHandlers() {
     });
 
 
-    $('#results').on('click', '.add-remove-fav', function () {
+    $('#results').on('click', '.favorite', function () {
         //send onAppId & id wich is song id in trevx database
         AddRemoveFav(this.getAttribute('on-app-id'),this.id);
-        //console.log(this.id);
     });
 
 
-    $('#results').on('click', '.audio-line', function () {
+    $('#results').on('click', '.avatar', function () {
         //send send to background
         PlayThisAudio("resultList", this.getAttribute('on-app-id'));
         //startOrResume();
         //startPlaylist();
-        document.getElementById("curr-song-name").innerText = this.getAttribute('title');
+        //document.getElementById("curr-song-name").innerText = this.getAttribute('title');
         console.log("event listener: this.getAttribute('on-app-id')= " + this.getAttribute('on-app-id'));
     });
 
-    $('#fav').on('click', '.audio-line', function () {
+    $('#results').on('click', '.name', function () {
+        //send send to background
+        PlayThisAudio("resultList", this.getAttribute('on-app-id'));;
+    });
+
+    $('#fav').on('click', '.name', function () {
         //send send to background
         PlayThisAudio("favoritesList", this.getAttribute('on-app-id'));
         console.log(this.id);
     });
 
-    $('#fav').on('click', '.add-remove-fav', function () {
+    $('#fav').on('click', '.avatar', function () {
+        //send send to background
+        PlayThisAudio("favoritesList", this.getAttribute('on-app-id'));
+    });
+
+    $('#fav').on('click', '.remove', function () {
         //send onAppId & id wich is song id in trevx database
         AddRemoveFav(this.getAttribute('on-app-id'), this.id);
         console.log(this.id);
@@ -79,9 +90,10 @@ function addApplicationEventHandlers() {
         
         console.log(err);
     }
+ 
 
     $(function () {
-        $("#trevxSearchBox").autocomplete({
+        $("#search-box").autocomplete({
             source: function (request, response) {
                 var suggestionUrl = "http://trevx.com/v1/suggestion/" + encodeURIComponent(request.term) + "/?format=json";
                 $.getJSON(suggestionUrl, function (data) {
@@ -173,8 +185,27 @@ function getAudioImage(imgUrl) {
     return imgUrl;
 }
 
-function searchForQuery(searchQueryValueEncoded) {
+// http://trevx.com/discover-api.php?type=categories&lan=en&country=us&order=random&categories_limit=6&songs_limit=6&artists_limit=3&world_discover_limit=5
+//Trending API
+function trending() {
 
+    var url = 'http://trevx.com/discover-api.php?type=categories&lan=en&country=us&order=random&categories_limit=6&songs_limit=6&artists_limit=3&world_discover_limit=5';
+        $.getJSON(url, function (trend) {
+            
+            if (trend.length > 0) {
+                document.getElementById("trending-list").innerHTML = createTrending(trend);
+            } else {
+                document.getElementById("trending-list").innerHTML = "Sorry, an erorr accrued";
+            }
+        });
+
+    //document.getElementById("trevxSearchBox").value = '';
+};
+
+
+
+// searcg API
+function searchForQuery(searchQueryValueEncoded) {
     if (typeof searchQueryValueEncoded !== "string") {
         var searchQueryValueEncoded = encodeURI(document.getElementById("trevxSearchBox").value);
     }
@@ -195,7 +226,7 @@ function searchForQuery(searchQueryValueEncoded) {
         });
     }
 
-    document.getElementById("trevxSearchBox").value = '';
+    //document.getElementById("trevxSearchBox").value = '';
 };
 
 // this function ricive stringfy JSON object to send it in message
@@ -244,7 +275,7 @@ function AddRemoveFav(onAppId, id) {
 
     WriteTextFileFav(favoritesList);
     sendFavoritesList(JSON.stringify(favoritesList));
-    document.getElementById("fav").innerHTML = createAudioLines(favoritesList);
+    document.getElementById("fav").innerHTML = createFavAudioLines(favoritesList);
 }
 
 function checkIfFavored(target) {
@@ -287,12 +318,54 @@ function removeFromFavorites(target){
 
 function createAudioLines(list) {
     var links = '';
+
     for (var i = 0; i < list.length; i++) {
-        //"<a class='action' id='" + resultList[i].id + "'href='#'>"
-        links += "<span id=" + list[i].id + " class='add-remove-fav' on-app-id=" + i + ">add to fav</span>" + "<p id=" + list[i].id + " title ='"+ list[i].title +"' on-app-id=" + i + " class='audio-line'>" + list[i].title + "</p>";
-        title = list[i].title
+        links += "<li>" +
+       "<div class='avatar'  on-app-id=" + i + "> <img src=" + getAudioImage(list[i].image) + "> <span class='icon play'></span> <span class='icon pause'></span> </div> " +
+       "<h2 class='name' on-app-id=" + i + " >" + list[i].title + "</h2> " +
+       "<div class='actions'> </a> <a href='#' class='favorite'  id=" + list[i].id + " on-app-id=" + i + "></a> </div></li>";
+    }
+    return "<ul class='results'>" + links + "</ul>";
+}
+
+
+function createFavAudioLines(list) {
+    var links = '';
+    for (var i = 0; i < list.length; i++) {
+        links += '<li>'+
+          "<div class='avatar'  on-app-id=" + i + "> <img src=" + getAudioImage(list[i].image) + "> <span class='icon play'></span> <span class='icon pause'></span> </div> " +
+          "<h2 class='name' on-app-id="+i+" >" + list[i].title + "</h2> " +
+          "<div class='actions'> <a href='#' id=" + list[i].id + " class='remove' on-app-id=" + i + ">x</a> </div>" +
+        '</li>';
+       // links += "<span id=" + list[i].id + " class='add-remove-fav' on-app-id=" + i + ">add to fav</span>" + "<p id=" + list[i].id + " title ='" + list[i].title + "' on-app-id=" + i + " class='audio-line'>" + list[i].title + "</p>";
     }
     return links;
+}
+
+
+var gggg =
+ "<li class='columns large-2 medium-3 small-6'>" +
+ "<div class='block'> <a href='#' class='action'> <img src='assets/imgs/avatar.jpg' alt=''> <span class='icon play'></span> <span class='icon pause'></span> </a> <a href='#' class='name'>" +
+ "<h3>Track Name 2 <span>Music</span></h3>" +
+ "</a> </div>" +
+ "</li>";
+
+var boxes = '';
+function createTrending(trend) {
+    for (var i = 0; i < trend.length; i++) {
+        boxes +=
+            "<li class='columns large-2 medium-3 small-6'>" +
+                 "<div class='block'> <a href='#' class='action'> <img src=" + (trend[i].Imgurl) + " alt=''> </a>" +
+                    "<a href='#' class='name'>" +
+                      "<h3>" + trend[i].Qtitle +
+                            "<span>Music</span>" +
+                            "</h3>" +
+                    "</a>" +
+                "</div>" +
+            "</li>";
+    }
+    return boxes;
+
 }
 
 
@@ -365,7 +438,7 @@ function ReadTextFileFav() {
            if (JSON.parse(timestamp).length > 0) {
                favoritesList = JSON.parse(timestamp);
                //sendFavoritesList(JSON.stringify(favoritesList));
-               document.getElementById("fav").innerHTML = createAudioLines(favoritesList);
+               document.getElementById("fav").innerHTML = createFavAudioLines(favoritesList);
                //console.log("read done, msg should sent ");
            } else {
                document.getElementById("fav").innerHTML = "no fav added yet";
@@ -389,55 +462,12 @@ function removeRedundentResult() {
     resultList = resultList.reverse();
 };
 
-//autocomplete
-//$(function () {
-//    $("#trevxSearchButton").autocomplete({
-//        source: function (request, response) {
-//            var suggestionUrl = "http://trevx.com/v1/suggestion/" + encodeURIComponent(request.term) + "/?format=json";
-//            $.getJSON(suggestionUrl, function (data) {
-//                var searchTerms = data.slice(0, data.length - 4);
-//                response(searchTerms);
-//                console.log("aaauuuuuutttttttttoooooo");
-//            });
-//        },
-//        // on select suggestion item do
-//        select: function (event, ui) {
-//            searchForAQuery(ui.item.value);
-//        },
-//        minLength: 2,
-//        //remove results status message
-//        messages: {
-//            noResults: '',
-//            results: function () { }
-//        },
-//    })
-//});
-
-//$("input.suggest-user").autocomplete({
-//    source: function (request, response) {
-//        $.ajax({
-//            dataType: "json",
-//            type: 'Get',
-//            url: 'yourURL',
-//            success: function (data) {
-//                $('input.suggest-user').removeClass('ui-autocomplete-loading');
-//                // hide loading image
-
-//                response($.map(data, function (item) {
-//                    // your operation on data
-//                }));
-//            },
-//            error: function (data) {
-//                $('input.suggest-user').removeClass('ui-autocomplete-loading');
-//            }
-//        });
-//    },
-//    minLength: 3,
-//    open: function () { },
-//    close: function () { },
-//    focus: function (event, ui) { },
-//    select: function (event, ui) { }
-//});
+function getAudioImage(imgUrl) {
+    if (imgUrl.length == 0) {
+        imgUrl = "assets/imgs/cover-img.jpg";
+    }
+    return imgUrl;
+}
 
 //
 // To start playback send message to the background
@@ -589,12 +619,16 @@ function setupSMTC()
 }
 
 window.onload = function () {
+    trending();
 
     ReadTextFileFav();
     ReadTextFileResult();
+    //document.querySelector(".search-result").setAttribute("style", "display: block;");
+
 }
 
 function read() {
     ReadTextFileFav();
     ReadTextFileResult();
+
 }
