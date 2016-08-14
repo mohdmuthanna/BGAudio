@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-08-02T08:39:33.360</Modified>
+      <Modified>2016-08-08T10:49:16.326</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\css\setting.css">
       <PackagePath>assets\css\setting.css</PackagePath>
-      <Modified>2016-08-03T05:05:06.374</Modified>
+      <Modified>2016-08-04T08:49:23.557</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\css\simple-1.css">
       <PackagePath>assets\css\simple-1.css</PackagePath>
@@ -48,7 +48,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2016-07-12T12:54:00.798</Modified>
+      <Modified>2016-08-04T09:03:42.819</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\WinJS\css\ui-dark.css">
       <PackagePath>WinJS\css\ui-dark.css</PackagePath>
@@ -134,7 +134,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\audio.js">
       <PackagePath>js\audio.js</PackagePath>
-      <Modified>2016-07-27T10:51:48.208</Modified>
+      <Modified>2016-08-08T10:40:58.905</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\bootstrap.min.js">
       <PackagePath>js\bootstrap.min.js</PackagePath>
@@ -146,7 +146,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\global.js">
       <PackagePath>js\global.js</PackagePath>
-      <Modified>2016-08-03T09:55:36.470</Modified>
+      <Modified>2016-08-08T10:41:31.639</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\jquery-2.2.4.min.js">
       <PackagePath>js\jquery-2.2.4.min.js</PackagePath>
@@ -178,7 +178,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2016-08-03T06:50:47.300</Modified>
+      <Modified>2016-08-08T08:22:35.038</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\Media\Assets\Fragile.mp3">
       <PackagePath>Media\Assets\Fragile.mp3</PackagePath>
@@ -202,7 +202,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-08-02T08:39:32.772</Modified>
+      <Modified>2016-08-08T10:49:15.951</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

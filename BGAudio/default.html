@@ -26,7 +26,7 @@
                     <div class="columns large-1 medium-1 small-1 search-icon"> <span></span> </div>
                 </div>
                 <div class="row audio-field">
-                    <form name="text" id="search" method="post" role="search" class="columns large-11 medium-11 small-11">
+                    <form name="text" id="search" role="search" class="columns large-11 medium-11 small-11" action="javascript:myFunction(); return false;">
                         <span class="search-icon" id="trevxSearchButton"></span>
                         <input type="search" name="query" id="search-box" class="search-field-area" placeholder="Type any audio content">
                     </form>
@@ -49,44 +49,12 @@
         <section class="container">
             <!--Trending-->
             <div class="tab active trending">
-                <h2 class="title columns">Most Popular Songs</h2>
+                <h2 class="title columns">Most Popular Categories</h2>
                 <ul id="trending-list">
                 </ul>
 
-                <h2 class="title columns">Top Rated Artists</h2>
-                <ul>
-                    <li class="columns large-2 medium-3 small-6">
-                        <div class="block">
-                            <a href="#" class="action"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </a>
-                            <a href="#" class="name">
-                                <h3>Track Name 1 <span>Music</span></h3>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="columns large-2 medium-3 small-6">
-                        <div class="block">
-                            <a href="#" class="action"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </a>
-                            <a href="#" class="name">
-                                <h3>Track Name 2 <span>Music</span></h3>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="columns large-2 medium-3 small-6">
-                        <div class="block">
-                            <a href="#" class="action"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </a>
-                            <a href="#" class="name">
-                                <h3>Track Name 3 <span>Music</span></h3>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="columns large-2 medium-3 small-6">
-                        <div class="block">
-                            <a href="#" class="action"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </a>
-                            <a href="#" class="name">
-                                <h3>Track Name Track Name Track Name 4 <span>Music</span></h3>
-                            </a>
-                        </div>
-                    </li>
+                <h2 class="title columns">World wide music</h2>
+                <ul id="world-list">
                 </ul>
             </div>
             <!--/Trending-->
@@ -105,21 +73,6 @@
             <!--Search Result-->
             <div class="search-result">
                 <ul class="results">
-                    <li>
-                        <div class="avatar"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </div>
-                        <h2 class="name">Trak name trak name trak name trak name</h2>
-                        <div class="actions"> <a href="#" class="download"></a> <a href="#" class="favorite"></a> </div>
-                    </li>
-                    <li>
-                        <div class="avatar"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </div>
-                        <h2 class="name">Trak name trak name trak name trak name</h2>
-                        <div class="actions"> <a href="#" class="download"></a> <a href="#" class="favorite"></a> </div>
-                    </li>
-                    <li>
-                        <div class="avatar"> <img src="assets/imgs/avatar.jpg" alt=""> <span class="icon play"></span> <span class="icon pause"></span> </div>
-                        <h2 class="name">Trak name trak name trak name trak name</h2>
-                        <div class="actions"> <a href="#" class="download"></a> <a href="#" class="favorite"></a> </div>
-                    </li>
                 </ul>
             </div>
             <!--/Search Result-->

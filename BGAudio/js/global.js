@@ -8,6 +8,8 @@ var initialized = false; //is start play list initialized
 var resultList = [];
 var favoritesList = [];
 var firstRun = true;
+var trendingList = [];
+var worldList = [];
 
 var MediaPlaybackStatus = Windows.Media.MediaPlaybackStatus;
 var MediaPlayerState = Windows.Media.Playback.MediaPlayerState;
@@ -114,7 +116,38 @@ function addApplicationEventHandlers() {
         })
     });
 
-}
+    //enter
+    $("#search-box").keyup(function (e) {
+        //e.preventDefault();
+        var key = e.which || e.keyCode;
+        if (key === 13) { // 13 is enter
+            searchForQuery(document.getElementById('search-box').value);
+        }
+    });
+
+    //searchbutton clicked
+    $("#trevxSearchButton").click(function (e) {
+        searchForQuery(document.getElementById('search-box').value);
+    });
+
+    //trend box clicked
+    $(".trend-box").click(function (e) {
+
+    });
+
+    $('#trending-list').on('click', '.trend-box', function () {
+        var term = trendingList[this.id].Searchq.replace(/-/g, ' ');
+        console.log(" fffg    "+this.id);
+        searchForQuery(term);
+    });
+
+    $('#world-list').on('click', '.trend-box', function () {
+        var term = worldList[this.id].Searchq.replace(/-/g, ' ');
+        console.log(" fffg    " + this.id);
+        searchForQuery(term);
+    });
+    
+} // event listener
 
 function removeMediaPlayerEventHandlers() {
     mediaPlayer.removeEventListener("currentstatechanged", backgroundAudioStateChanged);
@@ -190,25 +223,44 @@ function getAudioImage(imgUrl) {
 function trending() {
 
     var url = 'http://trevx.com/discover-api.php?type=categories&lan=en&country=us&order=random&categories_limit=6&songs_limit=6&artists_limit=3&world_discover_limit=5';
-        $.getJSON(url, function (trend) {
-            
+    $.getJSON(url, function (trend) {
+            trendingList = trend;
             if (trend.length > 0) {
                 document.getElementById("trending-list").innerHTML = createTrending(trend);
             } else {
                 document.getElementById("trending-list").innerHTML = "Sorry, an erorr accrued";
             }
         });
+};
 
-    //document.getElementById("trevxSearchBox").value = '';
+function getWorldList() {
+
+    var url = 'http://trevx.com/discover-api.php?type=world_discover&lan=en&country=us&order=random&categories_limit=6&songs_limit=6&artists_limit=3&world_discover_limit=6';
+    $.getJSON(url, function (list) {
+        worldList = list;
+        if (list.length > 0) {
+            console.log("fgtgfrtgdfff");
+                document.getElementById("world-list").innerHTML = createWorldList(list);
+            } else {
+                document.getElementById("world-list").innerHTML = "Sorry, an erorr accrued";
+            }
+        });
 };
 
 
 
-// searcg API
+// search API
 function searchForQuery(searchQueryValueEncoded) {
     if (typeof searchQueryValueEncoded !== "string") {
-        var searchQueryValueEncoded = encodeURI(document.getElementById("trevxSearchBox").value);
+        var searchQueryValueEncoded = encodeURI(document.getElementById("search-box").value);
     }
+
+    document.getElementById('search-box').value = "";
+    $("#search-box").autocomplete("close");
+    $('.tab.discover').show().siblings('div').hide();
+    $('.columns').removeClass('on');
+    $('.discover').addClass('on');
+    $('.audio-field').attr('style', "display: none;");
 
     if (searchQueryValueEncoded.length > 0) {
         var url = 'http://trevx.com/v1/' + searchQueryValueEncoded + '/0/40/?format=json';
@@ -217,9 +269,10 @@ function searchForQuery(searchQueryValueEncoded) {
             removeRedundentResult();
             WriteTextFileResult(resultList);
             sendResultList(JSON.stringify(resultList));
-            
+
             if (resultList.length > 0) {
                 document.getElementById("results").innerHTML = createAudioLines(resultList);
+                changeFavoriteIconsState();
             } else {
                 document.getElementById("results").innerHTML = "No results found";
             }
@@ -239,6 +292,18 @@ function sendResultList(list) {
 
 
 };
+
+function changeFavoriteIconsState() {
+            var favoriteIcons = document.querySelectorAll('.fav-item');
+            for (var i = 0; i < favoriteIcons.length; i++) {
+                favoriteIcons[i].setAttribute("class", "fav-item favorite");
+                for (var j = 0; j < favoritesList.length; j++) {
+                    if (favoritesList[j].id == favoriteIcons[i].id) {
+                        favoriteIcons[i].setAttribute("class", "fav-item favorite on");
+                    }
+                }
+            }
+}
 
 function sendFavoritesList(list) {
     var message = new Windows.Foundation.Collections.ValueSet();
@@ -276,6 +341,7 @@ function AddRemoveFav(onAppId, id) {
     WriteTextFileFav(favoritesList);
     sendFavoritesList(JSON.stringify(favoritesList));
     document.getElementById("fav").innerHTML = createFavAudioLines(favoritesList);
+    changeFavoriteIconsState();
 }
 
 function checkIfFavored(target) {
@@ -323,7 +389,7 @@ function createAudioLines(list) {
         links += "<li>" +
        "<div class='avatar'  on-app-id=" + i + "> <img src=" + getAudioImage(list[i].image) + "> <span class='icon play'></span> <span class='icon pause'></span> </div> " +
        "<h2 class='name' on-app-id=" + i + " >" + list[i].title + "</h2> " +
-       "<div class='actions'> </a> <a href='#' class='favorite'  id=" + list[i].id + " on-app-id=" + i + "></a> </div></li>";
+       "<div class='actions'> </a> <a href='#' class='fav-item favorite'  id=" + list[i].id + " on-app-id=" + i + "></a> </div></li>";
     }
     return "<ul class='results'>" + links + "</ul>";
 }
@@ -350,15 +416,33 @@ var gggg =
  "</a> </div>" +
  "</li>";
 
-var boxes = '';
+
 function createTrending(trend) {
+    var boxes = '';
     for (var i = 0; i < trend.length; i++) {
         boxes +=
-            "<li class='columns large-2 medium-3 small-6'>" +
+            "<li class='columns large-2 medium-3 small-6 trend-box' id=" + i + " >" +
                  "<div class='block'> <a href='#' class='action'> <img src=" + (trend[i].Imgurl) + " alt=''> </a>" +
                     "<a href='#' class='name'>" +
                       "<h3>" + trend[i].Qtitle +
                             "<span>Music</span>" +
+                            "</h3>" +
+                    "</a>" +
+                "</div>" +
+            "</li>";
+    }
+    return boxes;
+
+}
+function createWorldList(list) {
+    var boxes = '';
+    for (var i = 0; i < list.length; i++) {
+        boxes +=
+            "<li class='columns large-2 medium-3 small-6 trend-box' id=" + i + " >" +
+                 "<div class='block'> <a href='#' class='action'> <img src=" + (list[i].Imgurl) + " alt=''> </a>" +
+                    "<a href='#' class='name'>" +
+                      "<h3>" + list[i].Qtitle +
+                            "<span>Worldwide</span>" +
                             "</h3>" +
                     "</a>" +
                 "</div>" +
@@ -405,11 +489,14 @@ function ReadTextFileResult() {
        } else {
            document.getElementById("results").innerHTML = "search for a music";
        }
+
+       changeFavoriteIconsState();
        
    }, function () {
        document.getElementById("results").innerHTML = "Welcome to Trevx, make new search";
        console.log("not exisit");
    });
+    
 }
 
 
@@ -620,6 +707,7 @@ function setupSMTC()
 
 window.onload = function () {
     trending();
+    getWorldList();
 
     ReadTextFileFav();
     ReadTextFileResult();
