@@ -33,6 +33,9 @@
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\css\bootstrap.css">
       <PackagePath>css\bootstrap.css</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\css\jquery.mobile-1.4.5.min.css">
+      <PackagePath>css\jquery.mobile-1.4.5.min.css</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\css\default.css">
       <PackagePath>css\default.css</PackagePath>
     </AppxPackagedFile>
@@ -119,6 +122,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\jquery.js">
       <PackagePath>js\jquery.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\jquery.mobile-1.4.5.min.js">
+      <PackagePath>js\jquery.mobile-1.4.5.min.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\messages.js">
       <PackagePath>js\messages.js</PackagePath>

@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-08-08T10:49:16.326</Modified>
+      <Modified>2016-08-14T12:52:55.593</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\css\setting.css">
       <PackagePath>assets\css\setting.css</PackagePath>
-      <Modified>2016-08-04T08:49:23.557</Modified>
+      <Modified>2016-08-14T13:15:32.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\css\simple-1.css">
       <PackagePath>assets\css\simple-1.css</PackagePath>
@@ -45,6 +45,10 @@
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\css\bootstrap.css">
       <PackagePath>css\bootstrap.css</PackagePath>
       <Modified>2016-06-01T13:06:25.204</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\css\jquery.mobile-1.4.5.min.css">
+      <PackagePath>css\jquery.mobile-1.4.5.min.css</PackagePath>
+      <Modified>2016-08-14T12:50:28.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\css\default.css">
       <PackagePath>css\default.css</PackagePath>
@@ -126,7 +130,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\js\script.js">
       <PackagePath>assets\js\script.js</PackagePath>
-      <Modified>2016-08-02T10:46:53.713</Modified>
+      <Modified>2016-08-14T12:47:25.223</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\js\slick.min.js">
       <PackagePath>assets\js\slick.min.js</PackagePath>
@@ -160,6 +164,10 @@
       <PackagePath>js\jquery.js</PackagePath>
       <Modified>2016-06-01T11:54:50.411</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\jquery.mobile-1.4.5.min.js">
+      <PackagePath>js\jquery.mobile-1.4.5.min.js</PackagePath>
+      <Modified>2016-08-14T12:50:36.349</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\js\messages.js">
       <PackagePath>js\messages.js</PackagePath>
       <Modified>2016-07-13T11:05:50.276</Modified>
@@ -178,7 +186,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2016-08-08T08:22:35.038</Modified>
+      <Modified>2016-08-14T12:52:51.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\Media\Assets\Fragile.mp3">
       <PackagePath>Media\Assets\Fragile.mp3</PackagePath>
@@ -202,7 +210,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-08-08T10:49:15.951</Modified>
+      <Modified>2016-08-14T12:52:55.163</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

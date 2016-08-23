@@ -37,3 +37,9 @@ var list = document.querySelector('.tab.discover');
 for (var i = list.children.length; i >= 0; i--) {
    // list.appendChild(list.children[Math.random() * i | 0]);
 }
+
+$("section").on("swiperight", '.trending', function (e) {
+    e.preventDefault();
+    $('.tab.trending').show().siblings('div').hide();
+    console.log("swiperight");
+});
