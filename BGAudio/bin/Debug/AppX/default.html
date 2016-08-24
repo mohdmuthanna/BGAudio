@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/setting.css">
     <link rel="stylesheet" href="assets/css/slick.css">
     <link href="/css/default.css" rel="stylesheet" />
-    <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <!-- <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" /> -->
 
     <!-- WinJS references -->
     <script src="WinJS/js/base.js"></script>
@@ -106,60 +106,14 @@
     </div>
     <!--/Wrapper-->
     <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/slick.min.js"></script>
-    <script>
-         $(document).ready(function(){
-         $('.slider').slick({
-           dots: true,
-           arrows: false,
-           infinite: true,
-           speed: 300,
-           slidesToShow: 1,
-            responsive: [
-             {
-               breakpoint: 2000,
-               settings: {
-                 slidesToShow: 3,
-                 slidesToScroll: 3,
-                 infinite: true,
-                 dots: true
-               }
-             },
-         	{
-               breakpoint: 1024,
-               settings: {
-                 slidesToShow: 3,
-                 slidesToScroll: 3,
-                 infinite: true,
-                 dots: true
-               }
-             },
-             {
-               breakpoint: 600,
-               settings: {
-                 slidesToShow: 2,
-                 slidesToScroll: 2
-               }
-             },
-             {
-               breakpoint: 480,
-               settings: {
-                 slidesToShow: 1,
-                 slidesToScroll: 1
-               }
-             }
-           ]
-         });
-         });
-    </script>
-
-
     <script src="/js/default.js"></script>
     <script src="/js/messages.js"></script>
     <script src="/js/global.js"></script>
-    <script src="js/jquery-ui.js"></script>
+    
    
 
 </body>
