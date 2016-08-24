@@ -38,8 +38,46 @@ for (var i = list.children.length; i >= 0; i--) {
    // list.appendChild(list.children[Math.random() * i | 0]);
 }
 
-$("section").on("swiperight", '.trending', function (e) {
+$("section").on("swipeleft", '.trending', function (e) {
     e.preventDefault();
-    $('.tab.trending').show().siblings('div').hide();
-    console.log("swiperight");
+    $('.tab.discover').fadeIn("slow").siblings('div').hide();
+    //icons on off
+    $('.ui-link').removeClass('on');
+    $('.icon').removeClass('on');
+    $('.discover').addClass('on').siblings('a').removeClass('on');
+    $('.discover').children('span').addClass('on');
 });
+
+$("section").on("swiperight", '.discover', function (e) {
+    e.preventDefault();
+    $('.tab.trending').fadeIn("slow").siblings('div').hide();
+    //icons on off
+    $('.ui-link').removeClass('on');
+    $('.icon').removeClass('on');
+    $('.trending').addClass('on').siblings('a').removeClass('on');
+    $('.trending').children('span').addClass('on');
+});
+
+$("section").on("swipeleft", '.discover', function (e) {
+    e.preventDefault();
+    $('.tab.favorite').fadeIn("slow").siblings('div').hide();
+
+    //icons on off
+    $('.ui-link').removeClass('on');
+    $('.icon').removeClass('on');
+    $('.favorite').addClass('on').siblings('a').removeClass('on');
+    $('.favorite').children('span').addClass('on');
+});
+
+$("section").on("swiperight", '.favorite', function (e) {
+    e.preventDefault();
+    $('.tab.discover').fadeIn("slow").siblings('div').hide();
+
+    //icons on off
+    $('.ui-link').removeClass('on');
+    $('.icon').removeClass('on');
+    $('.discover').addClass('on').siblings('a').removeClass('on');
+    $('.discover').children('span').addClass('on');
+});
+
+
