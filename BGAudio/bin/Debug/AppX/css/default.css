@@ -19,6 +19,17 @@ footer {
 }
 
 .ui-autocomplete{
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    top: 34px !important;
+	left: 4.5px !important;
+    right: 0;
+    border-radius: 0 0 3px 3px;
+    background-color: #fff;
+    z-index: 999999;
+    box-shadow: 0 8px 25px -6px;
+    /*
 	padding: 0;
 	border: 1px solid #bebebe;
 	border-width: 0 1px 1px;
@@ -28,6 +39,7 @@ footer {
 	left: 4.5px !important;
 	background-color: #fff;
 	list-style-type: none;
+        */
 }
 .ui-autocomplete li{
 	display: block;
@@ -53,4 +65,13 @@ footer {
   position: fixed;
   top: 50%;
   left: 50%;
+}
+
+
+.msg {
+    position: static;
+    top: 50%;
+    text-align: center;
+    padding-top: 80px;
+    color: rgba(82, 82, 82, 1);
 }

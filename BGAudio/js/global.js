@@ -266,7 +266,6 @@ function searchForQuery(searchQueryValueEncoded) {
         var url = 'http://trevx.com/v1/' + searchQueryValueEncoded + '/0/40/?format=json';
         document.getElementById("results").innerHTML = "<div id='loading-msg' class='loading'><img src='assets/imgs/load.gif' alt='loading' width='64' height='64'></div>";
         $.getJSON(url, function (data) {
-
             resultList = data.slice(0, data.length - 7);
             removeRedundentResult();
             WriteTextFileResult(resultList);
@@ -276,11 +275,14 @@ function searchForQuery(searchQueryValueEncoded) {
                 document.getElementById("results").innerHTML = createAudioLines(resultList);
                 changeFavoriteIconsState();
             } else {
-                document.getElementById("results").innerHTML = "No results found";
+                document.getElementById("results").innerHTML = "<div class='msg'>Sorry, No results found try a different keyword.</div>";
             }
+        }).error(function () {
+            document.getElementById("results").innerHTML = "<div class='msg'>Sorry an error occurred, Check your internet connection and try again.</div>";
+        }).fail(function () {
+            document.getElementById("results").innerHTML = "<div class='msg'>Sorry an error occurred, Check your internet connection and try again.</div>";
         });
     }
-
     //document.getElementById("trevxSearchBox").value = '';
 };
 
@@ -489,7 +491,7 @@ function ReadTextFileResult() {
           // sendResultList(JSON.stringify(resultList));
            
        } else {
-           document.getElementById("results").innerHTML = "search for a music";
+           document.getElementById("results").innerHTML = "<div class='msg'>Welcome to Trevx, The place you can find and listen to any audio content.</div>";
        }
 
        changeFavoriteIconsState();
@@ -530,7 +532,7 @@ function ReadTextFileFav() {
                document.getElementById("fav").innerHTML = createFavAudioLines(favoritesList);
                //console.log("read done, msg should sent ");
            } else {
-               document.getElementById("fav").innerHTML = "no fav added yet";
+               document.getElementById("fav").innerHTML = "<div class='msg'>Welcome to Trevx, Nothing added to the favorite list yet.</div>";
            }
        } catch (err) {
            console.log(err);

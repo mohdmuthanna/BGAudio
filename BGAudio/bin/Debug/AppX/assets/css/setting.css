@@ -222,7 +222,7 @@ body, input, .form-field, select {
 	padding: 0;
 }
 .results li {
-	width: 98%;
+	width: 95%;
 	margin-bottom: 10px;
 	padding: 0 1% 10px;
 	border-bottom: 1px solid #dedede;
@@ -273,7 +273,7 @@ body, input, .form-field, select {
 .results .actions a.remove {
 	width: 22px;
 	height: 22px;
-	top: 0;
+	top: 25px;
 	right: 0;
 	color: #999;
 }
