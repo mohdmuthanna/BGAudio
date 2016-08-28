@@ -92,4 +92,20 @@ if (is_touch_device()) {
 }
 
 
+$(".clearfix").click(function () {
+    $("#search-box").focus();
+})
+
+$('.clearfix').click(function (event) {
+    console.log('clearfix 1');
+    //event.preventDefault();
+    $('.audio-field').css({ "display": "block" });
+    $('#search-box').focus();
+});
+
+$('#close').click(function () {
+    console.log('x dddddddddddd');
+    $('.audio-field').css({ "display": "none" });
+});
+
 
