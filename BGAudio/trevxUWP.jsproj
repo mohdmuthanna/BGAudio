@@ -70,6 +70,7 @@
     <Content Include="assets\imgs\cover-img.jpg" />
     <Content Include="assets\imgs\icons - Copy.png" />
     <Content Include="assets\imgs\icons.png" />
+    <Content Include="assets\imgs\load.gif" />
     <Content Include="assets\imgs\logo.png" />
     <Content Include="assets\imgs\slide1.jpg" />
     <Content Include="assets\imgs\slide2.jpg" />

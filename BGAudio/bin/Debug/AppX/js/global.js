@@ -264,7 +264,9 @@ function searchForQuery(searchQueryValueEncoded) {
 
     if (searchQueryValueEncoded.length > 0) {
         var url = 'http://trevx.com/v1/' + searchQueryValueEncoded + '/0/40/?format=json';
+        document.getElementById("results").innerHTML = "<div id='loading-msg' class='loading'><img src='assets/imgs/load.gif' alt='loading' width='64' height='64'></div>";
         $.getJSON(url, function (data) {
+
             resultList = data.slice(0, data.length - 7);
             removeRedundentResult();
             WriteTextFileResult(resultList);

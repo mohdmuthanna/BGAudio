@@ -93,6 +93,9 @@
       <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\imgs\load.gif">
+      <PackagePath>assets\imgs\load.gif</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\js\jquery-3.1.0.min.js">
       <PackagePath>assets\js\jquery-3.1.0.min.js</PackagePath>
     </AppxPackagedFile>
