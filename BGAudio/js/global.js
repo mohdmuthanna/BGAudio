@@ -33,13 +33,19 @@ function addApplicationEventHandlers() {
     document.getElementById("trevxSearchButton").addEventListener("click", searchForQuery, false);
 
     $("#canvas").click(function (jqEvent) {
-        var coords = {
-            x: jqEvent.pageX - $("#canvas").offset().left,
-        };
-        var logicalCoords = {
-            x: coords.x / (canvas.width) *100,
-        }
-        canvasTracker(logicalCoords.x);
+        canvasTracker(jqEvent.pageX / document.body.clientWidth * 100)
+       // var coords = {
+          //  x: jqEvent.pageX - $("#canvas").offset().left,
+       // };
+       // var logicalCoords = {
+      //      x: coords.x / (canvas.width) *100,
+       // }
+       // console.log($("#canvas").offset());
+       // console.log('logicalCoords.x  ' + logicalCoords.x);
+        // console.log('jqEvent.pageX / document.body.clientWidth ' + jqEvent.pageX / document.body.clientWidth);
+       // console.log('x: coords.x ' + coords.x)
+
+
     });
 
 
@@ -85,7 +91,8 @@ function addApplicationEventHandlers() {
             messagereceivedHandler(e);
         }
         if (mediaPlayer.currentState != Windows.Media.Playback.MediaPlayerState.playing) {
-            document.getElementById("PauseButton").disabled = true;
+            //document.getElementById("PauseButton").disabled = true;
+            $('#PauseButton').css('display', 'none');
             //document.getElementById("NextButton").disabled = true;
         }
     } catch (err) {
@@ -326,6 +333,7 @@ function PlayThisAudio(activeList, onAppId) {
 };
 
 function canvasTracker(percentage) {
+    //console.log(percentage);
     var message = new Windows.Foundation.Collections.ValueSet();
     message.insert(Messages.CanvasTracker, percentage);
     Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground(message);
@@ -574,7 +582,9 @@ function startPlaylist() {
         }
     }
 
-    document.getElementById("PauseButton").disabled = false;
+    //document.getElementById("PauseButton").disabled = false;
+    $('#PlayButton').css('display', 'none');
+    $('#PauseButton').css('display', 'initial');
     //document.getElementById("NextButton").disabled = false;
     
 
@@ -627,16 +637,20 @@ function backgroundAudioStateChanged() {
         if (currentState == Windows.Media.Playback.MediaPlayerState.playing) {
             smtc.playbackStatus = MediaPlaybackStatus.playing;
             //document.getElementById("curr-song-name").innerText = "fffff";
-            document.getElementById("PauseButton").disabled = false;
-            document.getElementById("PlayButton").disabled = true;
+            $('#PlayButton').css('display', 'none');
+            $('#PauseButton').css('display', 'initial');
+            //document.getElementById("PauseButton").disabled = false;
+            //document.getElementById("PlayButton").disabled = true;
             if (positionUpdateInterval == 0) {
                 positionUpdateInterval = window.setInterval(progressBar, 1000, "test");
             }
         }
         else if (currentState == Windows.Media.Playback.MediaPlayerState.paused) {
             smtc.playbackStatus = MediaPlaybackStatus.paused;
-            document.getElementById("PauseButton").disabled = true;
-            document.getElementById("PlayButton").disabled = false;
+            $('#PauseButton').css('display', 'none');
+            $('#PlayButton').css('display', '');
+            //document.getElementById("PauseButton").disabled = true;
+            //document.getElementById("PlayButton").disabled = false;
             if (positionUpdateInterval != 0) {
                 window.clearInterval(positionUpdateInterval);
                 positionUpdateInterval = 0;

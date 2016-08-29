@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/simple-1.css">
     <link rel="stylesheet" href="assets/css/setting.css">
     <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/player.css">
     <link href="/css/default.css" rel="stylesheet" />
     <!-- <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" /> -->
 
@@ -78,31 +79,55 @@
             <!--/Search Result-->
         </section>
 
+<!--
+    
         <button type="button" id="PreviousButton">Previous</button>
         <button id="PlayButton" name="1" class="btn btn-success">Play</button>
         <button type="button" id="PauseButton" class="btn btn-primary">Pause</button>
         <button type="button" id="NextButton">Next</button>
         <p id="curr-song-name">enjoy</p>
 
-
+-->
 
         <style id="inlinecss" type="text/css">
             /* put a border around the canvas element */
-            #canvas {
+            #canvas-0 {
                 margin-top: 10px;
                 border-style: solid;
                 border-width: 1px;
                 padding: 3px;
             }
         </style>
+        <section class="player">
+            <div class="progress">
+                <canvas id="canvas">
+                    canvas not supported
+                </canvas>
+            </div>
 
-        <div class="container">
+            <div class="action">
+                <h3 id="curr-song-name"></h3>
+                <div class="btns">
+                    <button id="PreviousButton" class="icon prev ui-btn ui-shadow ui-corner-all"></button>
+                    <button id="PlayButton" class="icon play ui-btn ui-shadow ui-corner-all"></button>
+                    <button id="PauseButton" class="icon pause ui-btn ui-shadow ui-corner-all"></button>
+                    <button id="NextButton" class="icon next ui-btn ui-shadow ui-corner-all"></button>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- 
+            <div class="container">
             <p>
-                <canvas id="canvas" width="300" height="20">
+                <canvas id="canvas-0" width="300" height="20">
                     canvas not supported
                 </canvas>
             </p>
         </div>
+            -->
+        
     </div>
     <!--/Wrapper-->
     <script src="js/jquery-2.2.4.min.js"></script>

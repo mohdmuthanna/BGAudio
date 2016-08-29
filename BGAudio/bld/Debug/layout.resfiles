@@ -1,3 +1,4 @@
+assets\css\player.css
 assets\css\setting.css
 assets\css\simple-1.css
 assets\css\slick.css
@@ -8,6 +9,7 @@ assets\imgs\icons - Copy.png
 assets\imgs\icons.png
 assets\imgs\load.gif
 assets\imgs\logo.png
+assets\imgs\player-icons.png
 assets\imgs\slide1.jpg
 assets\imgs\slide2.jpg
 assets\js\jquery-3.1.0.min.js

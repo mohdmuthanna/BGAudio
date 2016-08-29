@@ -18,6 +18,9 @@
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\css\player.css">
+      <PackagePath>assets\css\player.css</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\css\setting.css">
       <PackagePath>assets\css\setting.css</PackagePath>
     </AppxPackagedFile>
@@ -65,6 +68,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\imgs\logo.png">
       <PackagePath>assets\imgs\logo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\imgs\player-icons.png">
+      <PackagePath>assets\imgs\player-icons.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>

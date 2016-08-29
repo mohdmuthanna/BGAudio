@@ -62,6 +62,7 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="assets\css\player.css" />
     <Content Include="assets\css\setting.css" />
     <Content Include="assets\css\simple-1.css" />
     <Content Include="assets\css\slick-theme.css" />
@@ -72,6 +73,7 @@
     <Content Include="assets\imgs\icons.png" />
     <Content Include="assets\imgs\load.gif" />
     <Content Include="assets\imgs\logo.png" />
+    <Content Include="assets\imgs\player-icons.png" />
     <Content Include="assets\imgs\slide1.jpg" />
     <Content Include="assets\imgs\slide2.jpg" />
     <Content Include="assets\js\jquery-3.1.0.min.js" />
