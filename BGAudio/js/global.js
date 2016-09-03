@@ -613,11 +613,17 @@ function progressBar() {
         if (canvas.getContext) {
             var ctx = canvas.getContext("2d");
             //clear canvas before painting
+            //ctx.clearRect(x, y, width, height);
             ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
-            ctx.fillStyle = "#DD4433";
-            var fWidth = (elapsedTime / mediaPlayer.naturalDuration) * (canvas.clientWidth);
+            ctx.fillStyle = "red";
+            var fWidth = Math.round( (elapsedTime / mediaPlayer.naturalDuration) * (canvas.clientWidth) );
+
             if (fWidth > 0) {
+                console.log('document.body.clientWidth ' + document.body.clientWidth);
+                console.log('elapsedTime ' + elapsedTime);
+                console.log("fWidth " + fWidth);
                 ctx.fillRect(0, 0, fWidth, canvas.clientHeight);
+
             }
         }
     }
