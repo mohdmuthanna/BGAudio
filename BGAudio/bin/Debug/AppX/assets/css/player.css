@@ -1,4 +1,5 @@
 .player {
+    display:none;
 	width:100%;
 	overflow:hidden;
 	position:fixed;
@@ -7,29 +8,34 @@
 	background-color: rgba(0, 0, 0, 0.7);
 }
 .player .progress {
-	padding:0 0px 10px;
+    width: 100%;
+    height: 10px;
+    border: 2px solid gray;
+    margin-bottom: 15px;
 }
-.player #canvas {
-	width:100%;
-	height:10px;
-	border:1px solid #fff;
-	
+
+.player .progress .bar {
+    background: #dd4433;
+    height: 10px;
+    width:0;
 }
+
 .player .action {
-	padding:0 10px;
+	padding:0px 20px 0 8px;
 }
 .player h3 {
 	width:60%;
-	float:left;
+	float:right;
 	margin:0;
 	font-weight:normal;
 	color:#fff;
 	word-wrap:break-word;
+    text-align:right;
 }
 .player .btns {
 	width:40%;
-	float:right;
-	text-align:right;
+	float:left;
+	
 }
 .player .icon {
 	width:24px;

@@ -32,7 +32,7 @@ function addApplicationEventHandlers() {
 
     document.getElementById("trevxSearchButton").addEventListener("click", searchForQuery, false);
 
-    $("#canvas").click(function (jqEvent) {
+    $(".progress").click(function (jqEvent) {
         canvasTracker(jqEvent.pageX / document.body.clientWidth * 100)
        // var coords = {
           //  x: jqEvent.pageX - $("#canvas").offset().left,
@@ -324,6 +324,7 @@ function sendFavoritesList(list) {
 };
 
 function PlayThisAudio(activeList, onAppId) {
+    $('.player').show();
     //console.log("active in global " + activeList);
     startPlaylist();  
     var message = new Windows.Foundation.Collections.ValueSet();
@@ -606,26 +607,21 @@ function playPrevSong() {
 // Display and update progress bar
 //
 function progressBar() {
+    var bar = $('.progress .bar');
+
     try {
         //get current position 
         var elapsedTime = Math.round(mediaPlayer.position);
         //update the progress bar
-        if (canvas.getContext) {
-            var ctx = canvas.getContext("2d");
+
             //clear canvas before painting
-            //ctx.clearRect(x, y, width, height);
-            ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
-            ctx.fillStyle = "red";
-            var fWidth = Math.round( (elapsedTime / mediaPlayer.naturalDuration) * (canvas.clientWidth) );
+        var fWidth = (elapsedTime / mediaPlayer.naturalDuration) * 100;
+        
+       // console.log('document.body.clientWidth ' + document.body.clientWidth);
+        //console.log('elapsedTime ' + elapsedTime);
+        //console.log("fWidth " + fWidth);
 
-            if (fWidth > 0) {
-                console.log('document.body.clientWidth ' + document.body.clientWidth);
-                console.log('elapsedTime ' + elapsedTime);
-                console.log("fWidth " + fWidth);
-                ctx.fillRect(0, 0, fWidth, canvas.clientHeight);
-
-            }
-        }
+        bar.width(fWidth + '%');
     }
     catch (error) {
         log(error.message);
@@ -648,7 +644,7 @@ function backgroundAudioStateChanged() {
             //document.getElementById("PauseButton").disabled = false;
             //document.getElementById("PlayButton").disabled = true;
             if (positionUpdateInterval == 0) {
-                positionUpdateInterval = window.setInterval(progressBar, 1000, "test");
+                positionUpdateInterval = window.setInterval(progressBar, 50, "test");
             }
         }
         else if (currentState == Windows.Media.Playback.MediaPlayerState.paused) {

@@ -222,7 +222,7 @@ body, input, .form-field, select {
 	padding: 0;
 }
 .results li {
-	width: 95%;
+	width: 98%;
 	margin-bottom: 10px;
 	padding: 0 1% 10px;
 	border-bottom: 1px solid #dedede;
@@ -238,11 +238,16 @@ body, input, .form-field, select {
 	height: 70px;
 }
 .results .name {
+    min-height: 64px;
 	width: 55%;
 	margin: 0 10px;
 	font-weight: normal;
 	font-size: 16px;
 }
+.results .name:hover {
+    cursor: pointer;
+}
+
 .results .actions {
 	width: 32px;
 	height: 32px;
