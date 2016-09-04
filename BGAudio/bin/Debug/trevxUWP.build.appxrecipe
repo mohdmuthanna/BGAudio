@@ -60,6 +60,9 @@
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\imgs\slide2.jpg">
       <PackagePath>assets\imgs\slide2.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\logo-social.jpg">
+      <PackagePath>images\logo-social.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\imgs\icons - Copy.png">
       <PackagePath>assets\imgs\icons - Copy.png</PackagePath>
     </AppxPackagedFile>
@@ -72,32 +75,264 @@
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\imgs\player-icons.png">
       <PackagePath>assets\imgs\player-icons.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.scale-100.png">
+      <PackagePath>images\AppList\AppList44x44Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.scale-125.png">
+      <PackagePath>images\AppList\AppList44x44Logo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.scale-150.png">
+      <PackagePath>images\AppList\AppList44x44Logo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.scale-200.png">
+      <PackagePath>images\AppList\AppList44x44Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.scale-400.png">
+      <PackagePath>images\AppList\AppList44x44Logo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-16_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-16_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-20_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-20_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-256_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-256_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-30_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-30_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-32_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-32_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-36_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-36_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-40_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-40_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-48_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-48_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-60_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-60_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-64_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-64_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-72_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-72_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-80_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-80_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\AppList\AppList44x44Logo.targetsize-96_altform-unplated.png">
+      <PackagePath>images\AppList\AppList44x44Logo.targetsize-96_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Large\Large310x310Logo.scale-100.png">
+      <PackagePath>images\Large\Large310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Large\Large310x310Logo.scale-125.png">
+      <PackagePath>images\Large\Large310x310Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Large\Large310x310Logo.scale-150.png">
+      <PackagePath>images\Large\Large310x310Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Large\Large310x310Logo.scale-200.png">
+      <PackagePath>images\Large\Large310x310Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Large\Large310x310Logo.scale-400.png">
+      <PackagePath>images\Large\Large310x310Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Medium\Medium150x150Logo.scale-100.png">
+      <PackagePath>images\Medium\Medium150x150Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Medium\Medium150x150Logo.scale-125.png">
+      <PackagePath>images\Medium\Medium150x150Logo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Medium\Medium150x150Logo.scale-150.png">
+      <PackagePath>images\Medium\Medium150x150Logo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Medium\Medium150x150Logo.scale-200.png">
+      <PackagePath>images\Medium\Medium150x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Medium\Medium150x150Logo.scale-400.png">
+      <PackagePath>images\Medium\Medium150x150Logo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Small\Small71x71Logo.scale-100.png">
+      <PackagePath>images\Small\Small71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Small\Small71x71Logo.scale-125.png">
+      <PackagePath>images\Small\Small71x71Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Small\Small71x71Logo.scale-150.png">
+      <PackagePath>images\Small\Small71x71Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Small\Small71x71Logo.scale-200.png">
+      <PackagePath>images\Small\Small71x71Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Small\Small71x71Logo.scale-400.png">
+      <PackagePath>images\Small\Small71x71Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\splashscreen.scale-125.png">
+      <PackagePath>images\splashscreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\splashscreen.scale-150.png">
+      <PackagePath>images\splashscreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\SplashScreen.scale-200.png">
       <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\splashscreen.scale-400.png">
+      <PackagePath>images\splashscreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\SplashScreen\SplashScreen.scale-100.png">
+      <PackagePath>images\SplashScreen\SplashScreen.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\SplashScreen\SplashScreen.scale-125.png">
+      <PackagePath>images\SplashScreen\SplashScreen.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\SplashScreen\SplashScreen.scale-150.png">
+      <PackagePath>images\SplashScreen\SplashScreen.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\SplashScreen\SplashScreen.scale-200.png">
+      <PackagePath>images\SplashScreen\SplashScreen.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\SplashScreen\SplashScreen.scale-400.png">
+      <PackagePath>images\SplashScreen\SplashScreen.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square150x150Logo.scale-200.png">
       <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square150x150Logo.scale-400.png">
+      <PackagePath>images\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square44x44Logo.scale-200.png">
       <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square44x44Logo.scale-400.png">
+      <PackagePath>images\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square44x44Logo.targetsize-16.png">
+      <PackagePath>images\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square44x44Logo.targetsize-24.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square44x44Logo.targetsize-256.png">
+      <PackagePath>images\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square44x44Logo.targetsize-256_altform-unplated.png">
+      <PackagePath>images\Square44x44Logo.targetsize-256_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Square44x44Logo.targetsize-48.png">
+      <PackagePath>images\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\StoreLogo.png">
       <PackagePath>images\StoreLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\storelogo.scale-100.png">
+      <PackagePath>images\storelogo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\storelogo.scale-125.png">
+      <PackagePath>images\storelogo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\storelogo.scale-150.png">
+      <PackagePath>images\storelogo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\storelogo.scale-200.png">
+      <PackagePath>images\storelogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\storelogo.scale-400.png">
+      <PackagePath>images\storelogo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Store\StoreLogo.scale-100.png">
+      <PackagePath>images\Store\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Store\StoreLogo.scale-125.png">
+      <PackagePath>images\Store\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Store\StoreLogo.scale-150.png">
+      <PackagePath>images\Store\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Store\StoreLogo.scale-200.png">
+      <PackagePath>images\Store\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Store\StoreLogo.scale-400.png">
+      <PackagePath>images\Store\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Wide310x150Logo.scale-200.png">
       <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Wide310x150Logo.scale-400.png">
+      <PackagePath>images\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Wide\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide\Wide310x150Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Wide\Wide310x150Logo.scale-125.png">
+      <PackagePath>images\Wide\Wide310x150Logo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Wide\Wide310x150Logo.scale-150.png">
+      <PackagePath>images\Wide\Wide310x150Logo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Wide\Wide310x150Logo.scale-200.png">
+      <PackagePath>images\Wide\Wide310x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\images\Wide\Wide310x150Logo.scale-400.png">
+      <PackagePath>images\Wide\Wide310x150Logo.scale-400.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\imgs\load.gif">
       <PackagePath>assets\imgs\load.gif</PackagePath>
