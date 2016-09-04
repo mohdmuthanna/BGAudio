@@ -53,10 +53,11 @@
     <TargetPlatformMinVersion>10.0.10141.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>$(VersionNumberMajor).$(VersionNumberMinor)</MinimumVisualStudioVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>BGAudio_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>trevxUWP_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>01C7F6843DE323629D922C355A547AEFC10C5E02</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -65,8 +66,6 @@
     <Content Include="assets\css\player.css" />
     <Content Include="assets\css\setting.css" />
     <Content Include="assets\css\simple-1.css" />
-    <Content Include="assets\css\slick-theme.css" />
-    <Content Include="assets\css\slick.css" />
     <Content Include="assets\imgs\avatar.jpg" />
     <Content Include="assets\imgs\cover-img.jpg" />
     <Content Include="assets\imgs\icons - Copy.png" />
@@ -169,6 +168,8 @@
     <Content Include="js\jquery.mobile-1.4.5.min.js" />
     <Content Include="js\messages.js" />
     <Content Include="data\data.json" />
+    <None Include="Package.StoreAssociation.xml" />
+    <None Include="trevxUWP_StoreKey.pfx" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />

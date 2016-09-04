@@ -1,0 +1,5 @@
+MainPackage=C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bin\Release\Upload\trevxUWP_1.1.4.0_AnyCPU.appx
+ResourcePack=C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\_scale-100.appx
+ResourcePack=C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\_scale-125.appx
+ResourcePack=C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\_scale-150.appx
+ResourcePack=C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\_scale-400.appx

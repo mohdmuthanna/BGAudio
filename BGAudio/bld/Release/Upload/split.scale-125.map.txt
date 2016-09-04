@@ -1,0 +1,15 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-125"
+"ResourceDimensions"		"scale-125"
+
+[Files]
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\Upload\split.scale-125.pri"			"resources.pri"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageUploadLayout\images\Wide\Wide310x150Logo.scale-125.png"			"images\Wide\Wide310x150Logo.scale-125.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageUploadLayout\images\storelogo.scale-125.png"			"images\storelogo.scale-125.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageUploadLayout\images\Store\StoreLogo.scale-125.png"			"images\Store\StoreLogo.scale-125.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageUploadLayout\images\splashscreen.scale-125.png"			"images\splashscreen.scale-125.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageUploadLayout\images\SplashScreen\SplashScreen.scale-125.png"			"images\SplashScreen\SplashScreen.scale-125.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageUploadLayout\images\Small\Small71x71Logo.scale-125.png"			"images\Small\Small71x71Logo.scale-125.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageUploadLayout\images\Medium\Medium150x150Logo.scale-125.png"			"images\Medium\Medium150x150Logo.scale-125.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageUploadLayout\images\Large\Large310x310Logo.scale-125.png"			"images\Large\Large310x310Logo.scale-125.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageUploadLayout\images\AppList\AppList44x44Logo.scale-125.png"			"images\AppList\AppList44x44Logo.scale-125.png"

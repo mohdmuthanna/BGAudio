@@ -1,8 +1,6 @@
 assets\css\player.css
 assets\css\setting.css
 assets\css\simple-1.css
-assets\css\slick.css
-assets\css\slick-theme.css
 assets\imgs\avatar.jpg
 assets\imgs\cover-img.jpg
 assets\imgs\icons - Copy.png
@@ -105,9 +103,6 @@ js\jquery.mobile-1.4.5.min.js
 js\jquery-2.2.4.min.js
 js\jquery-ui.js
 js\messages.js
-Media\Assets\Fragile.mp3
-Media\Assets\k.m4a
-Media\Assets\Perfect.m4a
 WinJS\css\ui-dark.css
 WinJS\css\ui-light.css
 WinJS\fonts\Symbols.ttf

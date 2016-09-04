@@ -1,0 +1,18 @@
+﻿[ResourceMetadata]
+"ResourceId"			"filemap.scale-400"
+"ResourceDimensions"		"scale-400"
+
+[Files]
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\filemap.scale-400.pri"			"resources.pri"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\Wide310x150Logo.scale-400.png"			"images\Wide310x150Logo.scale-400.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\storelogo.scale-400.png"			"images\storelogo.scale-400.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\Square44x44Logo.scale-400.png"			"images\Square44x44Logo.scale-400.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\Square150x150Logo.scale-400.png"			"images\Square150x150Logo.scale-400.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\splashscreen.scale-400.png"			"images\splashscreen.scale-400.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\Wide\Wide310x150Logo.scale-400.png"			"images\Wide\Wide310x150Logo.scale-400.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\Store\StoreLogo.scale-400.png"			"images\Store\StoreLogo.scale-400.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\SplashScreen\SplashScreen.scale-400.png"			"images\SplashScreen\SplashScreen.scale-400.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\Small\Small71x71Logo.scale-400.png"			"images\Small\Small71x71Logo.scale-400.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\Medium\Medium150x150Logo.scale-400.png"			"images\Medium\Medium150x150Logo.scale-400.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\Large\Large310x310Logo.scale-400.png"			"images\Large\Large310x310Logo.scale-400.png"
+"C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\bld\Release\PackageLayout\images\AppList\AppList44x44Logo.scale-400.png"			"images\AppList\AppList44x44Logo.scale-400.png"

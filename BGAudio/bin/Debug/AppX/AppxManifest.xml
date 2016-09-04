@@ -7,11 +7,11 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="d0e595e4-4b5e-4ad4-880c-f8689483bd5a" Version="1.0.0.0" Publisher="CN=cayildir" ProcessorArchitecture="neutral" />
+  <Identity Name="20742Trevx.Trevx" Version="1.1.4.0" Publisher="CN=ACAEE08E-BA91-429A-96FB-1253F748530C" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="d0e595e4-4b5e-4ad4-880c-f8689483bd5a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>BGAudio</DisplayName>
-    <PublisherDisplayName>cayildir</PublisherDisplayName>
+    <DisplayName>Trevx</DisplayName>
+    <PublisherDisplayName>Trevx</PublisherDisplayName>
     <Logo>images\Store\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -51,6 +51,6 @@
     <build:Item Name="ProjectGUID" Value="d0e595e4-4b5e-4ad4-880c-f8689483bd5a" />
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="AppHost" />
-    <build:Item Name="MakePri.exe" Version="10.0.10586.212 (th2_release_sec.160328-1908)" />
+    <build:Item Name="MakePri.exe" Version="10.0.14393.33 (rs1_release_sec.160727-1952)" />
   </build:Metadata>
 </Package>

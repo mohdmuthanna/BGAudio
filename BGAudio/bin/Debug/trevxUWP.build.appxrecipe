@@ -27,12 +27,6 @@
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\css\simple-1.css">
       <PackagePath>assets\css\simple-1.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\css\slick-theme.css">
-      <PackagePath>assets\css\slick-theme.css</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\assets\css\slick.css">
-      <PackagePath>assets\css\slick.css</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\css\bootstrap.css">
       <PackagePath>css\bootstrap.css</PackagePath>
     </AppxPackagedFile>
@@ -384,15 +378,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\default.html">
       <PackagePath>default.html</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\Media\Assets\Fragile.mp3">
-      <PackagePath>Media\Assets\Fragile.mp3</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\Media\Assets\k.m4a">
-      <PackagePath>Media\Assets\k.m4a</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\Media\Assets\Perfect.m4a">
-      <PackagePath>Media\Assets\Perfect.m4a</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mohd\Documents\Visual Studio 2015\Projects\BGAudio\BGAudio\data\data.json">
       <PackagePath>data\data.json</PackagePath>

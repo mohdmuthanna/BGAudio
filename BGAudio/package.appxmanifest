@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="d0e595e4-4b5e-4ad4-880c-f8689483bd5a" Version="1.0.0.0" Publisher="CN=cayildir" />
+  <Identity Name="20742Trevx.Trevx" Version="1.1.4.0" Publisher="CN=ACAEE08E-BA91-429A-96FB-1253F748530C" />
   <mp:PhoneIdentity PhoneProductId="d0e595e4-4b5e-4ad4-880c-f8689483bd5a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>BGAudio</DisplayName>
-    <PublisherDisplayName>cayildir</PublisherDisplayName>
+    <DisplayName>Trevx</DisplayName>
+    <PublisherDisplayName>Trevx</PublisherDisplayName>
     <Logo>images\Store\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>

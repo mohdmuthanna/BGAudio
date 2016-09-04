@@ -1,0 +1,83 @@
+﻿
+html, body {
+  height: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.secroll-div {
+    overflow: scroll;
+    height: 300px;
+}
+
+
+.results-list li .title:hover, .favorites-list li .title:hover{
+	cursor:pointer;
+}
+
+.ui-autocomplete{
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    top: 34px !important;
+	left: 4.5px !important;
+    right: 0;
+    border-radius: 0 0 3px 3px;
+    background-color: #fff;
+    z-index: 999999;
+    box-shadow: 0 8px 25px -6px;
+    /*
+	padding: 0;
+	border: 1px solid #bebebe;
+	border-width: 0 1px 1px;
+	z-index: 999999;
+	position: absolute;
+	top: 34px !important;
+	left: 4.5px !important;
+	background-color: #fff;
+	list-style-type: none;
+        */
+}
+.ui-autocomplete li{
+	display: block;
+	padding: 5px 10px;
+	border-left:3px solid #fff;
+}
+.ui-autocomplete li:hover{
+	background-color:#ededed;
+	border-left:3px solid #d43;
+}
+.ui-state-focus
+{
+    background:#dedede;
+    outline:none;
+}
+/*when mouse hover the suggestion result list a message will printed */
+/*dont display this message*/
+.ui-helper-hidden-accessible:last-child{
+	display: none;
+}
+
+.loading{
+  position: fixed;
+  top: 50%;
+  left: 45%;
+}
+
+
+.msg {
+    position: static;
+    top: 50%;
+    text-align: center;
+    padding-top: 80px;
+    color: rgba(82, 82, 82, 1);
+}
+
+#trending, #fav, #results{
+    min-height:500px;
+    padding-bottom:50px;
+    padding-right:14px;
+}

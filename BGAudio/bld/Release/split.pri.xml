@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="20742Trevx.Trevx" version="1.0" primary="true">
+		<Qualifiers>
+			<AlternateForm>UNPLATED</AlternateForm>
+			<Language>EN-US</Language>
+			<Scale>200</Scale>
+			<TargetSize>256,16,20,24,30,32,36,40,48,60,64,72,80,96</TargetSize>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="default.html" uri="ms-resource://20742Trevx.Trevx/Files/default.html">
+				<Candidate type="Path">
+					<Value>default.html</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="assets">
+				<ResourceMapSubtree name="css">
+					<NamedResource name="player.css" uri="ms-resource://20742Trevx.Trevx/Files/assets/css/player.css">
+						<Candidate type="Path">
+							<Value>assets\css\player.css</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="setting.css" uri="ms-resource://20742Trevx.Trevx/Files/assets/css/setting.css">
+						<Candidate type="Path">
+							<Value>assets\css\setting.css</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="simple-1.css" uri="ms-resource://20742Trevx.Trevx/Files/assets/css/simple-1.css">
+						<Candidate type="Path">
+							<Value>assets\css\simple-1.css</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="slick-theme.css" uri="ms-resource://20742Trevx.Trevx/Files/assets/css/slick-theme.css">
+						<Candidate type="Path">
+							<Value>assets\css\slick-theme.css</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="slick.css" uri="ms-resource://20742Trevx.Trevx/Files/assets/css/slick.css">
+						<Candidate type="Path">
+							<Value>assets\css\slick.css</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="imgs">
+					<NamedResource name="avatar.jpg" uri="ms-resource://20742Trevx.Trevx/Files/assets/imgs/avatar.jpg">
+						<Candidate type="Path">
+							<Value>assets\imgs\avatar.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="cover-img.jpg" uri="ms-resource://20742Trevx.Trevx/Files/assets/imgs/cover-img.jpg">
+						<Candidate type="Path">
+							<Value>assets\imgs\cover-img.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="icons - Copy.png" uri="ms-resource://20742Trevx.Trevx/Files/assets/imgs/icons - Copy.png">
+						<Candidate type="Path">
+							<Value>assets\imgs\icons - Copy.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="icons.png" uri="ms-resource://20742Trevx.Trevx/Files/assets/imgs/icons.png">
+						<Candidate type="Path">
+							<Value>assets\imgs\icons.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="load.gif" uri="ms-resource://20742Trevx.Trevx/Files/assets/imgs/load.gif">
+						<Candidate type="Path">
+							<Value>assets\imgs\load.gif</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="logo.png" uri="ms-resource://20742Trevx.Trevx/Files/assets/imgs/logo.png">
+						<Candidate type="Path">
+							<Value>assets\imgs\logo.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="player-icons.png" uri="ms-resource://20742Trevx.Trevx/Files/assets/imgs/player-icons.png">
+						<Candidate type="Path">
+							<Value>assets\imgs\player-icons.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="slide1.jpg" uri="ms-resource://20742Trevx.Trevx/Files/assets/imgs/slide1.jpg">
+						<Candidate type="Path">
+							<Value>assets\imgs\slide1.jpg</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="slide2.jpg" uri="ms-resource://20742Trevx.Trevx/Files/assets/imgs/slide2.jpg">
+						<Candidate type="Path">
+							<Value>assets\imgs\slide2.jpg</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="js">
+					<NamedResource name="jquery-3.1.0.min.js" uri="ms-resource://20742Trevx.Trevx/Files/assets/js/jquery-3.1.0.min.js">
+						<Candidate type="Path">
+							<Value>assets\js\jquery-3.1.0.min.js</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="script.js" uri="ms-resource://20742Trevx.Trevx/Files/assets/js/script.js">
+						<Candidate type="Path">
+							<Value>assets\js\script.js</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="slick.min.js" uri="ms-resource://20742Trevx.Trevx/Files/assets/js/slick.min.js">
+						<Candidate type="Path">
+							<Value>assets\js\slick.min.js</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="css">
+				<NamedResource name="bootstrap.css" uri="ms-resource://20742Trevx.Trevx/Files/css/bootstrap.css">
+					<Candidate type="Path">
+						<Value>css\bootstrap.css</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="default.css" uri="ms-resource://20742Trevx.Trevx/Files/css/default.css">
+					<Candidate type="Path">
+						<Value>css\default.css</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="jquery.mobile-1.4.5.min.css" uri="ms-resource://20742Trevx.Trevx/Files/css/jquery.mobile-1.4.5.min.css">
+					<Candidate type="Path">
+						<Value>css\jquery.mobile-1.4.5.min.css</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="data">
+				<NamedResource name="data.json" uri="ms-resource://20742Trevx.Trevx/Files/data/data.json">
+					<Candidate type="Path">
+						<Value>data\data.json</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="images">
+				<NamedResource name="LockScreenLogo.png" uri="ms-resource://20742Trevx.Trevx/Files/images/LockScreenLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>images\LockScreenLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="logo-social.jpg" uri="ms-resource://20742Trevx.Trevx/Files/images/logo-social.jpg">
+					<Candidate type="Path">
+						<Value>images\logo-social.jpg</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="splashscreen.png" uri="ms-resource://20742Trevx.Trevx/Files/images/splashscreen.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>images\SplashScreen.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://20742Trevx.Trevx/Files/images/Square150x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>images\Square150x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://20742Trevx.Trevx/Files/images/Square44x44Logo.png">
+					<Candidate qualifiers="TargetSize-48" isDefault="true" type="Path">
+						<Value>images\Square44x44Logo.targetsize-48.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256, AlternateForm-UNPLATED" type="Path">
+						<Value>images\Square44x44Logo.targetsize-256_altform-unplated.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256" isDefault="true" type="Path">
+						<Value>images\Square44x44Logo.targetsize-256.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24, AlternateForm-UNPLATED" type="Path">
+						<Value>images\Square44x44Logo.targetsize-24_altform-unplated.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24" isDefault="true" type="Path">
+						<Value>images\Square44x44Logo.targetsize-24.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-16" isDefault="true" type="Path">
+						<Value>images\Square44x44Logo.targetsize-16.png</Value>
+					</Candidate>
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>images\Square44x44Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://20742Trevx.Trevx/Files/images/StoreLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>images\storelogo.scale-200.png</Value>
+					</Candidate>
+					<Candidate type="Path">
+						<Value>images\StoreLogo.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://20742Trevx.Trevx/Files/images/Wide310x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>images\Wide310x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="AppList">
+					<NamedResource name="AppList44x44Logo.png" uri="ms-resource://20742Trevx.Trevx/Files/images/AppList/AppList44x44Logo.png">
+						<Candidate qualifiers="TargetSize-96, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-96_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-80, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-80_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-72, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-72_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-64, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-64_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-60, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-60_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-48, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-48_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-40, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-40_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-36, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-36_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-32, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-32_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-30, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-30_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-256, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-256_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-24, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-24_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-20, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-20_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="TargetSize-16, AlternateForm-UNPLATED" type="Path">
+							<Value>images\AppList\AppList44x44Logo.targetsize-16_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+							<Value>images\AppList\AppList44x44Logo.scale-200.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Large">
+					<NamedResource name="Large310x310Logo.png" uri="ms-resource://20742Trevx.Trevx/Files/images/Large/Large310x310Logo.png">
+						<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+							<Value>images\Large\Large310x310Logo.scale-200.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Medium">
+					<NamedResource name="Medium150x150Logo.png" uri="ms-resource://20742Trevx.Trevx/Files/images/Medium/Medium150x150Logo.png">
+						<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+							<Value>images\Medium\Medium150x150Logo.scale-200.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Small">
+					<NamedResource name="Small71x71Logo.png" uri="ms-resource://20742Trevx.Trevx/Files/images/Small/Small71x71Logo.png">
+						<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+							<Value>images\Small\Small71x71Logo.scale-200.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="SplashScreen">
+					<NamedResource name="SplashScreen.png" uri="ms-resource://20742Trevx.Trevx/Files/images/SplashScreen/SplashScreen.png">
+						<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+							<Value>images\SplashScreen\SplashScreen.scale-200.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Store">
+					<NamedResource name="StoreLogo.png" uri="ms-resource://20742Trevx.Trevx/Files/images/Store/StoreLogo.png">
+						<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+							<Value>images\Store\StoreLogo.scale-200.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Wide">
+					<NamedResource name="Wide310x150Logo.png" uri="ms-resource://20742Trevx.Trevx/Files/images/Wide/Wide310x150Logo.png">
+						<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+							<Value>images\Wide\Wide310x150Logo.scale-200.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="js">
+				<NamedResource name="audio.js" uri="ms-resource://20742Trevx.Trevx/Files/js/audio.js">
+					<Candidate type="Path">
+						<Value>js\audio.js</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="bootstrap.min.js" uri="ms-resource://20742Trevx.Trevx/Files/js/bootstrap.min.js">
+					<Candidate type="Path">
+						<Value>js\bootstrap.min.js</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="default.js" uri="ms-resource://20742Trevx.Trevx/Files/js/default.js">
+					<Candidate type="Path">
+						<Value>js\default.js</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="global.js" uri="ms-resource://20742Trevx.Trevx/Files/js/global.js">
+					<Candidate type="Path">
+						<Value>js\global.js</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="jquery-2.2.4.min.js" uri="ms-resource://20742Trevx.Trevx/Files/js/jquery-2.2.4.min.js">
+					<Candidate type="Path">
+						<Value>js\jquery-2.2.4.min.js</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="jquery-ui.js" uri="ms-resource://20742Trevx.Trevx/Files/js/jquery-ui.js">
+					<Candidate type="Path">
+						<Value>js\jquery-ui.js</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="jquery.js" uri="ms-resource://20742Trevx.Trevx/Files/js/jquery.js">
+					<Candidate type="Path">
+						<Value>js\jquery.js</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="jquery.mobile-1.4.5.min.js" uri="ms-resource://20742Trevx.Trevx/Files/js/jquery.mobile-1.4.5.min.js">
+					<Candidate type="Path">
+						<Value>js\jquery.mobile-1.4.5.min.js</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="messages.js" uri="ms-resource://20742Trevx.Trevx/Files/js/messages.js">
+					<Candidate type="Path">
+						<Value>js\messages.js</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="WinJS">
+				<ResourceMapSubtree name="css">
+					<NamedResource name="ui-dark.css" uri="ms-resource://20742Trevx.Trevx/Files/WinJS/css/ui-dark.css">
+						<Candidate type="Path">
+							<Value>WinJS\css\ui-dark.css</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ui-light.css" uri="ms-resource://20742Trevx.Trevx/Files/WinJS/css/ui-light.css">
+						<Candidate type="Path">
+							<Value>WinJS\css\ui-light.css</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="fonts">
+					<NamedResource name="Symbols.ttf" uri="ms-resource://20742Trevx.Trevx/Files/WinJS/fonts/Symbols.ttf">
+						<Candidate type="Path">
+							<Value>WinJS\fonts\Symbols.ttf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="js">
+					<NamedResource name="base.js" uri="ms-resource://20742Trevx.Trevx/Files/WinJS/js/base.js">
+						<Candidate type="Path">
+							<Value>WinJS\js\base.js</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ui.js" uri="ms-resource://20742Trevx.Trevx/Files/WinJS/js/ui.js">
+						<Candidate type="Path">
+							<Value>WinJS\js\ui.js</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="ui.strings.js" uri="ms-resource://20742Trevx.Trevx/Files/WinJS/js/ui.strings.js">
+						<Candidate qualifiers="Language-EN-US" isDefault="true" type="Path">
+							<Value>WinJS\js\en-US\ui.strings.js</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

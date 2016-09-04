@@ -1,0 +1,2428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='C:\ProgramData\Windows App Certification Kit\results.xsl'?>
+<REPORT xml:lang="en-US" OVERALL_RESULT="FAIL" VERSION="10.0.14393.33" LATEST_VERSION="TRUE" UPDATE_DOWNLOAD_URL="" TOOLSET_ARCHITECTURE="x64" SecureBoot="FALSE" APP_TYPE="UapApp" PUBLISHER_DISPLAY_NAME="CN=ACAEE08E-BA91-429A-96FB-1253F748530C" APP_NAME="" APP_VERSION="" OSVERSION="10.0.10586.0" OS="Microsoft Windows 10 Pro" PER_USER_APPLICATION="" PARTIAL_RUN="FALSE" LCID="1033" VALIDATION_TYPE="UI" ReportGenerationTime="9/4/2016 1:14:33 PM" ID="48e2ef78d79430d676878d657ea9afd9">
+  <REQUIREMENTS>
+    <REQUIREMENT NUMBER="10" TITLE="Deployment and launch tests" RATIONALE="Application failures such as crashes and hangs are a major disruption to users and cause frustration. Eliminating such failures improves application stability and reliability, and overall, provides users with a better application experience.">
+      <TEST INDEX="50" NAME="Bytecode generation" DESCRIPTION="Byte code generation should be able to complete successfully for packages containing an HTML5 Windows Store app." EXECUTIONTIME="00h:00m:01s.30ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="79" NAME="Background tasks cancelation handler" DESCRIPTION="App should implement event handler to handle background task cancelation request." EXECUTIONTIME="00h:00m:27s.72ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="81" NAME="Platform version launch" DESCRIPTION="App should not mis-use OSVersionInfo API to provide users functionality that is specific to the OS." EXECUTIONTIME="00h:00m:24s.43ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="47" NAME="App launch" DESCRIPTION="App launch tests." EXECUTIONTIME="00h:00m:24s.36ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="80" NAME="App prelaunch" DESCRIPTION="App should pass app prelaunch validation." EXECUTIONTIME="00h:00m:34s.18ms">
+        <MESSAGES>
+          <MESSAGE TEXT="The app failed prelaunch test - 20742Trevx.Trevx_1.1.4.0_neutral__v903ktgm2sns2." />
+        </MESSAGES>
+        <RESULT><![CDATA[FAIL]]></RESULT>
+      </TEST>
+      <TEST INDEX="21" NAME="Crashes and hangs" DESCRIPTION="Do not crash or hang during the testing process." EXECUTIONTIME="00h:00m:02s.55ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="12" TITLE="Package compliance test" RATIONALE="The package manifest was missing one or more required attributes.">
+      <TEST INDEX="77" NAME="Application count" DESCRIPTION="One package should not define more than one app in the manifest." EXECUTIONTIME="00h:00m:01s.04ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="31" NAME="App manifest" DESCRIPTION="App manifest must include valid entries for all required fields." EXECUTIONTIME="00h:00m:01s.21ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="74" NAME="Bundle manifest" DESCRIPTION="Bundle manifest must include valid entries for all required fields." EXECUTIONTIME="00h:00m:01s.63ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="75" NAME="Package size" DESCRIPTION="Package file size should not be greater than 4 gigabytes." EXECUTIONTIME="00h:00m:01s.27ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="83" NAME="Restricted namespace" DESCRIPTION="Check if any restricted namespace is referenced in the appx manifest." EXECUTIONTIME="00h:00m:01s.05ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="14" TITLE="Windows security features test" RATIONALE="Applications must opt-into Windows security features.">
+      <TEST INDEX="33" NAME="Binary analyzer" DESCRIPTION="Analysis of security features enabled on binaries" EXECUTIONTIME="00h:00m:01s.80ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="70" NAME="Banned file analyzer" DESCRIPTION="Analysis of application to detect known insecure files" EXECUTIONTIME="00h:00m:00s.98ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="62" NAME="Private code signing" DESCRIPTION="App should not package private code signing key files." EXECUTIONTIME="00h:00m:01s.11ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="15" TITLE="Supported API test" RATIONALE="The application should only refer to the APIs allowed by the Windows SDK for Windows Store Apps.">
+      <TEST INDEX="38" NAME="Supported APIs" DESCRIPTION="Windows Store App must only use supported platform APIs." EXECUTIONTIME="00h:00m:01s.52ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="19" TITLE="App manifest resources tests" RATIONALE="The App Package Manifest should have valid resources defined in the resources.pri file, as per the App Packaging Specification and App Manifest Schema.">
+      <TEST INDEX="45" NAME="App resources" DESCRIPTION="The package should have valid resources defined in the resources.pri file." EXECUTIONTIME="00h:00m:00s.76ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="61" NAME="Branding" DESCRIPTION="App should not use the default images packed by windows SDK samples or Visual Studio." EXECUTIONTIME="00h:00m:02s.63ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="20" TITLE="Debug configuration test" RATIONALE="The App should not install any debug binaries.">
+      <TEST INDEX="46" NAME="Debug configuration" DESCRIPTION="The App should not install any debug binaries." EXECUTIONTIME="00h:00m:01s.20ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="21" TITLE="File encoding test" RATIONALE="Packages containing an HTML5 Windows Store app must have correct file encoding.">
+      <TEST INDEX="49" NAME="UTF-8 file encoding" DESCRIPTION="Packages containing an HTML5 Windows Store app must have correct file encoding." EXECUTIONTIME="00h:00m:01s.20ms">
+        <MESSAGES>
+          <MESSAGE TEXT="File c:\program files\windowsapps\20742trevx.trevx_1.1.4.0_neutral__v903ktgm2sns2\assets\css\slick-theme.css is not properly UTF-8 encoded. Re-save the file as UTF-8 (including Byte Order Mark)." />
+          <MESSAGE TEXT="File c:\program files\windowsapps\20742trevx.trevx_1.1.4.0_neutral__v903ktgm2sns2\assets\css\slick.css is not properly UTF-8 encoded. Re-save the file as UTF-8 (including Byte Order Mark)." />
+        </MESSAGES>
+        <RESULT><![CDATA[FAIL]]></RESULT>
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="23" TITLE="App Capabilities test" RATIONALE="Packages declaring special-use capabilities will have to provide justifications during the onboarding process.">
+      <TEST INDEX="52" NAME="Special use capabilities" DESCRIPTION="Packages declaring special-use capabilities will have to provide justifications during the onboarding process." EXECUTIONTIME="00h:00m:01s.11ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="24" TITLE="Windows Runtime metadata validation" RATIONALE="Metadata needs to be conformant and consistent across all generation sources.">
+      <TEST INDEX="56" NAME="ExclusiveTo attribute" DESCRIPTION="A class must not implement an interface that is marked ExclusiveTo another class." EXECUTIONTIME="00h:00m:14s.05ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="57" NAME="Type location" DESCRIPTION="Types must be defined in the metadata file with the longest matching namespace." EXECUTIONTIME="00h:00m:01s.14ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="55" NAME="Type name case-sensitivity" DESCRIPTION="Namespace and type names must not vary only by casing." EXECUTIONTIME="00h:00m:00s.90ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="54" NAME="Type name correctness" DESCRIPTION="Only system types can be in the Windows namespace and no types can be in the global namespace." EXECUTIONTIME="00h:00m:00s.90ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="58" NAME="General metadata correctness" DESCRIPTION="Metadata files must meet various requirements in order to be valid and correct." EXECUTIONTIME="00h:00m:13s.00ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="53" NAME="Properties" DESCRIPTION="Write-only and indexer properties may not be used. Corresponding getter and setter methods must match in type." EXECUTIONTIME="00h:00m:00s.90ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="25" TITLE="Package sanity test" RATIONALE="Validation of the app package contents to ensure correctness.">
+      <TEST INDEX="63" NAME="Platform appropriate files" DESCRIPTION="App should not install files that do not match the target processor architecture." EXECUTIONTIME="00h:00m:01s.06ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+      <TEST INDEX="66" NAME="Supported directory structure check" DESCRIPTION="Validate each file in the package for that the file name length should be less than MAX_PATH." EXECUTIONTIME="00h:00m:01s.22ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="27" TITLE="Resource Usage Test" RATIONALE="WinJS background tasks need to call close() to free resource.">
+      <TEST INDEX="68" NAME="WinJS background task" DESCRIPTION="WinJS background tasks need to call close() to free resource." EXECUTIONTIME="00h:00m:01s.65ms">
+        <MESSAGES />
+        <RESULT><![CDATA[PASS]]></RESULT>
+      </TEST>
+    </REQUIREMENT>
+  </REQUIREMENTS>
+  <APPLICATIONS>
+    <Installed_Programs>
+      <Program Name="20742Trevx.Trevx" Type="Application" Source="AppxPackage" Publisher="CN=ACAEE08E-BA91-429A-96FB-1253F748530C" Version="1.1.4.0" Language="1033" InstallDate="09/04/2016 11:11:46" OSVersionAtInstallTime="10.0.0.10586" RootDirPath="c:\program files\windowsapps\20742trevx.trevx_1.1.4.0_neutral__v903ktgm2sns2" Id="0000fde0deb0144743aa074ecdd36dea748300000904">
+        <Indicators>
+          <WindowsStoreAppManifestIndicators>
+            <PackageManifest PackageFullName="20742Trevx.Trevx_1.1.4.0_neutral__v903ktgm2sns2">
+              <Package>
+                <Identity Name="20742Trevx.Trevx" Version="1.1.4.0" Publisher="CN=ACAEE08E-BA91-429A-96FB-1253F748530C" ProcessorArchitecture="neutral" />
+                <PhoneIdentity PhoneProductId="d0e595e4-4b5e-4ad4-880c-f8689483bd5a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+                <Properties>
+                  <DisplayName>Trevx</DisplayName>
+                  <PublisherDisplayName>Trevx</PublisherDisplayName>
+                  <Logo>images\Store\StoreLogo.png</Logo>
+                </Properties>
+                <Dependencies>
+                  <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10141.0" MaxVersionTested="10.0.10240.0" />
+                </Dependencies>
+                <Resources>
+                  <Resource Language="EN-US" />
+                  <Resource Scale="200" />
+                </Resources>
+                <Applications>
+                  <Application Id="App" StartPage="default.html">
+                    <VisualElements DisplayName="Trevx" Description="Trevx is audio search engie and player." BackgroundColor="transparent" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png" ForegroundText="light">
+                      <DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" ShortName="Trevx" Square71x71Logo="images\Small\Small71x71Logo.png" Square310x310Logo="images\Large\Large310x310Logo.png">
+                        <ShowNameOnTiles>
+                          <ShowOn Tile="square150x150Logo" />
+                          <ShowOn Tile="square310x310Logo" />
+                        </ShowNameOnTiles>
+                      </DefaultTile>
+                      <SplashScreen Image="images\splashscreen.png" />
+                    </VisualElements>
+                    <Extensions>
+                      <Extension Category="windows.backgroundTasks" StartPage="js\audio.js">
+                        <BackgroundTasks>
+                          <Task Type="audio" />
+                        </BackgroundTasks>
+                      </Extension>
+                    </Extensions>
+                  </Application>
+                </Applications>
+                <Capabilities>
+                  <Capability Name="internetClient" />
+                </Capabilities>
+              </Package>
+            </PackageManifest>
+            <BundleManifest PackageFamilyName="20742Trevx.Trevx_v903ktgm2sns2">
+              <Bundle SchemaVersion="2.0">
+                <Identity Name="20742Trevx.Trevx" Publisher="CN=ACAEE08E-BA91-429A-96FB-1253F748530C" Version="1.1.4.0" />
+                <Packages>
+                  <Package Type="application" Version="1.1.4.0" Architecture="neutral" FileName="trevxUWP_1.1.4.0_AnyCPU.appx" Offset="58" Size="1597223">
+                    <Resources>
+                      <Resource Language="EN-US" />
+                      <Resource Scale="200" />
+                    </Resources>
+                  </Package>
+                  <Package Type="resource" Version="1.1.4.0" ResourceId="split.scale-100" FileName="trevxUWP_1.1.4.0_scale-100.appx" Offset="1597366" Size="35180">
+                    <Resources>
+                      <Resource Scale="100" />
+                    </Resources>
+                  </Package>
+                  <Package Type="resource" Version="1.1.4.0" ResourceId="split.scale-125" FileName="trevxUWP_1.1.4.0_scale-125.appx" Offset="1632631" Size="47006">
+                    <Resources>
+                      <Resource Scale="125" />
+                    </Resources>
+                  </Package>
+                  <Package Type="resource" Version="1.1.4.0" ResourceId="split.scale-150" FileName="trevxUWP_1.1.4.0_scale-150.appx" Offset="1679722" Size="60695">
+                    <Resources>
+                      <Resource Scale="150" />
+                    </Resources>
+                  </Package>
+                  <Package Type="resource" Version="1.1.4.0" ResourceId="split.scale-400" FileName="trevxUWP_1.1.4.0_scale-400.appx" Offset="1740502" Size="317576">
+                    <Resources>
+                      <Resource Scale="400" />
+                    </Resources>
+                  </Package>
+                </Packages>
+              </Bundle>
+            </BundleManifest>
+          </WindowsStoreAppManifestIndicators>
+        </Indicators>
+        <StaticProperties>
+          <Files Id="0000da39a3ee5e6b4b0d3255bfef95601890afd80709" />
+        </StaticProperties>
+      </Program>
+    </Installed_Programs>
+  </APPLICATIONS>
+  <DEPENDENCY_INFORMATION>
+    <AitStaticAnalysis ProgramId="0000fde0deb0144743aa074ecdd36dea748300000904" AnalysisVersion="1.60" DictionaryVersion="3.1" Type="Package" Id="20742Trevx.Trevx_1.1.4.0_neutral__v903ktgm2sns2">
+      <AitFile ErrorCode="0" Name="global.js" Id="000005abca69524a54d35b7f4b73b8caed6530f54c0e">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="Windows.Foundation.Collections.ValueSet" />
+          <AitFeature Name="Windows.Media.MediaPlaybackStatus" />
+          <AitFeature Name="Windows.Media.Playback.BackgroundMediaPlayer.addEventListener" />
+          <AitFeature Name="Windows.Media.Playback.BackgroundMediaPlayer.current" />
+          <AitFeature Name="Windows.Media.Playback.BackgroundMediaPlayer.onmessagereceivedfrombackground" />
+          <AitFeature Name="Windows.Media.Playback.BackgroundMediaPlayer.removeEventListener" />
+          <AitFeature Name="Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground" />
+          <AitFeature Name="Windows.Media.Playback.MediaPlayerState" />
+          <AitFeature Name="Windows.Media.Playback.MediaPlayerState.paused" />
+          <AitFeature Name="Windows.Media.Playback.MediaPlayerState.playing" />
+          <AitFeature Name="Windows.Media.SystemMediaTransportControls.getForCurrentView" />
+          <AitFeature Name="Windows.Media.SystemMediaTransportControlsButton" />
+          <AitFeature Name="Windows.Storage.ApplicationData.current" />
+          <AitFeature Name="Windows.Storage.CreationCollisionOption.replaceExisting" />
+          <AitFeature Name="Windows.Storage.FileIO.readTextAsync" />
+          <AitFeature Name="Windows.Storage.FileIO.writeTextAsync" />
+          <AitFeature Name="document.body.clientWidth" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="document.querySelector" />
+          <AitFeature Name="document.querySelectorAll" />
+          <AitFeature Name="window.clearInterval" />
+          <AitFeature Name="window.setInterval" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="default.js" Id="00002938e11b2ecc21f09f312af34dd435e71c13f3e0">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Application" />
+          <AitFeature Name="WinJS.Application.sessionState" />
+          <AitFeature Name="WinJS.UI.processAll" />
+          <AitFeature Name="Windows.ApplicationModel.Activation" />
+          <AitFeature Name="Windows.Foundation.Collections.ValueSet" />
+          <AitFeature Name="Windows.Media.Playback.BackgroundMediaPlayer.sendMessageToBackground" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="jquery-2.2.4.min.js" Id="00002e9e2234899f1054afb0d23bd8a2c1ef2085d3a4" />
+      <AitFile ErrorCode="0" Name="base.js" Id="0000308af3054ceb3a48951be34e1ec8601fb63d570e">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="MSApp.execAsyncAtPriority" />
+          <AitFeature Name="MSApp.execAtPriority" />
+          <AitFeature Name="MSApp.getCurrentPriority" />
+          <AitFeature Name="MSApp.isTaskScheduledAtPriorityOrHigher" />
+          <AitFeature Name="WinJS.Application" />
+          <AitFeature Name="WinJS.Application.IOHelper.exists" />
+          <AitFeature Name="WinJS.Application.IOHelper.exists_p" />
+          <AitFeature Name="WinJS.Application.IOHelper.exists_returnValue" />
+          <AitFeature Name="WinJS.Application.IOHelper.readText" />
+          <AitFeature Name="WinJS.Application.IOHelper.readText_p" />
+          <AitFeature Name="WinJS.Application.IOHelper.readText_returnValue" />
+          <AitFeature Name="WinJS.Application.IOHelper.remove" />
+          <AitFeature Name="WinJS.Application.IOHelper.remove_p" />
+          <AitFeature Name="WinJS.Application.IOHelper.remove_returnValue" />
+          <AitFeature Name="WinJS.Application.IOHelper.writeText" />
+          <AitFeature Name="WinJS.Application.IOHelper.writeText_p" />
+          <AitFeature Name="WinJS.Application.IOHelper.writeText_returnValue" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.exists" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.exists_p" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.exists_returnValue" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.readText" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.readText_p" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.readText_returnValue" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.remove" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.remove_p" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.remove_returnValue" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.writeText" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.writeText_p" />
+          <AitFeature Name="WinJS.Application.InMemoryHelper.writeText_returnValue" />
+          <AitFeature Name="WinJS.Application._pumpEventQueue" />
+          <AitFeature Name="WinJS.Application._queuePromiseErrors" />
+          <AitFeature Name="WinJS.Application.addEventListener" />
+          <AitFeature Name="WinJS.Application.addEventListener_p" />
+          <AitFeature Name="WinJS.Application.checkpoint" />
+          <AitFeature Name="WinJS.Application.event.setPromise" />
+          <AitFeature Name="WinJS.Application.eventRecord.setPromise" />
+          <AitFeature Name="WinJS.Application.eventRecord.setPromise_p" />
+          <AitFeature Name="WinJS.Application.local" />
+          <AitFeature Name="WinJS.Application.onactivated" />
+          <AitFeature Name="WinJS.Application.onbackclick" />
+          <AitFeature Name="WinJS.Application.oncheckpoint" />
+          <AitFeature Name="WinJS.Application.onerror" />
+          <AitFeature Name="WinJS.Application.onloaded" />
+          <AitFeature Name="WinJS.Application.onready" />
+          <AitFeature Name="WinJS.Application.onsettings" />
+          <AitFeature Name="WinJS.Application.onunload" />
+          <AitFeature Name="WinJS.Application.queueEvent" />
+          <AitFeature Name="WinJS.Application.queueEvent_p" />
+          <AitFeature Name="WinJS.Application.removeEventListener" />
+          <AitFeature Name="WinJS.Application.removeEventListener_p" />
+          <AitFeature Name="WinJS.Application.roaming" />
+          <AitFeature Name="WinJS.Application.start" />
+          <AitFeature Name="WinJS.Application.stop" />
+          <AitFeature Name="WinJS.Application.temp" />
+          <AitFeature Name="WinJS.Binding.FilteredListProjection.getItem" />
+          <AitFeature Name="WinJS.Binding.FilteredListProjection.getItem_p" />
+          <AitFeature Name="WinJS.Binding.FilteredListProjection.getItem_returnValue" />
+          <AitFeature Name="WinJS.Binding.FilteredListProjection.indexOfKey" />
+          <AitFeature Name="WinJS.Binding.FilteredListProjection.indexOfKey_p" />
+          <AitFeature Name="WinJS.Binding.FilteredListProjection.indexOfKey_returnValue" />
+          <AitFeature Name="WinJS.Binding.FilteredListProjection.length" />
+          <AitFeature Name="WinJS.Binding.FilteredListProjection.notifyMutated" />
+          <AitFeature Name="WinJS.Binding.FilteredListProjection.notifyMutated_p" />
+          <AitFeature Name="WinJS.Binding.FilteredListProjection.setAt" />
+          <AitFeature Name="WinJS.Binding.FilteredListProjection.setAt_p" />
+          <AitFeature Name="WinJS.Binding.GroupedSortedListProjection.getItemFromKey" />
+          <AitFeature Name="WinJS.Binding.GroupedSortedListProjection.getItemFromKey_p" />
+          <AitFeature Name="WinJS.Binding.GroupedSortedListProjection.getItemFromKey_returnValue" />
+          <AitFeature Name="WinJS.Binding.GroupedSortedListProjection.groups" />
+          <AitFeature Name="WinJS.Binding.GroupsListProjection.getItem" />
+          <AitFeature Name="WinJS.Binding.GroupsListProjection.getItemFromKey" />
+          <AitFeature Name="WinJS.Binding.GroupsListProjection.getItemFromKey_p" />
+          <AitFeature Name="WinJS.Binding.GroupsListProjection.getItemFromKey_returnValue" />
+          <AitFeature Name="WinJS.Binding.GroupsListProjection.getItem_p" />
+          <AitFeature Name="WinJS.Binding.GroupsListProjection.getItem_returnValue" />
+          <AitFeature Name="WinJS.Binding.GroupsListProjection.indexOfKey" />
+          <AitFeature Name="WinJS.Binding.GroupsListProjection.indexOfKey_p" />
+          <AitFeature Name="WinJS.Binding.GroupsListProjection.indexOfKey_returnValue" />
+          <AitFeature Name="WinJS.Binding.GroupsListProjection.length" />
+          <AitFeature Name="WinJS.Binding.IdBindingNotSupported" />
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Binding.List." />
+          <AitFeature Name="WinJS.Binding.List.IllegalLength" />
+          <AitFeature Name="WinJS.Binding.List.List" />
+          <AitFeature Name="WinJS.Binding.List.NotSupported" />
+          <AitFeature Name="WinJS.Binding.List._endEdits" />
+          <AitFeature Name="WinJS.Binding.List.constructor" />
+          <AitFeature Name="WinJS.Binding.List.constructor_p" />
+          <AitFeature Name="WinJS.Binding.List.constructor_returnValue" />
+          <AitFeature Name="WinJS.Binding.List.getItem" />
+          <AitFeature Name="WinJS.Binding.List.getItemFromKey" />
+          <AitFeature Name="WinJS.Binding.List.getItemFromKey_p" />
+          <AitFeature Name="WinJS.Binding.List.getItemFromKey_returnValue" />
+          <AitFeature Name="WinJS.Binding.List.getItem_p" />
+          <AitFeature Name="WinJS.Binding.List.getItem_returnValue" />
+          <AitFeature Name="WinJS.Binding.List.indexOfKey" />
+          <AitFeature Name="WinJS.Binding.List.indexOfKey_p" />
+          <AitFeature Name="WinJS.Binding.List.indexOfKey_returnValue" />
+          <AitFeature Name="WinJS.Binding.List.length" />
+          <AitFeature Name="WinJS.Binding.List.move" />
+          <AitFeature Name="WinJS.Binding.List.move_p" />
+          <AitFeature Name="WinJS.Binding.List.notifyMutated" />
+          <AitFeature Name="WinJS.Binding.List.notifyMutated_p" />
+          <AitFeature Name="WinJS.Binding.List.pop" />
+          <AitFeature Name="WinJS.Binding.List.pop_returnValue" />
+          <AitFeature Name="WinJS.Binding.List.push" />
+          <AitFeature Name="WinJS.Binding.List.push_p" />
+          <AitFeature Name="WinJS.Binding.List.push_returnValue" />
+          <AitFeature Name="WinJS.Binding.List.reverse" />
+          <AitFeature Name="WinJS.Binding.List.reverse_returnValue" />
+          <AitFeature Name="WinJS.Binding.List.setAt" />
+          <AitFeature Name="WinJS.Binding.List.setAt_p" />
+          <AitFeature Name="WinJS.Binding.List.shift" />
+          <AitFeature Name="WinJS.Binding.List.shift_returnValue" />
+          <AitFeature Name="WinJS.Binding.List.sort" />
+          <AitFeature Name="WinJS.Binding.List.sort_p" />
+          <AitFeature Name="WinJS.Binding.List.sort_returnValue" />
+          <AitFeature Name="WinJS.Binding.List.splice" />
+          <AitFeature Name="WinJS.Binding.List.splice_p" />
+          <AitFeature Name="WinJS.Binding.List.splice_returnValue" />
+          <AitFeature Name="WinJS.Binding.List.unshift" />
+          <AitFeature Name="WinJS.Binding.List.unshift_p" />
+          <AitFeature Name="WinJS.Binding.List.unshift_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.concat" />
+          <AitFeature Name="WinJS.Binding.ListBase.concat_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.createFiltered" />
+          <AitFeature Name="WinJS.Binding.ListBase.createFiltered_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.createFiltered_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.createGrouped" />
+          <AitFeature Name="WinJS.Binding.ListBase.createGrouped_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.createGrouped_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.createSorted" />
+          <AitFeature Name="WinJS.Binding.ListBase.createSorted_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.createSorted_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.every" />
+          <AitFeature Name="WinJS.Binding.ListBase.every_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.every_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.filter" />
+          <AitFeature Name="WinJS.Binding.ListBase.filter_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.filter_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.forEach" />
+          <AitFeature Name="WinJS.Binding.ListBase.forEach_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.getAt" />
+          <AitFeature Name="WinJS.Binding.ListBase.getAt_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.getAt_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.indexOf" />
+          <AitFeature Name="WinJS.Binding.ListBase.indexOf_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.indexOf_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.join" />
+          <AitFeature Name="WinJS.Binding.ListBase.join_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.join_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.lastIndexOf" />
+          <AitFeature Name="WinJS.Binding.ListBase.lastIndexOf_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.lastIndexOf_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.map" />
+          <AitFeature Name="WinJS.Binding.ListBase.map_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.map_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.notifyReload" />
+          <AitFeature Name="WinJS.Binding.ListBase.onitemchanged" />
+          <AitFeature Name="WinJS.Binding.ListBase.oniteminserted" />
+          <AitFeature Name="WinJS.Binding.ListBase.onitemmoved" />
+          <AitFeature Name="WinJS.Binding.ListBase.onitemmutated" />
+          <AitFeature Name="WinJS.Binding.ListBase.onitemremoved" />
+          <AitFeature Name="WinJS.Binding.ListBase.onreload" />
+          <AitFeature Name="WinJS.Binding.ListBase.reduce" />
+          <AitFeature Name="WinJS.Binding.ListBase.reduceRight" />
+          <AitFeature Name="WinJS.Binding.ListBase.reduceRight_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.reduceRight_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.reduce_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.reduce_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.slice" />
+          <AitFeature Name="WinJS.Binding.ListBase.slice_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.slice_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBase.some" />
+          <AitFeature Name="WinJS.Binding.ListBase.some_p" />
+          <AitFeature Name="WinJS.Binding.ListBase.some_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBaseWithMutators.pop" />
+          <AitFeature Name="WinJS.Binding.ListBaseWithMutators.pop_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBaseWithMutators.push" />
+          <AitFeature Name="WinJS.Binding.ListBaseWithMutators.push_p" />
+          <AitFeature Name="WinJS.Binding.ListBaseWithMutators.push_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBaseWithMutators.shift" />
+          <AitFeature Name="WinJS.Binding.ListBaseWithMutators.shift_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListBaseWithMutators.unshift" />
+          <AitFeature Name="WinJS.Binding.ListBaseWithMutators.unshift_p" />
+          <AitFeature Name="WinJS.Binding.ListBaseWithMutators.unshift_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListDataSource" />
+          <AitFeature Name="WinJS.Binding.ListProjection.dispose" />
+          <AitFeature Name="WinJS.Binding.ListProjection.getItemFromKey" />
+          <AitFeature Name="WinJS.Binding.ListProjection.getItemFromKey_p" />
+          <AitFeature Name="WinJS.Binding.ListProjection.getItemFromKey_returnValue" />
+          <AitFeature Name="WinJS.Binding.ListProjection.move" />
+          <AitFeature Name="WinJS.Binding.ListProjection.move_p" />
+          <AitFeature Name="WinJS.Binding.ListProjection.splice" />
+          <AitFeature Name="WinJS.Binding.ListProjection.splice_p" />
+          <AitFeature Name="WinJS.Binding.ListProjection.splice_returnValue" />
+          <AitFeature Name="WinJS.Binding.ParseError" />
+          <AitFeature Name="WinJS.Binding.SortedListProjection.getItem" />
+          <AitFeature Name="WinJS.Binding.SortedListProjection.getItem_p" />
+          <AitFeature Name="WinJS.Binding.SortedListProjection.getItem_returnValue" />
+          <AitFeature Name="WinJS.Binding.SortedListProjection.indexOfKey_p" />
+          <AitFeature Name="WinJS.Binding.SortedListProjection.indexOfKey_returnValue" />
+          <AitFeature Name="WinJS.Binding.SortedListProjection.length" />
+          <AitFeature Name="WinJS.Binding.SortedListProjection.notifyMutated" />
+          <AitFeature Name="WinJS.Binding.SortedListProjection.notifyMutated_p" />
+          <AitFeature Name="WinJS.Binding.SortedListProjection.setAt" />
+          <AitFeature Name="WinJS.Binding.SortedListProjection.setAt_p" />
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.Binding.Template.Template" />
+          <AitFeature Name="WinJS.Binding.Template.bindingInitializer" />
+          <AitFeature Name="WinJS.Binding.Template.constructor" />
+          <AitFeature Name="WinJS.Binding.Template.constructor_p" />
+          <AitFeature Name="WinJS.Binding.Template.debugBreakOnRender" />
+          <AitFeature Name="WinJS.Binding.Template.disableOptimizedProcessing" />
+          <AitFeature Name="WinJS.Binding.Template.element" />
+          <AitFeature Name="WinJS.Binding.Template.extractChild" />
+          <AitFeature Name="WinJS.Binding.Template.processTimeout" />
+          <AitFeature Name="WinJS.Binding.Template.render" />
+          <AitFeature Name="WinJS.Binding.Template.render.value" />
+          <AitFeature Name="WinJS.Binding.Template.render.value_p" />
+          <AitFeature Name="WinJS.Binding.Template.render.value_returnValue" />
+          <AitFeature Name="WinJS.Binding.Template.renderItem" />
+          <AitFeature Name="WinJS.Binding.Template.renderItem_p" />
+          <AitFeature Name="WinJS.Binding.Template.renderItem_returnValue" />
+          <AitFeature Name="WinJS.Binding.Template.render_p" />
+          <AitFeature Name="WinJS.Binding.Template.render_returnValue" />
+          <AitFeature Name="WinJS.Binding.Template_name" />
+          <AitFeature Name="WinJS.Binding.UnsupportedDataType" />
+          <AitFeature Name="WinJS.Binding.addClassOneTime" />
+          <AitFeature Name="WinJS.Binding.as" />
+          <AitFeature Name="WinJS.Binding.as_p" />
+          <AitFeature Name="WinJS.Binding.as_returnValue" />
+          <AitFeature Name="WinJS.Binding.bind" />
+          <AitFeature Name="WinJS.Binding.bind_p" />
+          <AitFeature Name="WinJS.Binding.bind_returnValue" />
+          <AitFeature Name="WinJS.Binding.converter" />
+          <AitFeature Name="WinJS.Binding.converter_p" />
+          <AitFeature Name="WinJS.Binding.converter_returnValue" />
+          <AitFeature Name="WinJS.Binding.declarativeBind" />
+          <AitFeature Name="WinJS.Binding.declarativeBind_p" />
+          <AitFeature Name="WinJS.Binding.declarativeBind_returnValue" />
+          <AitFeature Name="WinJS.Binding.defaultBind" />
+          <AitFeature Name="WinJS.Binding.defaultBind." />
+          <AitFeature Name="WinJS.Binding.defaultBind_p" />
+          <AitFeature Name="WinJS.Binding.defaultBind_returnValue" />
+          <AitFeature Name="WinJS.Binding.define" />
+          <AitFeature Name="WinJS.Binding.define.return" />
+          <AitFeature Name="WinJS.Binding.define.return_p" />
+          <AitFeature Name="WinJS.Binding.define_p" />
+          <AitFeature Name="WinJS.Binding.define_returnValue" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.addProperty" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.addProperty_p" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.addProperty_returnValue" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.getProperty" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.getProperty_p" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.getProperty_returnValue" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.removeProperty" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.removeProperty_p" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.removeProperty_returnValue" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.setProperty" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.setProperty_p" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.setProperty_returnValue" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.updateProperty" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.updateProperty_p" />
+          <AitFeature Name="WinJS.Binding.dynamicObservableMixin.updateProperty_returnValue" />
+          <AitFeature Name="WinJS.Binding.expandProperties" />
+          <AitFeature Name="WinJS.Binding.expandProperties_p" />
+          <AitFeature Name="WinJS.Binding.expandProperties_returnValue" />
+          <AitFeature Name="WinJS.Binding.initializer" />
+          <AitFeature Name="WinJS.Binding.initializer_p" />
+          <AitFeature Name="WinJS.Binding.initializer_returnValue" />
+          <AitFeature Name="WinJS.Binding.observableMixin.bind" />
+          <AitFeature Name="WinJS.Binding.observableMixin.bind_p" />
+          <AitFeature Name="WinJS.Binding.observableMixin.bind_returnValue" />
+          <AitFeature Name="WinJS.Binding.observableMixin.notify" />
+          <AitFeature Name="WinJS.Binding.observableMixin.notify_p" />
+          <AitFeature Name="WinJS.Binding.observableMixin.notify_returnValue" />
+          <AitFeature Name="WinJS.Binding.observableMixin.unbind" />
+          <AitFeature Name="WinJS.Binding.observableMixin.unbind_p" />
+          <AitFeature Name="WinJS.Binding.observableMixin.unbind_returnValue" />
+          <AitFeature Name="WinJS.Binding.oneTime" />
+          <AitFeature Name="WinJS.Binding.oneTime_p" />
+          <AitFeature Name="WinJS.Binding.oneTime_returnValue" />
+          <AitFeature Name="WinJS.Binding.processAll." />
+          <AitFeature Name="WinJS.Binding.setAttribute" />
+          <AitFeature Name="WinJS.Binding.setAttributeOneTime" />
+          <AitFeature Name="WinJS.Binding.setAttributeOneTime_p" />
+          <AitFeature Name="WinJS.Binding.setAttribute_p" />
+          <AitFeature Name="WinJS.Binding.setAttribute_returnValue" />
+          <AitFeature Name="WinJS.Binding.unwrap" />
+          <AitFeature Name="WinJS.Binding.unwrap_p" />
+          <AitFeature Name="WinJS.Binding.unwrap_returnValue" />
+          <AitFeature Name="WinJS.Class.define" />
+          <AitFeature Name="WinJS.Class.define_p" />
+          <AitFeature Name="WinJS.Class.define_returnValue" />
+          <AitFeature Name="WinJS.Class.derive" />
+          <AitFeature Name="WinJS.Class.derive_p" />
+          <AitFeature Name="WinJS.Class.derive_returnValue" />
+          <AitFeature Name="WinJS.Class.mix_p" />
+          <AitFeature Name="WinJS.Class.mix_returnValue" />
+          <AitFeature Name="WinJS.ErrorFromName" />
+          <AitFeature Name="WinJS.ErrorFromName_p" />
+          <AitFeature Name="WinJS.ErrorFromName_returnValue" />
+          <AitFeature Name="WinJS.Namespace._lazy" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Namespace.defineWithParent" />
+          <AitFeature Name="WinJS.Namespace.defineWithParent_p" />
+          <AitFeature Name="WinJS.Namespace.defineWithParent_returnValue" />
+          <AitFeature Name="WinJS.Namespace.define_p" />
+          <AitFeature Name="WinJS.Namespace.define_returnValue" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.Navigation.addEventListener" />
+          <AitFeature Name="WinJS.Navigation.addEventListener_p" />
+          <AitFeature Name="WinJS.Navigation.back" />
+          <AitFeature Name="WinJS.Navigation.back_p" />
+          <AitFeature Name="WinJS.Navigation.back_returnValue" />
+          <AitFeature Name="WinJS.Navigation.beforenavigate.setPromise" />
+          <AitFeature Name="WinJS.Navigation.beforenavigate.setPromise_p" />
+          <AitFeature Name="WinJS.Navigation.canGoBack" />
+          <AitFeature Name="WinJS.Navigation.canGoForward" />
+          <AitFeature Name="WinJS.Navigation.forward" />
+          <AitFeature Name="WinJS.Navigation.forward_p" />
+          <AitFeature Name="WinJS.Navigation.forward_returnValue" />
+          <AitFeature Name="WinJS.Navigation.history" />
+          <AitFeature Name="WinJS.Navigation.location" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.Navigation.navigate_p" />
+          <AitFeature Name="WinJS.Navigation.navigate_returnValue" />
+          <AitFeature Name="WinJS.Navigation.navigated.setPromise" />
+          <AitFeature Name="WinJS.Navigation.navigated.setPromise_p" />
+          <AitFeature Name="WinJS.Navigation.navigating.setPromise" />
+          <AitFeature Name="WinJS.Navigation.navigating.setPromise_p" />
+          <AitFeature Name="WinJS.Navigation.onbeforenavigate" />
+          <AitFeature Name="WinJS.Navigation.onnavigated" />
+          <AitFeature Name="WinJS.Navigation.onnavigating" />
+          <AitFeature Name="WinJS.Navigation.removeEventListener" />
+          <AitFeature Name="WinJS.Navigation.removeEventListener_p" />
+          <AitFeature Name="WinJS.Navigation.state" />
+          <AitFeature Name="WinJS.Navigation.state." />
+          <AitFeature Name="WinJS.Promise.addEventListener" />
+          <AitFeature Name="WinJS.Promise.addEventListener_p" />
+          <AitFeature Name="WinJS.Promise.any" />
+          <AitFeature Name="WinJS.Promise.any_p" />
+          <AitFeature Name="WinJS.Promise.any_returnValue" />
+          <AitFeature Name="WinJS.Promise.as" />
+          <AitFeature Name="WinJS.Promise.as_p" />
+          <AitFeature Name="WinJS.Promise.as_returnValue" />
+          <AitFeature Name="WinJS.Promise.callonerror" />
+          <AitFeature Name="WinJS.Promise.cancel" />
+          <AitFeature Name="WinJS.Promise.dispatchEvent" />
+          <AitFeature Name="WinJS.Promise.dispatchEvent_p" />
+          <AitFeature Name="WinJS.Promise.dispatchEvent_returnValue" />
+          <AitFeature Name="WinJS.Promise.done" />
+          <AitFeature Name="WinJS.Promise.is" />
+          <AitFeature Name="WinJS.Promise.is_p" />
+          <AitFeature Name="WinJS.Promise.is_returnValue" />
+          <AitFeature Name="WinJS.Promise.join" />
+          <AitFeature Name="WinJS.Promise.join_p" />
+          <AitFeature Name="WinJS.Promise.join_returnValue" />
+          <AitFeature Name="WinJS.Promise.removeEventListener" />
+          <AitFeature Name="WinJS.Promise.removeEventListener_capture" />
+          <AitFeature Name="WinJS.Promise.removeEventListener_eventType" />
+          <AitFeature Name="WinJS.Promise.removeEventListener_listener" />
+          <AitFeature Name="WinJS.Promise.then" />
+          <AitFeature Name="WinJS.Promise.thenEach" />
+          <AitFeature Name="WinJS.Promise.thenEach_p" />
+          <AitFeature Name="WinJS.Promise.thenEach_returnValue" />
+          <AitFeature Name="WinJS.Promise.then_p" />
+          <AitFeature Name="WinJS.Promise.then_returnValue" />
+          <AitFeature Name="WinJS.Promise.timeout" />
+          <AitFeature Name="WinJS.Promise.timeout_p" />
+          <AitFeature Name="WinJS.Promise.timeout_returnValue" />
+          <AitFeature Name="WinJS.Promise.wrap" />
+          <AitFeature Name="WinJS.Promise.wrapError" />
+          <AitFeature Name="WinJS.Promise.wrapError." />
+          <AitFeature Name="WinJS.Promise.wrapError_p" />
+          <AitFeature Name="WinJS.Promise.wrapError_returnValue" />
+          <AitFeature Name="WinJS.Promise.wrap_p" />
+          <AitFeature Name="WinJS.Promise.wrap_returnValue" />
+          <AitFeature Name="WinJS.PromiseStateMachine.cancel" />
+          <AitFeature Name="WinJS.PromiseStateMachine.done" />
+          <AitFeature Name="WinJS.PromiseStateMachine.done_p" />
+          <AitFeature Name="WinJS.PromiseStateMachine.then" />
+          <AitFeature Name="WinJS.PromiseStateMachine.then_p" />
+          <AitFeature Name="WinJS.PromiseStateMachine.then_returnValue" />
+          <AitFeature Name="WinJS.Res.NestingExceeded" />
+          <AitFeature Name="WinJS.Res.NotFound" />
+          <AitFeature Name="WinJS.Resources.addEventListener" />
+          <AitFeature Name="WinJS.Resources.addEventListener_p" />
+          <AitFeature Name="WinJS.Resources.getString" />
+          <AitFeature Name="WinJS.Resources.getString._p" />
+          <AitFeature Name="WinJS.Resources.getString_returnValue" />
+          <AitFeature Name="WinJS.Resources.processAll" />
+          <AitFeature Name="WinJS.Resources.processAll_p" />
+          <AitFeature Name="WinJS.UI.Animation" />
+          <AitFeature Name="WinJS.UI.Animation.continuumBackwardIn" />
+          <AitFeature Name="WinJS.UI.Animation.continuumBackwardIn_p" />
+          <AitFeature Name="WinJS.UI.Animation.continuumBackwardIn_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.continuumBackwardOut" />
+          <AitFeature Name="WinJS.UI.Animation.continuumBackwardOut_p" />
+          <AitFeature Name="WinJS.UI.Animation.continuumBackwardOut_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.continuumForwardIn" />
+          <AitFeature Name="WinJS.UI.Animation.continuumForwardIn_p" />
+          <AitFeature Name="WinJS.UI.Animation.continuumForwardIn_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.continuumForwardOut" />
+          <AitFeature Name="WinJS.UI.Animation.continuumForwardOut_p" />
+          <AitFeature Name="WinJS.UI.Animation.continuumForwardOut_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.createAddToListAnimation" />
+          <AitFeature Name="WinJS.UI.Animation.createAddToListAnimation_p" />
+          <AitFeature Name="WinJS.UI.Animation.createAddToListAnimation_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.createAddToSearchListAnimation" />
+          <AitFeature Name="WinJS.UI.Animation.createAddToSearchListAnimation_p" />
+          <AitFeature Name="WinJS.UI.Animation.createAddToSearchListAnimation_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.createCollapseAnimation" />
+          <AitFeature Name="WinJS.UI.Animation.createCollapseAnimation_p" />
+          <AitFeature Name="WinJS.UI.Animation.createCollapseAnimation_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.createDeleteFromListAnimation" />
+          <AitFeature Name="WinJS.UI.Animation.createDeleteFromListAnimation_p" />
+          <AitFeature Name="WinJS.UI.Animation.createDeleteFromListAnimation_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.createDeleteFromSearchListAnimation" />
+          <AitFeature Name="WinJS.UI.Animation.createDeleteFromSearchListAnimation_p" />
+          <AitFeature Name="WinJS.UI.Animation.createDeleteFromSearchListAnimation_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.createExpandAnimation" />
+          <AitFeature Name="WinJS.UI.Animation.createExpandAnimation_p" />
+          <AitFeature Name="WinJS.UI.Animation.createExpandAnimation_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.createPageNavigationAnimations" />
+          <AitFeature Name="WinJS.UI.Animation.createPageNavigationAnimations." />
+          <AitFeature Name="WinJS.UI.Animation.createPageNavigationAnimations_p" />
+          <AitFeature Name="WinJS.UI.Animation.createPageNavigationAnimations_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.createPeekAnimation" />
+          <AitFeature Name="WinJS.UI.Animation.createPeekAnimation_p" />
+          <AitFeature Name="WinJS.UI.Animation.createPeekAnimation_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.createRepositionAnimation" />
+          <AitFeature Name="WinJS.UI.Animation.createRepositionAnimation_p" />
+          <AitFeature Name="WinJS.UI.Animation.createRepositionAnimation_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.crossFade" />
+          <AitFeature Name="WinJS.UI.Animation.crossFade_p" />
+          <AitFeature Name="WinJS.UI.Animation.crossFade_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.dragBetweenEnter" />
+          <AitFeature Name="WinJS.UI.Animation.dragBetweenEnter_p" />
+          <AitFeature Name="WinJS.UI.Animation.dragBetweenEnter_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.dragBetweenLeave" />
+          <AitFeature Name="WinJS.UI.Animation.dragBetweenLeave_p" />
+          <AitFeature Name="WinJS.UI.Animation.dragBetweenLeave_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.dragSourceEnd" />
+          <AitFeature Name="WinJS.UI.Animation.dragSourceEnd_p" />
+          <AitFeature Name="WinJS.UI.Animation.dragSourceEnd_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.dragSourceStart" />
+          <AitFeature Name="WinJS.UI.Animation.dragSourceStart_p" />
+          <AitFeature Name="WinJS.UI.Animation.dragSourceStart_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.drillInIncoming" />
+          <AitFeature Name="WinJS.UI.Animation.drillInIncoming_p" />
+          <AitFeature Name="WinJS.UI.Animation.drillInIncoming_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.drillInOutgoing" />
+          <AitFeature Name="WinJS.UI.Animation.drillInOutgoing_p" />
+          <AitFeature Name="WinJS.UI.Animation.drillInOutgoing_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.drillOutIncoming" />
+          <AitFeature Name="WinJS.UI.Animation.drillOutIncoming_p" />
+          <AitFeature Name="WinJS.UI.Animation.drillOutIncoming_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.drillOutOutgoing" />
+          <AitFeature Name="WinJS.UI.Animation.drillOutOutgoing_p" />
+          <AitFeature Name="WinJS.UI.Animation.drillOutOutgoing_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.enterContent" />
+          <AitFeature Name="WinJS.UI.Animation.enterContent_p" />
+          <AitFeature Name="WinJS.UI.Animation.enterContent_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.enterPage" />
+          <AitFeature Name="WinJS.UI.Animation.enterPage_p" />
+          <AitFeature Name="WinJS.UI.Animation.enterPage_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.exitContent" />
+          <AitFeature Name="WinJS.UI.Animation.exitContent_p" />
+          <AitFeature Name="WinJS.UI.Animation.exitContent_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.exitPage" />
+          <AitFeature Name="WinJS.UI.Animation.exitPage_p" />
+          <AitFeature Name="WinJS.UI.Animation.exitPage_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.fadeIn" />
+          <AitFeature Name="WinJS.UI.Animation.fadeIn_p" />
+          <AitFeature Name="WinJS.UI.Animation.fadeIn_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.fadeOut" />
+          <AitFeature Name="WinJS.UI.Animation.fadeOut_p" />
+          <AitFeature Name="WinJS.UI.Animation.fadeOut_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.hideEdgeUI" />
+          <AitFeature Name="WinJS.UI.Animation.hideEdgeUI_p" />
+          <AitFeature Name="WinJS.UI.Animation.hideEdgeUI_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.hidePanel" />
+          <AitFeature Name="WinJS.UI.Animation.hidePanel_p" />
+          <AitFeature Name="WinJS.UI.Animation.hidePanel_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.hidePopup" />
+          <AitFeature Name="WinJS.UI.Animation.hidePopup_p" />
+          <AitFeature Name="WinJS.UI.Animation.hidePopup_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.pointerDown" />
+          <AitFeature Name="WinJS.UI.Animation.pointerDown_p" />
+          <AitFeature Name="WinJS.UI.Animation.pointerDown_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.pointerUp" />
+          <AitFeature Name="WinJS.UI.Animation.pointerUp_p" />
+          <AitFeature Name="WinJS.UI.Animation.pointerUp_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.showEdgeUI" />
+          <AitFeature Name="WinJS.UI.Animation.showEdgeUI_p" />
+          <AitFeature Name="WinJS.UI.Animation.showPanel" />
+          <AitFeature Name="WinJS.UI.Animation.showPanel_p" />
+          <AitFeature Name="WinJS.UI.Animation.showPanel_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.showPopup" />
+          <AitFeature Name="WinJS.UI.Animation.showPopup_p" />
+          <AitFeature Name="WinJS.UI.Animation.showPopup_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.slideDown" />
+          <AitFeature Name="WinJS.UI.Animation.slideDown_p" />
+          <AitFeature Name="WinJS.UI.Animation.slideDown_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.slideLeftIn" />
+          <AitFeature Name="WinJS.UI.Animation.slideLeftIn_p" />
+          <AitFeature Name="WinJS.UI.Animation.slideLeftIn_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.slideLeftOut" />
+          <AitFeature Name="WinJS.UI.Animation.slideLeftOut_p" />
+          <AitFeature Name="WinJS.UI.Animation.slideLeftOut_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.slideRightIn" />
+          <AitFeature Name="WinJS.UI.Animation.slideRightIn_p" />
+          <AitFeature Name="WinJS.UI.Animation.slideRightIn_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.slideRightOut" />
+          <AitFeature Name="WinJS.UI.Animation.slideRightOut_p" />
+          <AitFeature Name="WinJS.UI.Animation.slideRightOut_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.slideUp" />
+          <AitFeature Name="WinJS.UI.Animation.slideUp_p" />
+          <AitFeature Name="WinJS.UI.Animation.slideUp_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.swipeDeselect" />
+          <AitFeature Name="WinJS.UI.Animation.swipeDeselect_p" />
+          <AitFeature Name="WinJS.UI.Animation.swipeDeselect_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.swipeReveal" />
+          <AitFeature Name="WinJS.UI.Animation.swipeReveal_p" />
+          <AitFeature Name="WinJS.UI.Animation.swipeReveal_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.swipeSelect" />
+          <AitFeature Name="WinJS.UI.Animation.swipeSelect_p" />
+          <AitFeature Name="WinJS.UI.Animation.swipeSelect_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileBackwardIn" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileBackwardIn_p" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileBackwardIn_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileBackwardOut" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileBackwardOut_p" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileBackwardOut_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileForwardIn" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileForwardIn_p" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileForwardIn_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileForwardOut" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileForwardOut_p" />
+          <AitFeature Name="WinJS.UI.Animation.turnstileForwardOut_returnValue" />
+          <AitFeature Name="WinJS.UI.Animation.updateBadge" />
+          <AitFeature Name="WinJS.UI.Animation.updateBadge_p" />
+          <AitFeature Name="WinJS.UI.Animation.updateBadge_returnValue" />
+          <AitFeature Name="WinJS.UI.DOMEventMixin.addEventListener" />
+          <AitFeature Name="WinJS.UI.DOMEventMixin.addEventListener_p" />
+          <AitFeature Name="WinJS.UI.DOMEventMixin.dispatchEvent" />
+          <AitFeature Name="WinJS.UI.DOMEventMixin.dispatchEvent_p" />
+          <AitFeature Name="WinJS.UI.DOMEventMixin.dispatchEvent_returnValue" />
+          <AitFeature Name="WinJS.UI.DOMEventMixin.removeEventListener" />
+          <AitFeature Name="WinJS.UI.DOMEventMixin.removeEventListener_p" />
+          <AitFeature Name="WinJS.UI.DOMEventMixin.setOptions" />
+          <AitFeature Name="WinJS.UI.DOMEventMixin.setOptions_p" />
+          <AitFeature Name="WinJS.UI.Fragments" />
+          <AitFeature Name="WinJS.UI.Fragments.cache" />
+          <AitFeature Name="WinJS.UI.Fragments.cache_p" />
+          <AitFeature Name="WinJS.UI.Fragments.cache_returnValue" />
+          <AitFeature Name="WinJS.UI.Fragments.clearCache" />
+          <AitFeature Name="WinJS.UI.Fragments.clearCache_p" />
+          <AitFeature Name="WinJS.UI.Fragments.render" />
+          <AitFeature Name="WinJS.UI.Fragments.renderCopy" />
+          <AitFeature Name="WinJS.UI.Fragments.renderCopy_p" />
+          <AitFeature Name="WinJS.UI.Fragments.renderCopy_returnValue" />
+          <AitFeature Name="WinJS.UI.Fragments.render_p" />
+          <AitFeature Name="WinJS.UI.Fragments.render_returnValue" />
+          <AitFeature Name="WinJS.UI.GroupHeaderTapBehavior" />
+          <AitFeature Name="WinJS.UI.GroupHeaderTapBehavior.invoke" />
+          <AitFeature Name="WinJS.UI.GroupHeaderTapBehavior.none" />
+          <AitFeature Name="WinJS.UI.HtmlControl" />
+          <AitFeature Name="WinJS.UI.HtmlControl.HtmlControl" />
+          <AitFeature Name="WinJS.UI.HtmlControl.constructor" />
+          <AitFeature Name="WinJS.UI.HtmlControl.constructor_p" />
+          <AitFeature Name="WinJS.UI.HtmlControl_name" />
+          <AitFeature Name="WinJS.UI.ItemsManager.ItemIsInvalid" />
+          <AitFeature Name="WinJS.UI.ItemsManager.ItemRendererIsInvalid" />
+          <AitFeature Name="WinJS.UI.ItemsManager.ListDataSourceIsInvalid" />
+          <AitFeature Name="WinJS.UI.ListView.ObjectType" />
+          <AitFeature Name="WinJS.UI.ListView.ObjectType.footer" />
+          <AitFeature Name="WinJS.UI.ListView.ObjectType.groupHeader" />
+          <AitFeature Name="WinJS.UI.ListView.ObjectType.header" />
+          <AitFeature Name="WinJS.UI.ListView.ObjectType.item" />
+          <AitFeature Name="WinJS.UI.ListView.SelectionMode" />
+          <AitFeature Name="WinJS.UI.ListView.SelectionMode.multi" />
+          <AitFeature Name="WinJS.UI.ListView.SelectionMode.none" />
+          <AitFeature Name="WinJS.UI.ListView.SelectionMode.single" />
+          <AitFeature Name="WinJS.UI.ObjectType" />
+          <AitFeature Name="WinJS.UI.ObjectType.footer" />
+          <AitFeature Name="WinJS.UI.ObjectType.groupHeader" />
+          <AitFeature Name="WinJS.UI.ObjectType.header" />
+          <AitFeature Name="WinJS.UI.ObjectType.item" />
+          <AitFeature Name="WinJS.UI.Orientation" />
+          <AitFeature Name="WinJS.UI.Orientation.horizontal" />
+          <AitFeature Name="WinJS.UI.Orientation.vertical" />
+          <AitFeature Name="WinJS.UI.PageNavigationAnimation" />
+          <AitFeature Name="WinJS.UI.PageNavigationAnimation.continuum" />
+          <AitFeature Name="WinJS.UI.PageNavigationAnimation.enterPage" />
+          <AitFeature Name="WinJS.UI.PageNavigationAnimation.slide" />
+          <AitFeature Name="WinJS.UI.PageNavigationAnimation.turnstile" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.error" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.error_p" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.error_returnValue" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.init" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.init_p" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.init_returnValue" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.load" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.load_p" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.load_returnValue" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.process" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.process_p" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.process_returnValue" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.processed" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.processed_p" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.processed_returnValue" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.ready" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.ready_p" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.render" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.render_p" />
+          <AitFeature Name="WinJS.UI.Pages._mixin.render_returnValue" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="WinJS.UI.Pages.define_p" />
+          <AitFeature Name="WinJS.UI.Pages.define_returnValue" />
+          <AitFeature Name="WinJS.UI.Pages.dispose" />
+          <AitFeature Name="WinJS.UI.Pages.get" />
+          <AitFeature Name="WinJS.UI.Pages.get_p" />
+          <AitFeature Name="WinJS.UI.Pages.get_returnValue" />
+          <AitFeature Name="WinJS.UI.Pages.render" />
+          <AitFeature Name="WinJS.UI.Pages.render_p" />
+          <AitFeature Name="WinJS.UI.Pages.render_returnValue" />
+          <AitFeature Name="WinJS.UI.ParseError" />
+          <AitFeature Name="WinJS.UI.SelectionMode" />
+          <AitFeature Name="WinJS.UI.SelectionMode.multi" />
+          <AitFeature Name="WinJS.UI.SelectionMode.none" />
+          <AitFeature Name="WinJS.UI.SelectionMode.single" />
+          <AitFeature Name="WinJS.UI.SwipeBehavior" />
+          <AitFeature Name="WinJS.UI.SwipeBehavior.none" />
+          <AitFeature Name="WinJS.UI.SwipeBehavior.select" />
+          <AitFeature Name="WinJS.UI.TabContainer" />
+          <AitFeature Name="WinJS.UI.TabContainer.TabContainer" />
+          <AitFeature Name="WinJS.UI.TabContainer.childFocus" />
+          <AitFeature Name="WinJS.UI.TabContainer.constructor" />
+          <AitFeature Name="WinJS.UI.TabContainer.constructor_p" />
+          <AitFeature Name="WinJS.UI.TabContainer.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.TabContainer.dispose" />
+          <AitFeature Name="WinJS.UI.TabContainer.tabIndex" />
+          <AitFeature Name="WinJS.UI.TapBehavior" />
+          <AitFeature Name="WinJS.UI.TapBehavior.directSelect" />
+          <AitFeature Name="WinJS.UI.TapBehavior.invokeOnly" />
+          <AitFeature Name="WinJS.UI.TapBehavior.none" />
+          <AitFeature Name="WinJS.UI.TapBehavior.toggleSelect" />
+          <AitFeature Name="WinJS.UI._Animation._completeActionPromise" />
+          <AitFeature Name="WinJS.UI._Animation._completeAnimationPromise" />
+          <AitFeature Name="WinJS.UI._ImageLoader._image" />
+          <AitFeature Name="WinJS.UI._ItemsManager" />
+          <AitFeature Name="WinJS.UI._ItemsManager._pendingReady" />
+          <AitFeature Name="WinJS.UI._ItemsManager._postEndNotifications" />
+          <AitFeature Name="WinJS.UI.disableAnimations" />
+          <AitFeature Name="WinJS.UI.enableAnimations" />
+          <AitFeature Name="WinJS.UI.eventHandler" />
+          <AitFeature Name="WinJS.UI.eventHandler_p" />
+          <AitFeature Name="WinJS.UI.eventHandler_returnValue" />
+          <AitFeature Name="WinJS.UI.executeAnimation" />
+          <AitFeature Name="WinJS.UI.executeAnimation_p" />
+          <AitFeature Name="WinJS.UI.executeAnimation_returnValue" />
+          <AitFeature Name="WinJS.UI.executeTransition" />
+          <AitFeature Name="WinJS.UI.executeTransition_p" />
+          <AitFeature Name="WinJS.UI.executeTransition_returnValue" />
+          <AitFeature Name="WinJS.UI.isAnimationEnabled" />
+          <AitFeature Name="WinJS.UI.isAnimationEnabled_returnValue" />
+          <AitFeature Name="WinJS.UI.process" />
+          <AitFeature Name="WinJS.UI.processAll" />
+          <AitFeature Name="WinJS.UI.processAll_p" />
+          <AitFeature Name="WinJS.UI.processAll_returnValue" />
+          <AitFeature Name="WinJS.UI.process_p" />
+          <AitFeature Name="WinJS.UI.process_returnValue" />
+          <AitFeature Name="WinJS.UI.scopedSelect" />
+          <AitFeature Name="WinJS.UI.scopedSelect_p" />
+          <AitFeature Name="WinJS.UI.scopedSelect_returnValue" />
+          <AitFeature Name="WinJS.UI.select.createSelect" />
+          <AitFeature Name="WinJS.UI.select.createSelect_p" />
+          <AitFeature Name="WinJS.UI.select.createSelect_returnValue" />
+          <AitFeature Name="WinJS.Utilities.Key" />
+          <AitFeature Name="WinJS.Utilities.Key.F1" />
+          <AitFeature Name="WinJS.Utilities.Key.F10" />
+          <AitFeature Name="WinJS.Utilities.Key.F11" />
+          <AitFeature Name="WinJS.Utilities.Key.F12" />
+          <AitFeature Name="WinJS.Utilities.Key.F2" />
+          <AitFeature Name="WinJS.Utilities.Key.F3" />
+          <AitFeature Name="WinJS.Utilities.Key.F4" />
+          <AitFeature Name="WinJS.Utilities.Key.F5" />
+          <AitFeature Name="WinJS.Utilities.Key.F6" />
+          <AitFeature Name="WinJS.Utilities.Key.F7" />
+          <AitFeature Name="WinJS.Utilities.Key.F8" />
+          <AitFeature Name="WinJS.Utilities.Key.F9" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadA" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadB" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadDPadDown" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadDPadLeft" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadDPadRight" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadDPadUp" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadLeftShoulder" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadLeftThumbstick" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadLeftThumbstickDown" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadLeftThumbstickLeft" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadLeftThumbstickRight" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadLeftThumbstickUp" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadLeftTrigger" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadMenu" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadRightShoulder" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadRightThumbstick" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadRightThumbstickDown" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadRightThumbstickLeft" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadRightThumbstickRight" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadRightThumbstickUp" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadRightTrigger" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadView" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadX" />
+          <AitFeature Name="WinJS.Utilities.Key.GamepadY" />
+          <AitFeature Name="WinJS.Utilities.Key.IME" />
+          <AitFeature Name="WinJS.Utilities.Key.NavigationAccept" />
+          <AitFeature Name="WinJS.Utilities.Key.NavigationCancel" />
+          <AitFeature Name="WinJS.Utilities.Key.NavigationDown" />
+          <AitFeature Name="WinJS.Utilities.Key.NavigationLeft" />
+          <AitFeature Name="WinJS.Utilities.Key.NavigationMenu" />
+          <AitFeature Name="WinJS.Utilities.Key.NavigationRight" />
+          <AitFeature Name="WinJS.Utilities.Key.NavigationUp" />
+          <AitFeature Name="WinJS.Utilities.Key.NavigationView" />
+          <AitFeature Name="WinJS.Utilities.Key.a" />
+          <AitFeature Name="WinJS.Utilities.Key.add" />
+          <AitFeature Name="WinJS.Utilities.Key.alt" />
+          <AitFeature Name="WinJS.Utilities.Key.b" />
+          <AitFeature Name="WinJS.Utilities.Key.backSlash" />
+          <AitFeature Name="WinJS.Utilities.Key.backspace" />
+          <AitFeature Name="WinJS.Utilities.Key.browserBack" />
+          <AitFeature Name="WinJS.Utilities.Key.browserForward" />
+          <AitFeature Name="WinJS.Utilities.Key.c" />
+          <AitFeature Name="WinJS.Utilities.Key.capsLock" />
+          <AitFeature Name="WinJS.Utilities.Key.closeBracket" />
+          <AitFeature Name="WinJS.Utilities.Key.comma" />
+          <AitFeature Name="WinJS.Utilities.Key.ctrl" />
+          <AitFeature Name="WinJS.Utilities.Key.d" />
+          <AitFeature Name="WinJS.Utilities.Key.dash" />
+          <AitFeature Name="WinJS.Utilities.Key.decimalPoint" />
+          <AitFeature Name="WinJS.Utilities.Key.deleteKey" />
+          <AitFeature Name="WinJS.Utilities.Key.divide" />
+          <AitFeature Name="WinJS.Utilities.Key.downArrow" />
+          <AitFeature Name="WinJS.Utilities.Key.e" />
+          <AitFeature Name="WinJS.Utilities.Key.end" />
+          <AitFeature Name="WinJS.Utilities.Key.enter" />
+          <AitFeature Name="WinJS.Utilities.Key.equal" />
+          <AitFeature Name="WinJS.Utilities.Key.escape" />
+          <AitFeature Name="WinJS.Utilities.Key.f" />
+          <AitFeature Name="WinJS.Utilities.Key.forwardSlash" />
+          <AitFeature Name="WinJS.Utilities.Key.g" />
+          <AitFeature Name="WinJS.Utilities.Key.graveAccent" />
+          <AitFeature Name="WinJS.Utilities.Key.h" />
+          <AitFeature Name="WinJS.Utilities.Key.home" />
+          <AitFeature Name="WinJS.Utilities.Key.i" />
+          <AitFeature Name="WinJS.Utilities.Key.insert" />
+          <AitFeature Name="WinJS.Utilities.Key.j" />
+          <AitFeature Name="WinJS.Utilities.Key.k" />
+          <AitFeature Name="WinJS.Utilities.Key.l" />
+          <AitFeature Name="WinJS.Utilities.Key.leftArrow" />
+          <AitFeature Name="WinJS.Utilities.Key.leftWindows" />
+          <AitFeature Name="WinJS.Utilities.Key.m" />
+          <AitFeature Name="WinJS.Utilities.Key.menu" />
+          <AitFeature Name="WinJS.Utilities.Key.multiply" />
+          <AitFeature Name="WinJS.Utilities.Key.n" />
+          <AitFeature Name="WinJS.Utilities.Key.num0" />
+          <AitFeature Name="WinJS.Utilities.Key.num1" />
+          <AitFeature Name="WinJS.Utilities.Key.num2" />
+          <AitFeature Name="WinJS.Utilities.Key.num3" />
+          <AitFeature Name="WinJS.Utilities.Key.num4" />
+          <AitFeature Name="WinJS.Utilities.Key.num5" />
+          <AitFeature Name="WinJS.Utilities.Key.num6" />
+          <AitFeature Name="WinJS.Utilities.Key.num7" />
+          <AitFeature Name="WinJS.Utilities.Key.num8" />
+          <AitFeature Name="WinJS.Utilities.Key.num9" />
+          <AitFeature Name="WinJS.Utilities.Key.numLock" />
+          <AitFeature Name="WinJS.Utilities.Key.numPad0" />
+          <AitFeature Name="WinJS.Utilities.Key.numPad1" />
+          <AitFeature Name="WinJS.Utilities.Key.numPad2" />
+          <AitFeature Name="WinJS.Utilities.Key.numPad3" />
+          <AitFeature Name="WinJS.Utilities.Key.numPad4" />
+          <AitFeature Name="WinJS.Utilities.Key.numPad5" />
+          <AitFeature Name="WinJS.Utilities.Key.numPad6" />
+          <AitFeature Name="WinJS.Utilities.Key.numPad7" />
+          <AitFeature Name="WinJS.Utilities.Key.numPad8" />
+          <AitFeature Name="WinJS.Utilities.Key.numPad9" />
+          <AitFeature Name="WinJS.Utilities.Key.o" />
+          <AitFeature Name="WinJS.Utilities.Key.openBracket" />
+          <AitFeature Name="WinJS.Utilities.Key.p" />
+          <AitFeature Name="WinJS.Utilities.Key.pageDown" />
+          <AitFeature Name="WinJS.Utilities.Key.pageUp" />
+          <AitFeature Name="WinJS.Utilities.Key.pause" />
+          <AitFeature Name="WinJS.Utilities.Key.period" />
+          <AitFeature Name="WinJS.Utilities.Key.q" />
+          <AitFeature Name="WinJS.Utilities.Key.r" />
+          <AitFeature Name="WinJS.Utilities.Key.rightArrow" />
+          <AitFeature Name="WinJS.Utilities.Key.rightWindows" />
+          <AitFeature Name="WinJS.Utilities.Key.s" />
+          <AitFeature Name="WinJS.Utilities.Key.scrollLock" />
+          <AitFeature Name="WinJS.Utilities.Key.semicolon" />
+          <AitFeature Name="WinJS.Utilities.Key.shift" />
+          <AitFeature Name="WinJS.Utilities.Key.singleQuote" />
+          <AitFeature Name="WinJS.Utilities.Key.space" />
+          <AitFeature Name="WinJS.Utilities.Key.subtract" />
+          <AitFeature Name="WinJS.Utilities.Key.t" />
+          <AitFeature Name="WinJS.Utilities.Key.tab" />
+          <AitFeature Name="WinJS.Utilities.Key.u" />
+          <AitFeature Name="WinJS.Utilities.Key.upArrow" />
+          <AitFeature Name="WinJS.Utilities.Key.v" />
+          <AitFeature Name="WinJS.Utilities.Key.w" />
+          <AitFeature Name="WinJS.Utilities.Key.x" />
+          <AitFeature Name="WinJS.Utilities.Key.y" />
+          <AitFeature Name="WinJS.Utilities.Key.z" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.addClass" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.addClass_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.addClass_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.clearStyle" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.clearStyle_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.clearStyle_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.control" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.control2" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.control_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.control_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.control_returnValue2" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.forEach" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.forEach_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.forEach_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.get" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.getAttribute" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.getAttribute_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.getAttribute_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.get_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.get_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.hasClass" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.hasClass_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.hasClass_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.include" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.include_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.listen" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.listen_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.listen_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.query" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.query_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.query_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.removeClass" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.removeClass_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.removeClass_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.removeEventListener" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.removeEventListener_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.removeEventListener_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.setAttribute" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.setAttribute_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.setAttribute_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.setStyle" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.setStyle_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.setStyle_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.template" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.template_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.template_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.toggleClass" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.toggleClass_p" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection.toggleClass_returnValue" />
+          <AitFeature Name="WinJS.Utilities.QueryCollection_p" />
+          <AitFeature Name="WinJS.Utilities.Scheduler" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.JobInfoIsNoLongerValid" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.Priority" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobInfo.job" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobInfo.setPromise" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobInfo.setPromise_p" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobInfo.setWork" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobInfo.setWork_p" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobInfo.shouldYield" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobNode" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobNode.cancel" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobNode.completed" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobNode.id" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobNode.name" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobNode.owner" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobNode.pause" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobNode.priority" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._JobNode.resume" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._OwnerToken" />
+          <AitFeature Name="WinJS.Utilities.Scheduler._OwnerToken.cancelAll" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.createOwnerToken" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.createOwnerToken_returnValue" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.currentPriority" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.execHigh" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.execHigh_p" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.execHigh_returnValue" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.requestDrain" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.requestDrain_p" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.requestDrain_returnValue" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.retrieveState" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.schedule" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.schedulePromise" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.schedulePromise_p" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.schedulePromise_returnValue" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.schedule_p" />
+          <AitFeature Name="WinJS.Utilities.Scheduler.schedule_returnValue" />
+          <AitFeature Name="WinJS.Utilities._DOMWeakRefTable.cleanup" />
+          <AitFeature Name="WinJS.Utilities._setActive" />
+          <AitFeature Name="WinJS.Utilities._zoomTo" />
+          <AitFeature Name="WinJS.Utilities.addClass" />
+          <AitFeature Name="WinJS.Utilities.addClass_p" />
+          <AitFeature Name="WinJS.Utilities.addClass_returnValue" />
+          <AitFeature Name="WinJS.Utilities.children" />
+          <AitFeature Name="WinJS.Utilities.children_p" />
+          <AitFeature Name="WinJS.Utilities.children_returnValue" />
+          <AitFeature Name="WinJS.Utilities.convertToPixels" />
+          <AitFeature Name="WinJS.Utilities.convertToPixels_p" />
+          <AitFeature Name="WinJS.Utilities.convertToPixels_returnValue" />
+          <AitFeature Name="WinJS.Utilities.createEventProperties" />
+          <AitFeature Name="WinJS.Utilities.createEventProperties_p" />
+          <AitFeature Name="WinJS.Utilities.createEventProperties_returnValue" />
+          <AitFeature Name="WinJS.Utilities.data" />
+          <AitFeature Name="WinJS.Utilities.data_p" />
+          <AitFeature Name="WinJS.Utilities.data_returnValue" />
+          <AitFeature Name="WinJS.Utilities.disposeSubTree" />
+          <AitFeature Name="WinJS.Utilities.disposeSubTree_p" />
+          <AitFeature Name="WinJS.Utilities.empty" />
+          <AitFeature Name="WinJS.Utilities.empty_p" />
+          <AitFeature Name="WinJS.Utilities.empty_returnValue" />
+          <AitFeature Name="WinJS.Utilities.eventMixin.addEventListener" />
+          <AitFeature Name="WinJS.Utilities.eventMixin.addEventListener_p" />
+          <AitFeature Name="WinJS.Utilities.eventMixin.dispatchEvent" />
+          <AitFeature Name="WinJS.Utilities.eventMixin.dispatchEvent_p" />
+          <AitFeature Name="WinJS.Utilities.eventMixin.dispatchEvent_returnValue" />
+          <AitFeature Name="WinJS.Utilities.eventMixin.removeEventListener" />
+          <AitFeature Name="WinJS.Utilities.eventMixin.removeEventListener_p" />
+          <AitFeature Name="WinJS.Utilities.eventWithinElement" />
+          <AitFeature Name="WinJS.Utilities.eventWithinElement_p" />
+          <AitFeature Name="WinJS.Utilities.eventWithinElement_returnValue" />
+          <AitFeature Name="WinJS.Utilities.formatLog" />
+          <AitFeature Name="WinJS.Utilities.getContentHeight" />
+          <AitFeature Name="WinJS.Utilities.getContentHeight_p" />
+          <AitFeature Name="WinJS.Utilities.getContentHeight_returnValue" />
+          <AitFeature Name="WinJS.Utilities.getContentWidth" />
+          <AitFeature Name="WinJS.Utilities.getContentWidth_p" />
+          <AitFeature Name="WinJS.Utilities.getContentWidth_returnValue" />
+          <AitFeature Name="WinJS.Utilities.getMember" />
+          <AitFeature Name="WinJS.Utilities.getMember_p" />
+          <AitFeature Name="WinJS.Utilities.getMember_returnValue" />
+          <AitFeature Name="WinJS.Utilities.getPosition" />
+          <AitFeature Name="WinJS.Utilities.getPosition_p" />
+          <AitFeature Name="WinJS.Utilities.getPosition_returnValue" />
+          <AitFeature Name="WinJS.Utilities.getRelativeLeft" />
+          <AitFeature Name="WinJS.Utilities.getRelativeLeft_p" />
+          <AitFeature Name="WinJS.Utilities.getRelativeLeft_returnValue" />
+          <AitFeature Name="WinJS.Utilities.getRelativeTop" />
+          <AitFeature Name="WinJS.Utilities.getRelativeTop_p" />
+          <AitFeature Name="WinJS.Utilities.getRelativeTop_returnValue" />
+          <AitFeature Name="WinJS.Utilities.getScrollPosition" />
+          <AitFeature Name="WinJS.Utilities.getScrollPosition_p" />
+          <AitFeature Name="WinJS.Utilities.getScrollPosition_returnValue" />
+          <AitFeature Name="WinJS.Utilities.getTabIndex" />
+          <AitFeature Name="WinJS.Utilities.getTabIndex_p" />
+          <AitFeature Name="WinJS.Utilities.getTabIndex_returnValue" />
+          <AitFeature Name="WinJS.Utilities.getTotalHeight" />
+          <AitFeature Name="WinJS.Utilities.getTotalHeight_p" />
+          <AitFeature Name="WinJS.Utilities.getTotalHeight_returnValue" />
+          <AitFeature Name="WinJS.Utilities.getTotalWidth" />
+          <AitFeature Name="WinJS.Utilities.getTotalWidth_p" />
+          <AitFeature Name="WinJS.Utilities.getTotalWidth_returnValue" />
+          <AitFeature Name="WinJS.Utilities.hasClass" />
+          <AitFeature Name="WinJS.Utilities.hasClass_p" />
+          <AitFeature Name="WinJS.Utilities.hasClass_returnValue" />
+          <AitFeature Name="WinJS.Utilities.hasWinRT" />
+          <AitFeature Name="WinJS.Utilities.id" />
+          <AitFeature Name="WinJS.Utilities.id_p" />
+          <AitFeature Name="WinJS.Utilities.id_returnValue" />
+          <AitFeature Name="WinJS.Utilities.insertAdjacentHTML" />
+          <AitFeature Name="WinJS.Utilities.insertAdjacentHTMLUnsafe" />
+          <AitFeature Name="WinJS.Utilities.insertAdjacentHTMLUnsafe_p" />
+          <AitFeature Name="WinJS.Utilities.insertAdjacentHTML_p" />
+          <AitFeature Name="WinJS.Utilities.markDisposable" />
+          <AitFeature Name="WinJS.Utilities.markDisposable_p" />
+          <AitFeature Name="WinJS.Utilities.markSupportedForProcessing" />
+          <AitFeature Name="WinJS.Utilities.markSupportedForProcessing." />
+          <AitFeature Name="WinJS.Utilities.markSupportedForProcessing_p" />
+          <AitFeature Name="WinJS.Utilities.markSupportedForProcessing_returnValue" />
+          <AitFeature Name="WinJS.Utilities.msIsStaticHTML.insertAdjacentHTML" />
+          <AitFeature Name="WinJS.Utilities.msIsStaticHTML.insertAdjacentHTML_p" />
+          <AitFeature Name="WinJS.Utilities.msIsStaticHTML.setInnerHTML" />
+          <AitFeature Name="WinJS.Utilities.msIsStaticHTML.setInnerHTML_p" />
+          <AitFeature Name="WinJS.Utilities.msIsStaticHTML.setOuterHTML" />
+          <AitFeature Name="WinJS.Utilities.msIsStaticHTML.setOuterHTML_p" />
+          <AitFeature Name="WinJS.Utilities.query" />
+          <AitFeature Name="WinJS.Utilities.query_p" />
+          <AitFeature Name="WinJS.Utilities.query_returnValue" />
+          <AitFeature Name="WinJS.Utilities.ready" />
+          <AitFeature Name="WinJS.Utilities.ready_p" />
+          <AitFeature Name="WinJS.Utilities.ready_returnValue" />
+          <AitFeature Name="WinJS.Utilities.removeClass" />
+          <AitFeature Name="WinJS.Utilities.removeClass_p" />
+          <AitFeature Name="WinJS.Utilities.removeClass_returnValue" />
+          <AitFeature Name="WinJS.Utilities.requireSupportedForProcessing" />
+          <AitFeature Name="WinJS.Utilities.requireSupportedForProcessing_p" />
+          <AitFeature Name="WinJS.Utilities.requireSupportedForProcessing_returnValue" />
+          <AitFeature Name="WinJS.Utilities.setInnerHTML" />
+          <AitFeature Name="WinJS.Utilities.setInnerHTMLUnsafe" />
+          <AitFeature Name="WinJS.Utilities.setInnerHTMLUnsafe_p" />
+          <AitFeature Name="WinJS.Utilities.setInnerHTML_p" />
+          <AitFeature Name="WinJS.Utilities.setOuterHTML" />
+          <AitFeature Name="WinJS.Utilities.setOuterHTMLUnsafe" />
+          <AitFeature Name="WinJS.Utilities.setOuterHTMLUnsafe_p" />
+          <AitFeature Name="WinJS.Utilities.setOuterHTML_p" />
+          <AitFeature Name="WinJS.Utilities.setScrollPosition" />
+          <AitFeature Name="WinJS.Utilities.setScrollPosition_p" />
+          <AitFeature Name="WinJS.Utilities.startLog" />
+          <AitFeature Name="WinJS.Utilities.startLog2" />
+          <AitFeature Name="WinJS.Utilities.startLog_p" />
+          <AitFeature Name="WinJS.Utilities.startLog_returnValue" />
+          <AitFeature Name="WinJS.Utilities.stopLog" />
+          <AitFeature Name="WinJS.Utilities.strictProcessing" />
+          <AitFeature Name="WinJS.Utilities.toggleClass" />
+          <AitFeature Name="WinJS.Utilities.toggleClass_p" />
+          <AitFeature Name="WinJS.Utilities.toggleClass_returnValue" />
+          <AitFeature Name="WinJS.Utitilies.NonStaticHTML" />
+          <AitFeature Name="WinJS._ParallelWorkQueue.runNext" />
+          <AitFeature Name="WinJS._Telemetry.send" />
+          <AitFeature Name="WinJS._Telemetry.send_p" />
+          <AitFeature Name="WinJS.strictProcessing" />
+          <AitFeature Name="WinJS.xhr.constructor._returnValue" />
+          <AitFeature Name="WinJS.xhr_returnValue" />
+          <AitFeature Name="Windows.ApplicationModel.DesignMode.designModeEnabled" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.Core.ResourceContext" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.Core.ResourceManager" />
+          <AitFeature Name="Windows.ApplicationModel.Search.SearchQueryLinguisticDetails" />
+          <AitFeature Name="Windows.Data.Text.SemanticTextQuery" />
+          <AitFeature Name="Windows.Foundation.Collections.CollectionChange" />
+          <AitFeature Name="Windows.Foundation.Diagnostics" />
+          <AitFeature Name="Windows.Foundation.Uri" />
+          <AitFeature Name="Windows.Globalization.ApplicationLanguages" />
+          <AitFeature Name="Windows.Globalization.Calendar" />
+          <AitFeature Name="Windows.Globalization.DateTimeFormatting" />
+          <AitFeature Name="Windows.Globalization.Language" />
+          <AitFeature Name="Windows.Phone.UI.Input.HardwareButtons" />
+          <AitFeature Name="Windows.Storage.ApplicationData" />
+          <AitFeature Name="Windows.Storage.BulkAccess.FileInformationFactory" />
+          <AitFeature Name="Windows.Storage.CreationCollisionOption" />
+          <AitFeature Name="Windows.Storage.FileIO" />
+          <AitFeature Name="Windows.Storage.FileProperties.ThumbnailMode" />
+          <AitFeature Name="Windows.Storage.FileProperties.ThumbnailOptions" />
+          <AitFeature Name="Windows.Storage.FileProperties.ThumbnailType" />
+          <AitFeature Name="Windows.Storage.KnownFolders" />
+          <AitFeature Name="Windows.Storage.Search.FolderDepth" />
+          <AitFeature Name="Windows.Storage.Search.IndexerOption" />
+          <AitFeature Name="Windows.Storage.Streams.RandomAccessStreamReference" />
+          <AitFeature Name="Windows.UI.ApplicationSettings.SettingsCommand" />
+          <AitFeature Name="Windows.UI.ApplicationSettings.SettingsEdgeLocation" />
+          <AitFeature Name="Windows.UI.ApplicationSettings.SettingsPane" />
+          <AitFeature Name="Windows.UI.Core.AnimationMetrics" />
+          <AitFeature Name="Windows.UI.Input.EdgeGesture" />
+          <AitFeature Name="Windows.UI.Input.EdgeGestureKind" />
+          <AitFeature Name="Windows.UI.Input.PointerPoint" />
+          <AitFeature Name="Windows.UI.ViewManagement.HandPreference" />
+          <AitFeature Name="Windows.UI.ViewManagement.InputPane" />
+          <AitFeature Name="Windows.UI.ViewManagement.UIColorType" />
+          <AitFeature Name="Windows.UI.ViewManagement.UISettings" />
+          <AitFeature Name="Windows.UI.WebUI.Core.WebUICommandBar" />
+          <AitFeature Name="Windows.UI.WebUI.Core.WebUICommandBarBitmapIcon" />
+          <AitFeature Name="Windows.UI.WebUI.Core.WebUICommandBarClosedDisplayMode" />
+          <AitFeature Name="Windows.UI.WebUI.Core.WebUICommandBarIconButton" />
+          <AitFeature Name="Windows.UI.WebUI.Core.WebUICommandBarSymbolIcon" />
+          <AitFeature Name="Windows.UI.WebUI.WebUIApplication" />
+          <AitFeature Name="document.comment" />
+          <AitFeature Name="navigator.msManipulationViewsEnabled" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="default.html" Id="000046449cc96980da0cb139bd88bffdf18573a036fc" />
+      <AitFile ErrorCode="0" Name="audio.js" Id="00005f3df910b198123b50c58d4f7b066231d8eb8ea9">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Class.define" />
+          <AitFeature Name="WinJS.Utilities.eventMixin" />
+          <AitFeature Name="Windows.Foundation.Collections.ValueSet" />
+          <AitFeature Name="Windows.Foundation.Uri" />
+          <AitFeature Name="Windows.Media.MediaPlaybackType" />
+          <AitFeature Name="Windows.Media.Playback.BackgroundMediaPlayer" />
+          <AitFeature Name="Windows.Media.Playback.MediaPlayerState" />
+          <AitFeature Name="Windows.Storage.ApplicationData.current" />
+          <AitFeature Name="Windows.Storage.FileIO.readTextAsync" />
+          <AitFeature Name="Windows.UI.WebUI.WebUIBackgroundTaskInstance.current" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="jquery.js" Id="00006557a643db7f6fe48f5fada3fdcbde4ae71e7568">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="document.activeElement" />
+          <AitFeature Name="document.addEventListener" />
+          <AitFeature Name="document.attachEvent" />
+          <AitFeature Name="document.createDocumentFragment" />
+          <AitFeature Name="document.createElement" />
+          <AitFeature Name="document.detachEvent" />
+          <AitFeature Name="document.documentElement" />
+          <AitFeature Name="document.documentElement.currentStyle" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="document.getElementsByTagName" />
+          <AitFeature Name="document.hasFocus" />
+          <AitFeature Name="document.location" />
+          <AitFeature Name="document.readyState" />
+          <AitFeature Name="document.removeEventListener" />
+          <AitFeature Name="window.ActiveXObject" />
+          <AitFeature Name="window.DOMParser" />
+          <AitFeature Name="window.JSON.parse" />
+          <AitFeature Name="window.XMLHttpRequest" />
+          <AitFeature Name="window.addEventListener" />
+          <AitFeature Name="window.attachEvent" />
+          <AitFeature Name="window.detachEvent" />
+          <AitFeature Name="window.execScript" />
+          <AitFeature Name="window.frameElement" />
+          <AitFeature Name="window.getComputedStyle" />
+          <AitFeature Name="window.location.hash" />
+          <AitFeature Name="window.removeEventListener" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="jquery-ui.js" Id="000076cbc6beafeaa5826ee20d2dedcbe9ad0b91145f">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="document.activeElement" />
+          <AitFeature Name="document.activeElement.nodeName.toLowerCase" />
+          <AitFeature Name="document.body.parentNode.scrollHeight" />
+          <AitFeature Name="document.body.scrollLeft" />
+          <AitFeature Name="document.body.scrollTop" />
+          <AitFeature Name="document.createElement" />
+          <AitFeature Name="document.documentElement" />
+          <AitFeature Name="document.documentElement.clientHeight" />
+          <AitFeature Name="document.documentElement.clientWidth" />
+          <AitFeature Name="document.documentElement.scrollLeft" />
+          <AitFeature Name="document.documentElement.scrollTop" />
+          <AitFeature Name="document.documentMode" />
+          <AitFeature Name="document.getElementsByTagName" />
+          <AitFeature Name="document.selection.createRange" />
+          <AitFeature Name="location.hash.substring" />
+          <AitFeature Name="location.href.replace" />
+          <AitFeature Name="navigator.userAgent.toLowerCase" />
+          <AitFeature Name="window.Globalize" />
+          <AitFeature Name="window.getSelection" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="slick.min.js" Id="0000942553bc445ea33070978c7167678ef590e73e62">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="document.body.style" />
+          <AitFeature Name="document.createDocumentFragment" />
+          <AitFeature Name="document.createElement" />
+          <AitFeature Name="document.mozHidden" />
+          <AitFeature Name="document.webkitHidden" />
+          <AitFeature Name="window.innerWidth" />
+          <AitFeature Name="window.setTimeout" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="jquery-3.1.0.min.js" Id="0000a1bde0230f66d0335796780d392bff6cb11c1ca9" />
+      <AitFile ErrorCode="0" Name="ui.js" Id="0000c4aad06afeddb7a972353c27a4cb7d125b084d2b">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Application.onsettings" />
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.BindingTemplate" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.Navigation.history.canGoBack" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.UI.AppBar.AppBar" />
+          <AitFeature Name="WinJS.UI.AppBar.ClosedDisplayMode" />
+          <AitFeature Name="WinJS.UI.AppBar.ClosedDisplayMode.compact" />
+          <AitFeature Name="WinJS.UI.AppBar.ClosedDisplayMode.full" />
+          <AitFeature Name="WinJS.UI.AppBar.ClosedDisplayMode.minimal" />
+          <AitFeature Name="WinJS.UI.AppBar.ClosedDisplayMode.none" />
+          <AitFeature Name="WinJS.UI.AppBar.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.AppBar.NullCommand" />
+          <AitFeature Name="WinJS.UI.AppBar.Placement" />
+          <AitFeature Name="WinJS.UI.AppBar.Placement.bottom" />
+          <AitFeature Name="WinJS.UI.AppBar.Placement.top" />
+          <AitFeature Name="WinJS.UI.AppBar.close" />
+          <AitFeature Name="WinJS.UI.AppBar.closedDisplayMode" />
+          <AitFeature Name="WinJS.UI.AppBar.constructor" />
+          <AitFeature Name="WinJS.UI.AppBar.constructor_p" />
+          <AitFeature Name="WinJS.UI.AppBar.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.AppBar.data" />
+          <AitFeature Name="WinJS.UI.AppBar.dispose" />
+          <AitFeature Name="WinJS.UI.AppBar.element" />
+          <AitFeature Name="WinJS.UI.AppBar.forceLayout" />
+          <AitFeature Name="WinJS.UI.AppBar.getCommandById" />
+          <AitFeature Name="WinJS.UI.AppBar.getCommandById_p" />
+          <AitFeature Name="WinJS.UI.AppBar.getCommandById_returnValue" />
+          <AitFeature Name="WinJS.UI.AppBar.open" />
+          <AitFeature Name="WinJS.UI.AppBar.opened" />
+          <AitFeature Name="WinJS.UI.AppBar.placement" />
+          <AitFeature Name="WinJS.UI.AppBar.showOnlyCommands" />
+          <AitFeature Name="WinJS.UI.AppBar.showOnlyCommands_p" />
+          <AitFeature Name="WinJS.UI.AppBarCommand" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.AppBarCommand" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.BadButtonElement" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.BadClick" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.BadDivElement" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.BadHrElement" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.BadPriority" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.addEventListener" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.addEventListener_p" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.constructor" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.constructor_p" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.disabled" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.dispose" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.element" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.extraClass" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.firstElementFocus" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.flyout" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.hidden" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.icon" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.id" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.label" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.lastElementFocus" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.onclick" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.priority" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.removeEventListener" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.removeEventListener_p" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.section" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.selected" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.tooltip" />
+          <AitFeature Name="WinJS.UI.AppBarCommand.type" />
+          <AitFeature Name="WinJS.UI.AppBarCommand_e" />
+          <AitFeature Name="WinJS.UI.AppBarCommand_part" />
+          <AitFeature Name="WinJS.UI.AppBarIcon" />
+          <AitFeature Name="WinJS.UI.AppBarIcon.home" />
+          <AitFeature Name="WinJS.UI.AppBar_part" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.AutoSuggestBox" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.SetLocalContentSuggestionSettings" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.asb_createResultSuggestionImage_p" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.chooseSuggestionOnEnter" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.constructor" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.constructor_p" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.createResultSuggestionImage" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.disabled" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.dispose" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.element" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.invalidSuggestionKind" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.onquerychanged" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.onquerysubmitted" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.onresultsuggestionchosen" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.onsuggestionsrequested" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.placeholderText" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.queryText" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.searchHistoryContext" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.searchHistoryDisabled" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox.setLocalContentSuggestionSettings_p" />
+          <AitFeature Name="WinJS.UI.AutoSuggestBox_part" />
+          <AitFeature Name="WinJS.UI.BackButton" />
+          <AitFeature Name="WinJS.UI.BackButton.BackButton" />
+          <AitFeature Name="WinJS.UI.BackButton.BadButtonElement" />
+          <AitFeature Name="WinJS.UI.BackButton.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.BackButton.constructor" />
+          <AitFeature Name="WinJS.UI.BackButton.constructor_p" />
+          <AitFeature Name="WinJS.UI.BackButton.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.BackButton.dispose" />
+          <AitFeature Name="WinJS.UI.BackButton.element" />
+          <AitFeature Name="WinJS.UI.BackButton.refresh" />
+          <AitFeature Name="WinJS.UI.BackButton_part" />
+          <AitFeature Name="WinJS.UI.BrowseMode.selectionchanging.setPromise" />
+          <AitFeature Name="WinJS.UI.BrowseMode.selectionchanging.setPromise_p" />
+          <AitFeature Name="WinJS.UI.CellSpanningLayout" />
+          <AitFeature Name="WinJS.UI.CellSpanningLayout.groupInfo" />
+          <AitFeature Name="WinJS.UI.CellSpanningLayout.itemInfo" />
+          <AitFeature Name="WinJS.UI.CellSpanningLayout.maximumRowsOrColumns" />
+          <AitFeature Name="WinJS.UI.CellSpanningLayout.orientation" />
+          <AitFeature Name="WinJS.UI.CellSpanningLayout_p" />
+          <AitFeature Name="WinJS.UI.CellSpanningLayout_returnValue" />
+          <AitFeature Name="WinJS.UI.Command" />
+          <AitFeature Name="WinJS.UI.ContentDialog" />
+          <AitFeature Name="WinJS.UI.ContentDialog.ContentDialog" />
+          <AitFeature Name="WinJS.UI.ContentDialog.ContentDialogAlreadyShowing" />
+          <AitFeature Name="WinJS.UI.ContentDialog.ControlDisposed" />
+          <AitFeature Name="WinJS.UI.ContentDialog.DismissalResult" />
+          <AitFeature Name="WinJS.UI.ContentDialog.DismissalResult.none" />
+          <AitFeature Name="WinJS.UI.ContentDialog.DismissalResult.primary" />
+          <AitFeature Name="WinJS.UI.ContentDialog.DismissalResult.secondary" />
+          <AitFeature Name="WinJS.UI.ContentDialog.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.ContentDialog.constructor" />
+          <AitFeature Name="WinJS.UI.ContentDialog.constructor_p" />
+          <AitFeature Name="WinJS.UI.ContentDialog.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.ContentDialog.dispose" />
+          <AitFeature Name="WinJS.UI.ContentDialog.element" />
+          <AitFeature Name="WinJS.UI.ContentDialog.hidden" />
+          <AitFeature Name="WinJS.UI.ContentDialog.hide" />
+          <AitFeature Name="WinJS.UI.ContentDialog.hide_p" />
+          <AitFeature Name="WinJS.UI.ContentDialog.primaryCommandDisabled" />
+          <AitFeature Name="WinJS.UI.ContentDialog.primaryCommandText" />
+          <AitFeature Name="WinJS.UI.ContentDialog.secondaryCommandDisabled" />
+          <AitFeature Name="WinJS.UI.ContentDialog.secondaryCommandText" />
+          <AitFeature Name="WinJS.UI.ContentDialog.show" />
+          <AitFeature Name="WinJS.UI.ContentDialog.show_returnValue" />
+          <AitFeature Name="WinJS.UI.ContentDialog.title" />
+          <AitFeature Name="WinJS.UI.ContentDialog_e" />
+          <AitFeature Name="WinJS.UI.ContentDialog_part" />
+          <AitFeature Name="WinJS.UI.CountResult.unknown" />
+          <AitFeature Name="WinJS.UI.DatePicker" />
+          <AitFeature Name="WinJS.UI.DatePicker.DatePicker" />
+          <AitFeature Name="WinJS.UI.DatePicker.calendar" />
+          <AitFeature Name="WinJS.UI.DatePicker.constructor" />
+          <AitFeature Name="WinJS.UI.DatePicker.constructor_p" />
+          <AitFeature Name="WinJS.UI.DatePicker.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.DatePicker.current" />
+          <AitFeature Name="WinJS.UI.DatePicker.datePattern" />
+          <AitFeature Name="WinJS.UI.DatePicker.disabled" />
+          <AitFeature Name="WinJS.UI.DatePicker.dispose" />
+          <AitFeature Name="WinJS.UI.DatePicker.element" />
+          <AitFeature Name="WinJS.UI.DatePicker.maxYear" />
+          <AitFeature Name="WinJS.UI.DatePicker.minYear" />
+          <AitFeature Name="WinJS.UI.DatePicker.monthPattern" />
+          <AitFeature Name="WinJS.UI.DatePicker.yearPattern" />
+          <AitFeature Name="WinJS.UI.DatePicker_e" />
+          <AitFeature Name="WinJS.UI.DatePicker_name" />
+          <AitFeature Name="WinJS.UI.FlipView" />
+          <AitFeature Name="WinJS.UI.FlipView.BadCurrentPage" />
+          <AitFeature Name="WinJS.UI.FlipView.FlipView" />
+          <AitFeature Name="WinJS.UI.FlipView.NavigationDuringStateChange" />
+          <AitFeature Name="WinJS.UI.FlipView._dispatchDataSourceCountChangedEvent" />
+          <AitFeature Name="WinJS.UI.FlipView._dispatchPageSelectedEvent" />
+          <AitFeature Name="WinJS.UI.FlipView._refreshHandler" />
+          <AitFeature Name="WinJS.UI.FlipView.constructor" />
+          <AitFeature Name="WinJS.UI.FlipView.constructor_p" />
+          <AitFeature Name="WinJS.UI.FlipView.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.FlipView.count" />
+          <AitFeature Name="WinJS.UI.FlipView.count_returnValue" />
+          <AitFeature Name="WinJS.UI.FlipView.currentPage" />
+          <AitFeature Name="WinJS.UI.FlipView.dispose" />
+          <AitFeature Name="WinJS.UI.FlipView.element" />
+          <AitFeature Name="WinJS.UI.FlipView.forceLayout" />
+          <AitFeature Name="WinJS.UI.FlipView.itemDataSource" />
+          <AitFeature Name="WinJS.UI.FlipView.itemSpacing" />
+          <AitFeature Name="WinJS.UI.FlipView.itemTemplate" />
+          <AitFeature Name="WinJS.UI.FlipView.next" />
+          <AitFeature Name="WinJS.UI.FlipView.next_returnValue" />
+          <AitFeature Name="WinJS.UI.FlipView.orientation" />
+          <AitFeature Name="WinJS.UI.FlipView.previous" />
+          <AitFeature Name="WinJS.UI.FlipView.previous_returnValue" />
+          <AitFeature Name="WinJS.UI.FlipView.setCustomAnimations" />
+          <AitFeature Name="WinJS.UI.FlipView.setCustomAnimations_p" />
+          <AitFeature Name="WinJS.UI.FlipView_e" />
+          <AitFeature Name="WinJS.UI.FlipView_part" />
+          <AitFeature Name="WinJS.UI.Flyout.BadAlignment" />
+          <AitFeature Name="WinJS.UI.Flyout.BadPlacement" />
+          <AitFeature Name="WinJS.UI.Flyout.Flyout" />
+          <AitFeature Name="WinJS.UI.Flyout.NoAnchor" />
+          <AitFeature Name="WinJS.UI.Flyout.alignment" />
+          <AitFeature Name="WinJS.UI.Flyout.anchor" />
+          <AitFeature Name="WinJS.UI.Flyout.constructor" />
+          <AitFeature Name="WinJS.UI.Flyout.constructor_p" />
+          <AitFeature Name="WinJS.UI.Flyout.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.Flyout.disabled" />
+          <AitFeature Name="WinJS.UI.Flyout.hide" />
+          <AitFeature Name="WinJS.UI.Flyout.onafterhide" />
+          <AitFeature Name="WinJS.UI.Flyout.onaftershow" />
+          <AitFeature Name="WinJS.UI.Flyout.onbeforehide" />
+          <AitFeature Name="WinJS.UI.Flyout.onbeforeshow" />
+          <AitFeature Name="WinJS.UI.Flyout.placement" />
+          <AitFeature Name="WinJS.UI.Flyout.show" />
+          <AitFeature Name="WinJS.UI.Flyout.show_p" />
+          <AitFeature Name="WinJS.UI.Flyout_e" />
+          <AitFeature Name="WinJS.UI.Flyout_name" />
+          <AitFeature Name="WinJS.UI.Flyout_part" />
+          <AitFeature Name="WinJS.UI.GridLayout" />
+          <AitFeature Name="WinJS.UI.GridLayout.CellSpanningGroup.LayoutUnrealizedRange" />
+          <AitFeature Name="WinJS.UI.GridLayout.GroupInfoResultIsInvalid" />
+          <AitFeature Name="WinJS.UI.GridLayout.ItemInfoIsInvalid" />
+          <AitFeature Name="WinJS.UI.GridLayout._measuringElements" />
+          <AitFeature Name="WinJS.UI.GridLayout.groupInfo" />
+          <AitFeature Name="WinJS.UI.GridLayout.itemInfo" />
+          <AitFeature Name="WinJS.UI.GridLayout.maxRows" />
+          <AitFeature Name="WinJS.UI.GridLayout.maximumRowsOrColumns" />
+          <AitFeature Name="WinJS.UI.GridLayout_p" />
+          <AitFeature Name="WinJS.UI.GridLayout_returnValue" />
+          <AitFeature Name="WinJS.UI.GroupHeaderTapBehavior" />
+          <AitFeature Name="WinJS.UI.HeaderPosition" />
+          <AitFeature Name="WinJS.UI.Hub.AnimationType" />
+          <AitFeature Name="WinJS.UI.Hub.AnimationType.contentTransition" />
+          <AitFeature Name="WinJS.UI.Hub.AnimationType.entrance" />
+          <AitFeature Name="WinJS.UI.Hub.AnimationType.insert" />
+          <AitFeature Name="WinJS.UI.Hub.AnimationType.remove" />
+          <AitFeature Name="WinJS.UI.Hub.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.Hub.DuplicateSection" />
+          <AitFeature Name="WinJS.UI.Hub.Hub" />
+          <AitFeature Name="WinJS.UI.Hub.InvalidContent" />
+          <AitFeature Name="WinJS.UI.Hub.LoadingState" />
+          <AitFeature Name="WinJS.UI.Hub.LoadingState.complete" />
+          <AitFeature Name="WinJS.UI.Hub.LoadingState.loading" />
+          <AitFeature Name="WinJS.UI.Hub.constructor" />
+          <AitFeature Name="WinJS.UI.Hub.constructor_p" />
+          <AitFeature Name="WinJS.UI.Hub.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.Hub.dispose" />
+          <AitFeature Name="WinJS.UI.Hub.element" />
+          <AitFeature Name="WinJS.UI.Hub.entranceAnimation" />
+          <AitFeature Name="WinJS.UI.Hub.headerTemplate" />
+          <AitFeature Name="WinJS.UI.Hub.indexOfFirstVisible" />
+          <AitFeature Name="WinJS.UI.Hub.indexOfLastVisible" />
+          <AitFeature Name="WinJS.UI.Hub.loadingState" />
+          <AitFeature Name="WinJS.UI.Hub.oncontentanimating" />
+          <AitFeature Name="WinJS.UI.Hub.onheaderinvoked" />
+          <AitFeature Name="WinJS.UI.Hub.onloadingstatechanged" />
+          <AitFeature Name="WinJS.UI.Hub.orientation" />
+          <AitFeature Name="WinJS.UI.Hub.scrollPosition" />
+          <AitFeature Name="WinJS.UI.Hub.sectionOnScreen" />
+          <AitFeature Name="WinJS.UI.Hub.sections" />
+          <AitFeature Name="WinJS.UI.Hub.zoomableView" />
+          <AitFeature Name="WinJS.UI.HubSection" />
+          <AitFeature Name="WinJS.UI.HubSection.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.HubSection.HubSection" />
+          <AitFeature Name="WinJS.UI.HubSection.constructor" />
+          <AitFeature Name="WinJS.UI.HubSection.constructor_p" />
+          <AitFeature Name="WinJS.UI.HubSection.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.HubSection.contentElement" />
+          <AitFeature Name="WinJS.UI.HubSection.dispose" />
+          <AitFeature Name="WinJS.UI.HubSection.element" />
+          <AitFeature Name="WinJS.UI.HubSection.header" />
+          <AitFeature Name="WinJS.UI.HubSection.isHeaderStatic" />
+          <AitFeature Name="WinJS.UI.HubSection_part" />
+          <AitFeature Name="WinJS.UI.Hub_part" />
+          <AitFeature Name="WinJS.UI.IListBinding" />
+          <AitFeature Name="WinJS.UI.IListBinding.current" />
+          <AitFeature Name="WinJS.UI.IListBinding.current_returnValue" />
+          <AitFeature Name="WinJS.UI.IListBinding.first" />
+          <AitFeature Name="WinJS.UI.IListBinding.first_returnValue" />
+          <AitFeature Name="WinJS.UI.IListBinding.fromDescription" />
+          <AitFeature Name="WinJS.UI.IListBinding.fromIndex" />
+          <AitFeature Name="WinJS.UI.IListBinding.fromIndex_p" />
+          <AitFeature Name="WinJS.UI.IListBinding.fromIndex_returnValue" />
+          <AitFeature Name="WinJS.UI.IListBinding.fromKey" />
+          <AitFeature Name="WinJS.UI.IListBinding.fromKey_p" />
+          <AitFeature Name="WinJS.UI.IListBinding.fromKey_returnValue" />
+          <AitFeature Name="WinJS.UI.IListBinding.jumpToItem" />
+          <AitFeature Name="WinJS.UI.IListBinding.jumpToItem_p" />
+          <AitFeature Name="WinJS.UI.IListBinding.jumpToItem_returnValue" />
+          <AitFeature Name="WinJS.UI.IListBinding.last" />
+          <AitFeature Name="WinJS.UI.IListBinding.last_returnValue" />
+          <AitFeature Name="WinJS.UI.IListBinding.next" />
+          <AitFeature Name="WinJS.UI.IListBinding.next_returnValue" />
+          <AitFeature Name="WinJS.UI.IListBinding.previous" />
+          <AitFeature Name="WinJS.UI.IListBinding.previous_returnValue" />
+          <AitFeature Name="WinJS.UI.IListBinding.release" />
+          <AitFeature Name="WinJS.UI.IListBinding.releaseItem" />
+          <AitFeature Name="WinJS.UI.IListBinding.releaseItem_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.beginEdits" />
+          <AitFeature Name="WinJS.UI.IListDataSource.change" />
+          <AitFeature Name="WinJS.UI.IListDataSource.change_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.change_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.createListBinding" />
+          <AitFeature Name="WinJS.UI.IListDataSource.createListBinding_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.createListBinding_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.endEdits" />
+          <AitFeature Name="WinJS.UI.IListDataSource.fromDescription_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.fromDescription_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.getCount" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertAfter" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertAfter_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertAfter_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertAtEnd" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertAtEnd_data" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertAtEnd_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertAtEnd_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertAtStart" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertAtStart_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertAtStart_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertBefore" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertBefore_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.insertBefore_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.invalidateAll" />
+          <AitFeature Name="WinJS.UI.IListDataSource.invalidateAll_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.itemFromDescription" />
+          <AitFeature Name="WinJS.UI.IListDataSource.itemFromDescription_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.itemFromDescription_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.itemFromIndex" />
+          <AitFeature Name="WinJS.UI.IListDataSource.itemFromIndex_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.itemFromIndex_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.itemFromKey" />
+          <AitFeature Name="WinJS.UI.IListDataSource.itemFromKey_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.itemFromKey_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveAfter" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveAfter_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveAfter_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveBefore" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveBefore_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveBefore_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveToEnd" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveToEnd_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveToEnd_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveToStart" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveToStart_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.moveToStart_returnValue" />
+          <AitFeature Name="WinJS.UI.IListDataSource.remove" />
+          <AitFeature Name="WinJS.UI.IListDataSource.remove_p" />
+          <AitFeature Name="WinJS.UI.IListDataSource.remove_returnValue" />
+          <AitFeature Name="WinJS.UI.ItemContainer" />
+          <AitFeature Name="WinJS.UI.ItemContainer.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.ItemContainer.ItemContainer" />
+          <AitFeature Name="WinJS.UI.ItemContainer.constructor" />
+          <AitFeature Name="WinJS.UI.ItemContainer.constructor_p" />
+          <AitFeature Name="WinJS.UI.ItemContainer.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.ItemContainer.dispose" />
+          <AitFeature Name="WinJS.UI.ItemContainer.draggable" />
+          <AitFeature Name="WinJS.UI.ItemContainer.element" />
+          <AitFeature Name="WinJS.UI.ItemContainer.forceLayout" />
+          <AitFeature Name="WinJS.UI.ItemContainer.selected" />
+          <AitFeature Name="WinJS.UI.ItemContainer.selectionDisabled" />
+          <AitFeature Name="WinJS.UI.ItemContainer.swipeBehavior" />
+          <AitFeature Name="WinJS.UI.ItemContainer.swipeOrientation" />
+          <AitFeature Name="WinJS.UI.ItemContainer.tapBehavior" />
+          <AitFeature Name="WinJS.UI.ItemContainer_async_initialize" />
+          <AitFeature Name="WinJS.UI.ItemContainer_e" />
+          <AitFeature Name="WinJS.UI.ItemContainer_part" />
+          <AitFeature Name="WinJS.UI.ItemCotrol.oninvoked" />
+          <AitFeature Name="WinJS.UI.ItemCotrol.onselectionchanged" />
+          <AitFeature Name="WinJS.UI.ItemCotrol.onselectionchanging" />
+          <AitFeature Name="WinJS.UI.Layout.constructor" />
+          <AitFeature Name="WinJS.UI.Layout.constructor_p" />
+          <AitFeature Name="WinJS.UI.Layout.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.ListDataSource.IndexIsInvalid" />
+          <AitFeature Name="WinJS.UI.ListDataSource.InvalidCountReturned" />
+          <AitFeature Name="WinJS.UI.ListDataSource.InvalidIndexReturned" />
+          <AitFeature Name="WinJS.UI.ListDataSource.InvalidItemReturned" />
+          <AitFeature Name="WinJS.UI.ListDataSource.InvalidKeyReturned" />
+          <AitFeature Name="WinJS.UI.ListDataSource.InvalidRequestedCountReturned" />
+          <AitFeature Name="WinJS.UI.ListDataSource.KeyIsInvalid" />
+          <AitFeature Name="WinJS.UI.ListDataSource.ListDataAdapterIsInvalid" />
+          <AitFeature Name="WinJS.UI.ListDataSource.ObjectIsNotValidJson" />
+          <AitFeature Name="WinJS.UI.ListDataSource._fetch" />
+          <AitFeature Name="WinJS.UI.ListDataSource.processResults" />
+          <AitFeature Name="WinJS.UI.ListLayout" />
+          <AitFeature Name="WinJS.UI.ListLayout_p" />
+          <AitFeature Name="WinJS.UI.ListLayout_returnValue" />
+          <AitFeature Name="WinJS.UI.ListView" />
+          <AitFeature Name="WinJS.UI.ListView.InvalidItem" />
+          <AitFeature Name="WinJS.UI.ListView.LazyTreeCreation" />
+          <AitFeature Name="WinJS.UI.ListView.ListView" />
+          <AitFeature Name="WinJS.UI.ListView.ListViewAnimationType" />
+          <AitFeature Name="WinJS.UI.ListView.ListViewAnimationType.contentTransition" />
+          <AitFeature Name="WinJS.UI.ListView.ListViewAnimationType.entrance" />
+          <AitFeature Name="WinJS.UI.ListView.LoadingBehavior" />
+          <AitFeature Name="WinJS.UI.ListView.ModeIsInvalid" />
+          <AitFeature Name="WinJS.UI.ListView.NotCompatibleWithSemanticZoom" />
+          <AitFeature Name="WinJS.UI.ListView.SelectionMode" />
+          <AitFeature Name="WinJS.UI.ListView._allItemsRealized" />
+          <AitFeature Name="WinJS.UI.ListView._lazilyRemoveRedundantItemsBlocks" />
+          <AitFeature Name="WinJS.UI.ListView._lazilyUnrealizeItems" />
+          <AitFeature Name="WinJS.UI.ListView._onMSElementResize" />
+          <AitFeature Name="WinJS.UI.ListView._setupAria" />
+          <AitFeature Name="WinJS.UI.ListView._update" />
+          <AitFeature Name="WinJS.UI.ListView._updateView" />
+          <AitFeature Name="WinJS.UI.ListView.automaticallyLoadPages" />
+          <AitFeature Name="WinJS.UI.ListView.constructor" />
+          <AitFeature Name="WinJS.UI.ListView.constructor_p" />
+          <AitFeature Name="WinJS.UI.ListView.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.ListView.currentItem" />
+          <AitFeature Name="WinJS.UI.ListView.dispose" />
+          <AitFeature Name="WinJS.UI.ListView.element" />
+          <AitFeature Name="WinJS.UI.ListView.elementFromIndex" />
+          <AitFeature Name="WinJS.UI.ListView.elementFromIndex_p" />
+          <AitFeature Name="WinJS.UI.ListView.elementFromIndex_returnValue" />
+          <AitFeature Name="WinJS.UI.ListView.ensureVisible" />
+          <AitFeature Name="WinJS.UI.ListView.ensureVisible_p" />
+          <AitFeature Name="WinJS.UI.ListView.entranceAnimation" />
+          <AitFeature Name="WinJS.UI.ListView.footer" />
+          <AitFeature Name="WinJS.UI.ListView.forceLayout" />
+          <AitFeature Name="WinJS.UI.ListView.groupDataSource" />
+          <AitFeature Name="WinJS.UI.ListView.groupHeaderTapBehavior" />
+          <AitFeature Name="WinJS.UI.ListView.groupHeaderTemplate" />
+          <AitFeature Name="WinJS.UI.ListView.header" />
+          <AitFeature Name="WinJS.UI.ListView.indexOfElement" />
+          <AitFeature Name="WinJS.UI.ListView.indexOfElement_p" />
+          <AitFeature Name="WinJS.UI.ListView.indexOfElement_returnValue" />
+          <AitFeature Name="WinJS.UI.ListView.indexOfFirstVisible" />
+          <AitFeature Name="WinJS.UI.ListView.indexOfLastVisible" />
+          <AitFeature Name="WinJS.UI.ListView.invalidTemplate" />
+          <AitFeature Name="WinJS.UI.ListView.itemDataSource" />
+          <AitFeature Name="WinJS.UI.ListView.itemTemplate" />
+          <AitFeature Name="WinJS.UI.ListView.itemsDraggable" />
+          <AitFeature Name="WinJS.UI.ListView.itemsReorderable" />
+          <AitFeature Name="WinJS.UI.ListView.layout" />
+          <AitFeature Name="WinJS.UI.ListView.loadMorePages" />
+          <AitFeature Name="WinJS.UI.ListView.loadingBehavior" />
+          <AitFeature Name="WinJS.UI.ListView.loadingState" />
+          <AitFeature Name="WinJS.UI.ListView.maxDeferredItemCleanup" />
+          <AitFeature Name="WinJS.UI.ListView.maxLeadingPages" />
+          <AitFeature Name="WinJS.UI.ListView.maxTrailingPages" />
+          <AitFeature Name="WinJS.UI.ListView.pagesToLoad" />
+          <AitFeature Name="WinJS.UI.ListView.pagesToLoadThreshold" />
+          <AitFeature Name="WinJS.UI.ListView.recalculateItemPosition" />
+          <AitFeature Name="WinJS.UI.ListView.resetGroupHeader" />
+          <AitFeature Name="WinJS.UI.ListView.resetItem" />
+          <AitFeature Name="WinJS.UI.ListView.scrollPosition" />
+          <AitFeature Name="WinJS.UI.ListView.selection" />
+          <AitFeature Name="WinJS.UI.ListView.selectionMode" />
+          <AitFeature Name="WinJS.UI.ListView.swipeBehavior" />
+          <AitFeature Name="WinJS.UI.ListView.tapBehavior" />
+          <AitFeature Name="WinJS.UI.ListView.triggerDispose" />
+          <AitFeature Name="WinJS.UI.ListView.zoomableView" />
+          <AitFeature Name="WinJS.UI.ListViewAnimationType" />
+          <AitFeature Name="WinJS.UI.ListViewAnimationType.contentTransition" />
+          <AitFeature Name="WinJS.UI.ListViewAnimationType.entrance" />
+          <AitFeature Name="WinJS.UI.ListView_e" />
+          <AitFeature Name="WinJS.UI.ListView_part" />
+          <AitFeature Name="WinJS.UI.Menu.CannotChangeCommandsWhenVisible" />
+          <AitFeature Name="WinJS.UI.Menu.Menu" />
+          <AitFeature Name="WinJS.UI.Menu.NullCommand" />
+          <AitFeature Name="WinJS.UI.Menu.RequiresCommands" />
+          <AitFeature Name="WinJS.UI.Menu.commands" />
+          <AitFeature Name="WinJS.UI.Menu.constructor" />
+          <AitFeature Name="WinJS.UI.Menu.constructor_p" />
+          <AitFeature Name="WinJS.UI.Menu.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.Menu.getCommandById" />
+          <AitFeature Name="WinJS.UI.Menu.getCommandById_p" />
+          <AitFeature Name="WinJS.UI.Menu.getCommandById_returnValue" />
+          <AitFeature Name="WinJS.UI.Menu.hideCommands" />
+          <AitFeature Name="WinJS.UI.Menu.hideCommands_p" />
+          <AitFeature Name="WinJS.UI.Menu.show" />
+          <AitFeature Name="WinJS.UI.Menu.showCommands" />
+          <AitFeature Name="WinJS.UI.Menu.showCommands_p" />
+          <AitFeature Name="WinJS.UI.Menu.showOnlyCommands" />
+          <AitFeature Name="WinJS.UI.Menu.showOnlyCommands_p" />
+          <AitFeature Name="WinJS.UI.Menu.show_p" />
+          <AitFeature Name="WinJS.UI.MenuBackButtonCommand.constructor_p" />
+          <AitFeature Name="WinJS.UI.MenuCommand" />
+          <AitFeature Name="WinJS.UI.MenuCommand.BadButtonElement" />
+          <AitFeature Name="WinJS.UI.MenuCommand.BadClick" />
+          <AitFeature Name="WinJS.UI.MenuCommand.BadHrElement" />
+          <AitFeature Name="WinJS.UI.MenuCommand.CannotChangeHiddenProperty" />
+          <AitFeature Name="WinJS.UI.MenuCommand.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.MenuCommand.MenuCommand" />
+          <AitFeature Name="WinJS.UI.MenuCommand.addEventListener" />
+          <AitFeature Name="WinJS.UI.MenuCommand.addEventListener_p" />
+          <AitFeature Name="WinJS.UI.MenuCommand.constructor" />
+          <AitFeature Name="WinJS.UI.MenuCommand.constructor_p" />
+          <AitFeature Name="WinJS.UI.MenuCommand.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.MenuCommand.disabled" />
+          <AitFeature Name="WinJS.UI.MenuCommand.dispose" />
+          <AitFeature Name="WinJS.UI.MenuCommand.element" />
+          <AitFeature Name="WinJS.UI.MenuCommand.extraClass" />
+          <AitFeature Name="WinJS.UI.MenuCommand.flyout" />
+          <AitFeature Name="WinJS.UI.MenuCommand.hidden" />
+          <AitFeature Name="WinJS.UI.MenuCommand.id" />
+          <AitFeature Name="WinJS.UI.MenuCommand.label" />
+          <AitFeature Name="WinJS.UI.MenuCommand.onclick" />
+          <AitFeature Name="WinJS.UI.MenuCommand.removeEventListener" />
+          <AitFeature Name="WinJS.UI.MenuCommand.removeEventListener_p" />
+          <AitFeature Name="WinJS.UI.MenuCommand.selected" />
+          <AitFeature Name="WinJS.UI.MenuCommand.type" />
+          <AitFeature Name="WinJS.UI.MenuCommand_name" />
+          <AitFeature Name="WinJS.UI.Menu_name" />
+          <AitFeature Name="WinJS.UI.Menu_part" />
+          <AitFeature Name="WinJS.UI.NavBar.NavBar" />
+          <AitFeature Name="WinJS.UI.NavBar.closedDisplayMode" />
+          <AitFeature Name="WinJS.UI.NavBar.constructor" />
+          <AitFeature Name="WinJS.UI.NavBar.constructor_p" />
+          <AitFeature Name="WinJS.UI.NavBar.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.NavBar.onchildrenprocessed" />
+          <AitFeature Name="WinJS.UI.NavBar.processChildren" />
+          <AitFeature Name="WinJS.UI.NavBarCommand" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.NavBarCommand" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.constructor" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.constructor_p" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.dispose" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.element" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.icon" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.label" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.location" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.splitButton" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.splitOpened" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.state" />
+          <AitFeature Name="WinJS.UI.NavBarCommand.tooltip" />
+          <AitFeature Name="WinJS.UI.NavBarCommand_part" />
+          <AitFeature Name="WinJS.UI.NavBarContainer" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.NavBarContainer" />
+          <AitFeature Name="WinJS.UI.NavBarContainer._resizeImpl" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.constructor" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.constructor_p" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.currentIndex" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.data" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.dispose" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.element" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.fixedSize" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.forceLayout" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.layout" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.maxRows" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.oninvoked" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.onsplittoggle" />
+          <AitFeature Name="WinJS.UI.NavBarContainer.template" />
+          <AitFeature Name="WinJS.UI.NavBarContainer_async_initialize" />
+          <AitFeature Name="WinJS.UI.NavBarContainer_e" />
+          <AitFeature Name="WinJS.UI.NavBarContainer_part" />
+          <AitFeature Name="WinJS.UI.NavBar_e" />
+          <AitFeature Name="WinJS.UI.NavBar_part" />
+          <AitFeature Name="WinJS.UI.Orientation" />
+          <AitFeature Name="WinJS.UI.Overlay.dispose" />
+          <AitFeature Name="WinJS.UI.Pivot.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.Pivot.DuplicateItem" />
+          <AitFeature Name="WinJS.UI.Pivot.InvalidContent" />
+          <AitFeature Name="WinJS.UI.Pivot.Pivot" />
+          <AitFeature Name="WinJS.UI.Pivot._MSManipulationStateChangedHandler_animationPlaceholder" />
+          <AitFeature Name="WinJS.UI.Pivot._hidePivotItem_animationPlaceholder" />
+          <AitFeature Name="WinJS.UI.Pivot.constructor" />
+          <AitFeature Name="WinJS.UI.Pivot.constructor_p" />
+          <AitFeature Name="WinJS.UI.Pivot.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.Pivot.customLeftHeader" />
+          <AitFeature Name="WinJS.UI.Pivot.customRightHeader" />
+          <AitFeature Name="WinJS.UI.Pivot.dispose" />
+          <AitFeature Name="WinJS.UI.Pivot.element" />
+          <AitFeature Name="WinJS.UI.Pivot.forceLayout" />
+          <AitFeature Name="WinJS.UI.Pivot.items" />
+          <AitFeature Name="WinJS.UI.Pivot.locked" />
+          <AitFeature Name="WinJS.UI.Pivot.onitemanimationend" />
+          <AitFeature Name="WinJS.UI.Pivot.onitemanimationstart" />
+          <AitFeature Name="WinJS.UI.Pivot.onselectionchanged" />
+          <AitFeature Name="WinJS.UI.Pivot.selectedIndex" />
+          <AitFeature Name="WinJS.UI.Pivot.selectedItem" />
+          <AitFeature Name="WinJS.UI.Pivot.title" />
+          <AitFeature Name="WinJS.UI.PivotItem" />
+          <AitFeature Name="WinJS.UI.PivotItem.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.PivotItem.PivotItem" />
+          <AitFeature Name="WinJS.UI.PivotItem.constructor" />
+          <AitFeature Name="WinJS.UI.PivotItem.constructor_p" />
+          <AitFeature Name="WinJS.UI.PivotItem.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.PivotItem.contentElement" />
+          <AitFeature Name="WinJS.UI.PivotItem.dispose" />
+          <AitFeature Name="WinJS.UI.PivotItem.element" />
+          <AitFeature Name="WinJS.UI.PivotItem.header" />
+          <AitFeature Name="WinJS.UI.PivotItem_part" />
+          <AitFeature Name="WinJS.UI.Pivot_e" />
+          <AitFeature Name="WinJS.UI.Pivot_part" />
+          <AitFeature Name="WinJS.UI.Rating.Rating" />
+          <AitFeature Name="WinJS.UI.Rating.TooltipStringsIsInvalid" />
+          <AitFeature Name="WinJS.UI.Rating.addEventListener" />
+          <AitFeature Name="WinJS.UI.Rating.addEventListener_p" />
+          <AitFeature Name="WinJS.UI.Rating.averageRating" />
+          <AitFeature Name="WinJS.UI.Rating.constructor" />
+          <AitFeature Name="WinJS.UI.Rating.constructor_p" />
+          <AitFeature Name="WinJS.UI.Rating.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.Rating.disabled" />
+          <AitFeature Name="WinJS.UI.Rating.dispose" />
+          <AitFeature Name="WinJS.UI.Rating.element" />
+          <AitFeature Name="WinJS.UI.Rating.enableClear" />
+          <AitFeature Name="WinJS.UI.Rating.maxRating" />
+          <AitFeature Name="WinJS.UI.Rating.oncancel" />
+          <AitFeature Name="WinJS.UI.Rating.onchange" />
+          <AitFeature Name="WinJS.UI.Rating.onpreviewchange" />
+          <AitFeature Name="WinJS.UI.Rating.removeEventListener" />
+          <AitFeature Name="WinJS.UI.Rating.removeEventListener_p" />
+          <AitFeature Name="WinJS.UI.Rating.tooltipStrings" />
+          <AitFeature Name="WinJS.UI.Rating.userRating" />
+          <AitFeature Name="WinJS.UI.Rating_e" />
+          <AitFeature Name="WinJS.UI.Rating_part" />
+          <AitFeature Name="WinJS.UI.Repeater" />
+          <AitFeature Name="WinJS.UI.Repeater.AsynchronousRender" />
+          <AitFeature Name="WinJS.UI.Repeater.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.Repeater.Repeater" />
+          <AitFeature Name="WinJS.UI.Repeater.RepeaterModificationReentrancy" />
+          <AitFeature Name="WinJS.UI.Repeater.constructor" />
+          <AitFeature Name="WinJS.UI.Repeater.constructor_p" />
+          <AitFeature Name="WinJS.UI.Repeater.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.Repeater.data" />
+          <AitFeature Name="WinJS.UI.Repeater.dispose" />
+          <AitFeature Name="WinJS.UI.Repeater.element" />
+          <AitFeature Name="WinJS.UI.Repeater.elementFromIndex" />
+          <AitFeature Name="WinJS.UI.Repeater.elementFromIndex_returnValue" />
+          <AitFeature Name="WinJS.UI.Repeater.length" />
+          <AitFeature Name="WinJS.UI.Repeater.onitemchanged" />
+          <AitFeature Name="WinJS.UI.Repeater.onitemchanging" />
+          <AitFeature Name="WinJS.UI.Repeater.oniteminserted" />
+          <AitFeature Name="WinJS.UI.Repeater.oniteminserting" />
+          <AitFeature Name="WinJS.UI.Repeater.onitemmoved" />
+          <AitFeature Name="WinJS.UI.Repeater.onitemmoving" />
+          <AitFeature Name="WinJS.UI.Repeater.onitemremoved" />
+          <AitFeature Name="WinJS.UI.Repeater.onitemremoving" />
+          <AitFeature Name="WinJS.UI.Repeater.onitemsloaded" />
+          <AitFeature Name="WinJS.UI.Repeater.onitemsreloaded" />
+          <AitFeature Name="WinJS.UI.Repeater.onitemsreloading" />
+          <AitFeature Name="WinJS.UI.Repeater.template" />
+          <AitFeature Name="WinJS.UI.Repeater_part" />
+          <AitFeature Name="WinJS.UI.SearchBox" />
+          <AitFeature Name="WinJS.UI.SearchBox.SearchBox" />
+          <AitFeature Name="WinJS.UI.SearchBox.SearchBox_createResultSuggestionImage_p" />
+          <AitFeature Name="WinJS.UI.SearchBox.constructor" />
+          <AitFeature Name="WinJS.UI.SearchBox.constructor_p" />
+          <AitFeature Name="WinJS.UI.SearchBox.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.SearchBox.createResultSuggestionImage" />
+          <AitFeature Name="WinJS.UI.SearchBox.dispose" />
+          <AitFeature Name="WinJS.UI.SearchBox.focusOnKeyboardInput" />
+          <AitFeature Name="WinJS.UI.SearchBox_e" />
+          <AitFeature Name="WinJS.UI.SearchBox_part" />
+          <AitFeature Name="WinJS.UI.SearchControl.constructor_p" />
+          <AitFeature Name="WinJS.UI.SelectionManager.selectionchanging.setPromise" />
+          <AitFeature Name="WinJS.UI.SelectionManager.selectionchanging.setPromise_p" />
+          <AitFeature Name="WinJS.UI.SemanticZoom" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.InvalidZoomFactor" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.SemanticZoom" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.constructor" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.constructor_p" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.dispose" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.element" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.enableButton" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.forceLayout" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.locked" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.zoomFactor" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.zoomedInItem" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.zoomedOut" />
+          <AitFeature Name="WinJS.UI.SemanticZoom.zoomedOutItem" />
+          <AitFeature Name="WinJS.UI.SemanticZoom_part" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.BadReference" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.SettingsFlyout" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.constructor" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.constructor_p" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.disabled" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.hide" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.onafterhide" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.onaftershow" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.onbeforehide" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.onbeforeshow" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.populateSettings" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.populateSettings_p" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.settingsCommandId" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.show" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.showSettings" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.showSettings_p" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.show_static" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout.width" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout_e" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout_name" />
+          <AitFeature Name="WinJS.UI.SettingsFlyout_part" />
+          <AitFeature Name="WinJS.UI.SplitView" />
+          <AitFeature Name="WinJS.UI.SplitView.ClosedDisplayMode" />
+          <AitFeature Name="WinJS.UI.SplitView.ClosedDisplayMode.inline" />
+          <AitFeature Name="WinJS.UI.SplitView.ClosedDisplayMode.none" />
+          <AitFeature Name="WinJS.UI.SplitView.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.SplitView.OpenedDisplayMode" />
+          <AitFeature Name="WinJS.UI.SplitView.OpenedDisplayMode.inline" />
+          <AitFeature Name="WinJS.UI.SplitView.OpenedDisplayMode.overlay" />
+          <AitFeature Name="WinJS.UI.SplitView.PanePlacement" />
+          <AitFeature Name="WinJS.UI.SplitView.PanePlacement.bottom" />
+          <AitFeature Name="WinJS.UI.SplitView.PanePlacement.left" />
+          <AitFeature Name="WinJS.UI.SplitView.PanePlacement.right" />
+          <AitFeature Name="WinJS.UI.SplitView.PanePlacement.top" />
+          <AitFeature Name="WinJS.UI.SplitView.SplitView" />
+          <AitFeature Name="WinJS.UI.SplitView.closePane" />
+          <AitFeature Name="WinJS.UI.SplitView.closedDisplayMode" />
+          <AitFeature Name="WinJS.UI.SplitView.constructor" />
+          <AitFeature Name="WinJS.UI.SplitView.constructor_p" />
+          <AitFeature Name="WinJS.UI.SplitView.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.SplitView.contentElement" />
+          <AitFeature Name="WinJS.UI.SplitView.dispose" />
+          <AitFeature Name="WinJS.UI.SplitView.element" />
+          <AitFeature Name="WinJS.UI.SplitView.openPane" />
+          <AitFeature Name="WinJS.UI.SplitView.openedDisplayMode" />
+          <AitFeature Name="WinJS.UI.SplitView.paneElement" />
+          <AitFeature Name="WinJS.UI.SplitView.paneOpened" />
+          <AitFeature Name="WinJS.UI.SplitView.panePlacement" />
+          <AitFeature Name="WinJS.UI.SplitViewPaneToggle" />
+          <AitFeature Name="WinJS.UI.SplitViewPaneToggle.BadButtonElement" />
+          <AitFeature Name="WinJS.UI.SplitViewPaneToggle.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.SplitViewPaneToggle.SplitViewPaneToggle" />
+          <AitFeature Name="WinJS.UI.SplitViewPaneToggle.constructor" />
+          <AitFeature Name="WinJS.UI.SplitViewPaneToggle.constructor_p" />
+          <AitFeature Name="WinJS.UI.SplitViewPaneToggle.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.SplitViewPaneToggle.dispose" />
+          <AitFeature Name="WinJS.UI.SplitViewPaneToggle.element" />
+          <AitFeature Name="WinJS.UI.SplitViewPaneToggle.splitView" />
+          <AitFeature Name="WinJS.UI.SplitViewPaneToggle_part" />
+          <AitFeature Name="WinJS.UI.SplitView_e" />
+          <AitFeature Name="WinJS.UI.SplitView_part" />
+          <AitFeature Name="WinJS.UI.StorageDataSource" />
+          <AitFeature Name="WinJS.UI.StorageDataSource.loadThumbnail" />
+          <AitFeature Name="WinJS.UI.StorageDataSource.loadThumbnail_p" />
+          <AitFeature Name="WinJS.UI.StorageDataSource_p" />
+          <AitFeature Name="WinJS.UI.SwipeBehavior" />
+          <AitFeature Name="WinJS.UI.TabContainer" />
+          <AitFeature Name="WinJS.UI.TapBehavior" />
+          <AitFeature Name="WinJS.UI.TimePicker" />
+          <AitFeature Name="WinJS.UI.TimePicker.TimePicker" />
+          <AitFeature Name="WinJS.UI.TimePicker.clock" />
+          <AitFeature Name="WinJS.UI.TimePicker.constructor" />
+          <AitFeature Name="WinJS.UI.TimePicker.constructor_p" />
+          <AitFeature Name="WinJS.UI.TimePicker.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.TimePicker.current" />
+          <AitFeature Name="WinJS.UI.TimePicker.disabled" />
+          <AitFeature Name="WinJS.UI.TimePicker.dispose" />
+          <AitFeature Name="WinJS.UI.TimePicker.element" />
+          <AitFeature Name="WinJS.UI.TimePicker.hourPattern" />
+          <AitFeature Name="WinJS.UI.TimePicker.minuteIncrement" />
+          <AitFeature Name="WinJS.UI.TimePicker.minutePattern" />
+          <AitFeature Name="WinJS.UI.TimePicker.periodPattern" />
+          <AitFeature Name="WinJS.UI.TimePicker_e" />
+          <AitFeature Name="WinJS.UI.TimePicker_name" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch.ToggleSwitch" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch.checked" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch.constructor" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch.constructor_p" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch.disabled" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch.element" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch.labelOff" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch.labelOn" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch.onchange" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch.title" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch_e" />
+          <AitFeature Name="WinJS.UI.ToggleSwitch_part" />
+          <AitFeature Name="WinJS.UI.ToolBar" />
+          <AitFeature Name="WinJS.UI.ToolBar.ClosedDisplayMode" />
+          <AitFeature Name="WinJS.UI.ToolBar.ClosedDisplayMode.compact" />
+          <AitFeature Name="WinJS.UI.ToolBar.ClosedDisplayMode.full" />
+          <AitFeature Name="WinJS.UI.ToolBar.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI.ToolBar.ToolBar" />
+          <AitFeature Name="WinJS.UI.ToolBar.close" />
+          <AitFeature Name="WinJS.UI.ToolBar.closedDisplayMode" />
+          <AitFeature Name="WinJS.UI.ToolBar.constructor" />
+          <AitFeature Name="WinJS.UI.ToolBar.constructor_p" />
+          <AitFeature Name="WinJS.UI.ToolBar.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.ToolBar.data" />
+          <AitFeature Name="WinJS.UI.ToolBar.dispose" />
+          <AitFeature Name="WinJS.UI.ToolBar.element" />
+          <AitFeature Name="WinJS.UI.ToolBar.forceLayout" />
+          <AitFeature Name="WinJS.UI.ToolBar.getCommandById" />
+          <AitFeature Name="WinJS.UI.ToolBar.getCommandById_p" />
+          <AitFeature Name="WinJS.UI.ToolBar.getCommandById_returnValue" />
+          <AitFeature Name="WinJS.UI.ToolBar.open" />
+          <AitFeature Name="WinJS.UI.ToolBar.opened" />
+          <AitFeature Name="WinJS.UI.ToolBar.showOnlyCommands" />
+          <AitFeature Name="WinJS.UI.ToolBar.showOnlyCommands_p" />
+          <AitFeature Name="WinJS.UI.ToolBar_part" />
+          <AitFeature Name="WinJS.UI.Tooltip" />
+          <AitFeature Name="WinJS.UI.Tooltip.Tooltip" />
+          <AitFeature Name="WinJS.UI.Tooltip.addEventListener" />
+          <AitFeature Name="WinJS.UI.Tooltip.addEventListener_p" />
+          <AitFeature Name="WinJS.UI.Tooltip.close" />
+          <AitFeature Name="WinJS.UI.Tooltip.constructor" />
+          <AitFeature Name="WinJS.UI.Tooltip.constructor_p" />
+          <AitFeature Name="WinJS.UI.Tooltip.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.Tooltip.contentElement" />
+          <AitFeature Name="WinJS.UI.Tooltip.dispose" />
+          <AitFeature Name="WinJS.UI.Tooltip.element" />
+          <AitFeature Name="WinJS.UI.Tooltip.extraClass" />
+          <AitFeature Name="WinJS.UI.Tooltip.infotip" />
+          <AitFeature Name="WinJS.UI.Tooltip.innerHTML" />
+          <AitFeature Name="WinJS.UI.Tooltip.onbeforeclose" />
+          <AitFeature Name="WinJS.UI.Tooltip.onbeforeopen" />
+          <AitFeature Name="WinJS.UI.Tooltip.onclosed" />
+          <AitFeature Name="WinJS.UI.Tooltip.onopened" />
+          <AitFeature Name="WinJS.UI.Tooltip.open" />
+          <AitFeature Name="WinJS.UI.Tooltip.open_p" />
+          <AitFeature Name="WinJS.UI.Tooltip.placement" />
+          <AitFeature Name="WinJS.UI.Tooltip.removeEventListener" />
+          <AitFeature Name="WinJS.UI.Tooltip_e" />
+          <AitFeature Name="WinJS.UI.ViewBox" />
+          <AitFeature Name="WinJS.UI.ViewBox.InvalidChildren" />
+          <AitFeature Name="WinJS.UI.ViewBox.ViewBox" />
+          <AitFeature Name="WinJS.UI.ViewBox._updateLayout" />
+          <AitFeature Name="WinJS.UI.ViewBox.constructor" />
+          <AitFeature Name="WinJS.UI.ViewBox.constructor_p" />
+          <AitFeature Name="WinJS.UI.ViewBox.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI.ViewBox.dispose" />
+          <AitFeature Name="WinJS.UI.ViewBox.element" />
+          <AitFeature Name="WinJS.UI.ViewBox_name" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.beginNotifications" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.changed" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.changed_p" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.endNotifications" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.inserted" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.inserted_p" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.invalidateAll" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.invalidateAll_returnValue" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.moved" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.moved_p" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.reload" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.removed" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.ListDataNotificationHandler.removed_p" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource._baseDataSourceConstructor" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource._baseDataSourceConstructor_p" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.releaseSlotIfUnrequested" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource.resetCount" />
+          <AitFeature Name="WinJS.UI.VirtualizedDataSource_e" />
+          <AitFeature Name="WinJS.UI._Accents" />
+          <AitFeature Name="WinJS.UI._AppBarMenuLayout" />
+          <AitFeature Name="WinJS.UI._CommandingSurface" />
+          <AitFeature Name="WinJS.UI._CommandingSurface.BadData" />
+          <AitFeature Name="WinJS.UI._CommandingSurface.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI._CommandingSurface.MustContainCommands" />
+          <AitFeature Name="WinJS.UI._CommandingSurface._refresh" />
+          <AitFeature Name="WinJS.UI._GroupDataSource._continueFetch" />
+          <AitFeature Name="WinJS.UI._ItemEventsHandler" />
+          <AitFeature Name="WinJS.UI._LayoutCommon.groupHeaderPosition" />
+          <AitFeature Name="WinJS.UI._LayoutCommon.orientation" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.CannotChangeCommandsWhenVisible" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.CannotChangeLayoutWhenVisible" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.CannotChangePlacementWhenVisible" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.RequiresCommands" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar._LegacyAppBar" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar._changeVisiblePosition" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar._changeVisiblePosition_p" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar._checkDoNext" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.close" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.closedDisplayMode" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.commands" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.constructor" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.constructor_p" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.constructor_returnValue" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.getCommandById" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.getCommandById_p" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.getCommandById_returnValue" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.hideCommands" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.hideCommands_p" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.onafterclose" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.onafteropen" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.onbeforeclose" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.onbeforeopen" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.open" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.opened" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.placement" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.showCommands" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.showCommands_p" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.showOnlyCommands" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar.showOnlyCommands_p" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar_e" />
+          <AitFeature Name="WinJS.UI._LegacyAppBar_part" />
+          <AitFeature Name="WinJS.UI._LegacyLayout.backdropColor" />
+          <AitFeature Name="WinJS.UI._LegacyLayout.disableBackdrop" />
+          <AitFeature Name="WinJS.UI._LightDismissService" />
+          <AitFeature Name="WinJS.UI._Overlay" />
+          <AitFeature Name="WinJS.UI._Overlay.DuplicateConstruction" />
+          <AitFeature Name="WinJS.UI._Overlay.MustContainCommands" />
+          <AitFeature Name="WinJS.UI._Overlay._checkDoNext" />
+          <AitFeature Name="WinJS.UI._Overlay._endAnimateCommandsWithoutAnimation" />
+          <AitFeature Name="WinJS.UI._Overlay.addEventListener" />
+          <AitFeature Name="WinJS.UI._Overlay.addEventListener_p" />
+          <AitFeature Name="WinJS.UI._Overlay.element" />
+          <AitFeature Name="WinJS.UI._Overlay.hidden" />
+          <AitFeature Name="WinJS.UI._Overlay.removeEventListener" />
+          <AitFeature Name="WinJS.UI._Overlay.removeEventListener_p" />
+          <AitFeature Name="WinJS.UI._Overlay_p" />
+          <AitFeature Name="WinJS.UI._Overlay_returnValue" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.add" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.add_items" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.add_returnValue" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.clear" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.clear_returnValue" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.remove" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.remove_items" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.remove_returnValue" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.selectAll" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.selectAll_returnValue" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.set" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.set_items" />
+          <AitFeature Name="WinJS.UI._Selection.prototype.set_returnValue" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.add" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.add_items" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.add_returnValue" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.clear" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.clear_returnValue" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.count" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.count_returnValue" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.getIndices" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.getIndices_returnValue" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.getItems" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.getItems_returnValue" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.getRanges" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.getRanges_returnValue" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.isEverything" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.isEverything_returnValue" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.remove" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.remove_items" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.remove_returnValue" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.selectAll" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.selectAll_returnValue" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.set" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.set_items" />
+          <AitFeature Name="WinJS.UI._SelectionManager.prototype.set_returnValue" />
+          <AitFeature Name="WinJS.UI.computeDataSourceGroups" />
+          <AitFeature Name="WinJS.UI.computeDataSourceGroups_p" />
+          <AitFeature Name="WinJS.UI.computeDataSourceGroups_returnValue" />
+          <AitFeature Name="WinJS.UI.executeTransition" />
+          <AitFeature Name="WinJS.UI.processAll" />
+          <AitFeature Name="WinJS.Utilities._define" />
+          <AitFeature Name="WinJS.Utilities._elementsFromPoint" />
+          <AitFeature Name="WinJS.Utilities._require" />
+          <AitFeature Name="WinJS.Utilities._setActive" />
+          <AitFeature Name="WinJS.Utilities.markDisposable." />
+          <AitFeature Name="WinJS.VirtualizedDataSource.beginRefresh" />
+          <AitFeature Name="WinJS._commandLayoutsMixin._scaleNewCommands" />
+          <AitFeature Name="Windows.ApplicationModel.Search.LocalContentSuggestionSettings" />
+          <AitFeature Name="Windows.Storage.FileProperties.ThumbnailMode" />
+          <AitFeature Name="Windows.Storage.FileProperties.ThumbnailOptions" />
+          <AitFeature Name="Windows.Storage.Search.IStorageQueryResultBase" />
+          <AitFeature Name="document.createElement" />
+          <AitFeature Name="document.hasFocus" />
+          <AitFeature Name="window.getComputedStyle" />
+          <AitFeature Name="window.innerHeight" />
+          <AitFeature Name="window.innerWidth" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="messages.js" Id="0000c5bc80b457cf83a9e70e81a15afa158790b6c4bb" />
+      <AitFile ErrorCode="0" Name="bootstrap.min.js" Id="0000dc73b90e15df98940fb05c83022455dd7f0e8db5">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="document.body.clientWidth" />
+          <AitFeature Name="document.body.scrollTop" />
+          <AitFeature Name="document.body.style.paddingRight" />
+          <AitFeature Name="document.constructor" />
+          <AitFeature Name="document.createElement" />
+          <AitFeature Name="document.documentElement" />
+          <AitFeature Name="document.documentElement.clientHeight" />
+          <AitFeature Name="document.documentElement.getBoundingClientRect" />
+          <AitFeature Name="document.documentElement.scrollHeight" />
+          <AitFeature Name="document.documentElement.scrollTop" />
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="window.innerWidth" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="jquery.mobile-1.4.5.min.js" Id="0000dcaa86def2fc17ef415ba15cc352879528124c6a">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="location.hash.substring" />
+          <AitFeature Name="location.href.replace" />
+          <AitFeature Name="location.pathname" />
+          <AitFeature Name="location.protocol" />
+          <AitFeature Name="navigator.platform" />
+          <AitFeature Name="navigator.userAgent" />
+          <AitFeature Name="navigator.userAgent.indexOf" />
+          <AitFeature Name="navigator.userAgent.toLowerCase" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="script.js" Id="0000e21333f6727350eb797bcd5619da10adfd6ae914">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="document.querySelector" />
+          <AitFeature Name="navigator.maxTouchPoints" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="ui.strings.js" Id="0000f8982dc821b2dd32144c9856324ba6a8dba27c86">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="document.comment" />
+        </AitCategory>
+      </AitFile>
+    </AitStaticAnalysis>
+  </DEPENDENCY_INFORMATION>
+</REPORT>
