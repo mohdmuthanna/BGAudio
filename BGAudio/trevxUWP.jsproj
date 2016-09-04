@@ -168,9 +168,6 @@
     <Content Include="js\jquery.js" />
     <Content Include="js\jquery.mobile-1.4.5.min.js" />
     <Content Include="js\messages.js" />
-    <Content Include="Media\Assets\Fragile.mp3" />
-    <Content Include="Media\Assets\k.m4a" />
-    <Content Include="Media\Assets\Perfect.m4a" />
     <Content Include="data\data.json" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
